@@ -279,14 +279,14 @@ class GhostOsintScanner():
                 try:
                     module = __import__('modules.' + modName, globals(), locals(), [modName])
                 except ImportError:
-                    self.__go.error(f"Failed to load module: {modName}")
+                    self.__go.error(f"无法加载模块: {modName}")
                     continue
 
                 try:
                     mod = getattr(module, modName)()
                     mod.__name__ = modName
                 except Exception:
-                    self.__go.error(f"Module {modName} initialization failed: {traceback.format_exc()}")
+                    self.__go.error(f"模块 {modName} 初始化失败: {traceback.format_exc()}")
                     continue
 
                 # Set up the module options, scan ID, database handle and listeners
@@ -303,7 +303,7 @@ class GhostOsintScanner():
                     mod.setDbh(self.__dbh)
                     mod.setup(self.__go, self.__modconfig[modName])
                 except Exception:
-                    self.__go.error(f"Module {modName} initialization failed: {traceback.format_exc()}")
+                    self.__go.error(f"模块 {modName} 初始化失败: {traceback.format_exc()}")
                     mod.errorState = True
                     continue
 
@@ -312,7 +312,7 @@ class GhostOsintScanner():
                     try:
                         mod._updateSocket(socket)
                     except Exception as e:
-                        self.__go.error(f"Module {modName} socket setup failed: {e}")
+                        self.__go.error(f"模块 {modName} 安装失败: {e}")
                         continue
 
                 # Set up event output filters if requested
@@ -320,7 +320,7 @@ class GhostOsintScanner():
                     try:
                         mod.setOutputFilter(self.__config['__outputfilter'])
                     except Exception as e:
-                        self.__go.error(f"Module {modName} output filter setup failed: {e}")
+                        self.__go.error(f"模块 {modName} 输出过滤设置失败: {e}")
                         continue
 
                 # Give modules a chance to 'enrich' the original target with aliases of that target.
@@ -329,14 +329,14 @@ class GhostOsintScanner():
                     if newTarget is not None:
                         self.__target = newTarget
                 except Exception as e:
-                    self.__go.error(f"Module {modName} target enrichment failed: {e}")
+                    self.__go.error(f"模块 {modName} 目标充能失败: {e}")
                     continue
 
                 # Register the target with the module
                 try:
                     mod.setTarget(self.__target)
                 except Exception as e:
-                    self.__go.error(f"Module {modName} failed to set target '{self.__target}': {e}")
+                    self.__go.error(f"模块 {modName} 设置目标失败 '{self.__target}': {e}")
                     continue
 
                 # Set up the outgoing event queue
@@ -344,13 +344,13 @@ class GhostOsintScanner():
                     mod.outgoingEventQueue = self.eventQueue
                     mod.incomingEventQueue = queue.Queue()
                 except Exception as e:
-                    self.__go.error(f"Module {modName} event queue setup failed: {e}")
+                    self.__go.error(f"模块 {modName} 事件队列设置失败: {e}")
                     continue
 
                 self.__moduleInstances[modName] = mod
-                self.__go.status(f"{modName} module loaded.")
+                self.__go.status(f"{modName} 模块已加载.")
 
-            self.__go.debug(f"Scan [{self.__scanId}] loaded {len(self.__moduleInstances)} modules.")
+            self.__go.debug(f"扫描 [{self.__scanId}] 已加载 {len(self.__moduleInstances)} 模块.")
 
             if not self.__moduleInstances:
                 self.__setStatus("ERROR-FAILED", None, time.time() * 1000)
@@ -406,15 +406,15 @@ class GhostOsintScanner():
 
         except BaseException as e:
             exc_type, exc_value, exc_traceback = sys.exc_info()
-            self.__go.error(f"Unhandled exception ({e.__class__.__name__}) encountered during scan."
-                            + "Please report this as a bug: "
+            self.__go.error(f"未处理的异常 ({e.__class__.__name__}) 在扫描过程中遇到."
+                            + "请导出这个BUG: "
                             + repr(traceback.format_exception(exc_type, exc_value, exc_traceback)))
-            self.__go.status(f"Scan [{self.__scanId}] failed: {e}")
+            self.__go.status(f"扫描 [{self.__scanId}] 失败了呢: {e}")
             self.__setStatus("ERROR-FAILED", None, time.time() * 1000)
 
         finally:
             if not failed:
-                self.__go.status(f"Scan [{self.__scanId}] completed.")
+                self.__go.status(f"扫描 [{self.__scanId}] 已完成.")
                 self.__setStatus("FINISHED", None, time.time() * 1000)
             self.__dbh.close()
 

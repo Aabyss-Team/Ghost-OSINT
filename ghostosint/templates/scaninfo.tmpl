@@ -43,7 +43,7 @@
         </div>
         <div id='customtabview' role="group" class="btn-group pull-right">
          <a id='btn-fullview' rel="tooltip" data-title="完整数据视图" class="btn btn-default active" onClick='browseUpdate("full")'><i class='glyphicon glyphicon-th glyphicon glyphicon-white'></i></a>
-         <a id='btn-uniqueview' rel="tooltip" data-title="唯一数据视图" class="btn btn-default" onClick='browseUpdate("unique")'><i class='glyphicon glyphicon-align-justify glyphicon glyphicon-white'></i></a>
+         <a id='btn-uniqueview' rel="tooltip" data-title="特殊数据视图" class="btn btn-default" onClick='browseUpdate("unique")'><i class='glyphicon glyphicon-align-justify glyphicon glyphicon-white'></i></a>
          <a id='btn-vizview' rel="tooltip" data-title="联想数据视图" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class='glyphicon glyphicon-picture glyphicon glyphicon-white'></i></a>
          <ul class="dropdown-menu">
             <li><a class='link' onClick='browseUpdate("viz-bubble-data")'>气泡 (数据元素)</a></li>
@@ -286,7 +286,7 @@
             grid += "<div class='btn-toolbar'>";
             grid += "<div class='btn-group' style='float: unset; padding: 10px'><button class='btn disabled btn-lg btn-secondary' style='cursor: default;'>总数</span></button>"
             grid += "<button class='btn disabled btn-lg btn-default' id='tcounter' style='cursor: default;'>?</button></div>"
-            grid += "<div class='btn-group' style='float: unset; padding: 10px'><button class='btn disabled btn-lg btn-secondary' style='cursor: default;'>独特</button>"
+            grid += "<div class='btn-group' style='float: unset; padding: 10px'><button class='btn disabled btn-lg btn-secondary' style='cursor: default;'>特殊</button>"
             grid += "<button class='btn disabled btn-lg btn-default' id='ucounter' style='cursor: default;'>?</button></div>"
             grid += "<div class='btn-group' style='float: unset; padding: 10px'><button class='btn disabled btn-lg btn-secondary' style='cursor: default;'>状态</button>"
             grid += "<button class='btn disabled btn-lg btn-default' id='status' style='cursor: default;'>?</button></div>"
@@ -443,7 +443,7 @@
             refresh = function() { browseEventList(instanceId); }
             GhostOsint.fetchData('${docroot}/scansummary', {'id': instanceId, 'by': 'type'}, function(data) {
                             var table = "<table id='scansummary-content' class='table table-bordered table-striped tablesorter'>";
-                            table += "<thead><tr> <th>类型</th><th>唯一数据元素</th> <th>数据元素总数</th><th>最后数据元素时间</th></tr></thead><tbody>";
+                            table += "<thead><tr> <th>类型</th><th>特殊数据元素</th> <th>数据元素总数</th><th>最后数据元素时间</th></tr></thead><tbody>";
                             for (var i = 0; i < data.length; i++) {
                                 table += "<tr><td><a class='link' onClick='";
                                 table += "browseEventData(\"${id}\", \"" + escape(data[i][1]) + "\", \"" + data[i][0] + "\", \"full\");'>";
@@ -607,7 +607,7 @@
                             crumbs += "</ul>";
 
                             var table = "<table id='scansummary-content' class='table table-bordered table-striped small'>";
-                            table += "<thead><tr> <th>唯一数据元素</th><th>事件</th></tr></thead><tbody>";
+                            table += "<thead><tr> <th>特殊数据元素</th><th>事件</th></tr></thead><tbody>";
                             for (var i = 0; i < data.length; i++) {
                                 table += "<tr><td><pre class='table-border-bg-inherit'>";
                                 table += GhostOsint.replace_sfurltag(data[i][0]);

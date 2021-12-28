@@ -339,7 +339,7 @@ class GhostOsintWEB:
 
         fileobj = StringIO()
         parser = csv.writer(fileobj, dialect=dialect)
-        parser.writerow(["Date", "Component", "Type", "Event", "Event ID"])
+        parser.writerow(["数据", "组成t", "类型", "事件", "事件ID"])
         for row in data:
             parser.writerow([
                 time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(row[0] / 1000)),
@@ -383,13 +383,13 @@ class GhostOsintWEB:
             cherrypy.response.headers['Content-Disposition'] = f"attachment; filename={fname}"
             cherrypy.response.headers['Content-Type'] = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             cherrypy.response.headers['Pragma'] = "no-cache"
-            return self.buildExcel(rows, ["Updated", "Type", "Module", "Source",
-                                   "F/P", "Data"], sheetNameIndex=1)
+            return self.buildExcel(rows, ["已更新", "类型", "模块", "源",
+                                   "内容", "数据"], sheetNameIndex=1)
 
         elif filetype.lower() == 'csv':
             fileobj = StringIO()
             parser = csv.writer(fileobj, dialect=dialect)
-            parser.writerow(["Updated", "Type", "Module", "Source", "F/P", "Data"])
+            parser.writerow(["已更新", "类型", "模块", "源", "内容", "数据"])
             for row in data:
                 if row[4] == "ROOT":
                     continue
@@ -404,7 +404,7 @@ class GhostOsintWEB:
             return fileobj.getvalue().encode('utf-8')
 
         else:
-            return self.error("Invalid export filetype.")
+            return self.error("导出文件类型失败.")
 
     @cherrypy.expose
     def scaneventresultexportmulti(self: 'GhostOsintWEB', ids: str, filetype: str = "csv", dialect: str = "excel") -> str:
@@ -451,13 +451,13 @@ class GhostOsintWEB:
             cherrypy.response.headers['Content-Disposition'] = f"attachment; filename={fname}"
             cherrypy.response.headers['Content-Type'] = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             cherrypy.response.headers['Pragma'] = "no-cache"
-            return self.buildExcel(rows, ["Scan Name", "Updated", "Type", "Module",
-                                   "Source", "F/P", "Data"], sheetNameIndex=2)
+            return self.buildExcel(rows, ["扫描名称", "已更新", "类型", "模块",
+                                   "源", "内容", "数据"], sheetNameIndex=2)
 
         elif filetype.lower() == 'csv':
             fileobj = StringIO()
             parser = csv.writer(fileobj, dialect=dialect)
-            parser.writerow(["Scan Name", "Updated", "Type", "Module", "Source", "F/P", "Data"])
+            parser.writerow(["扫描名称", "已更新", "类型", "模块", "源", "内容", "数据"])
             for row in data:
                 if row[4] == "ROOT":
                     continue
@@ -477,7 +477,7 @@ class GhostOsintWEB:
             return fileobj.getvalue().encode('utf-8')
 
         else:
-            return self.error("Invalid export filetype.")
+            return self.error("导出文件类型无效.")
 
     @cherrypy.expose
     def scansearchresultexport(self: 'GhostOsintWEB', id: str, eventType: str = None, value: str = None, filetype: str = "csv", dialect: str = "excel") -> str:
@@ -508,13 +508,13 @@ class GhostOsintWEB:
             cherrypy.response.headers['Content-Disposition'] = "attachment; filename=GhostOSINT.xlsx"
             cherrypy.response.headers['Content-Type'] = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             cherrypy.response.headers['Pragma'] = "no-cache"
-            return self.buildExcel(rows, ["Updated", "Type", "Module", "Source",
-                                   "F/P", "Data"], sheetNameIndex=1)
+            return self.buildExcel(rows, ["已更新", "类型", "模块", "源",
+                                   "内容", "数据"], sheetNameIndex=1)
 
         elif filetype.lower() == 'csv':
             fileobj = StringIO()
             parser = csv.writer(fileobj, dialect=dialect)
-            parser.writerow(["Updated", "Type", "Module", "Source", "F/P", "Data"])
+            parser.writerow(["已更新", "类型", "模块", "源", "内容", "数据"])
             for row in data:
                 if row[10] == "ROOT":
                     continue
@@ -732,14 +732,14 @@ class GhostOsintWEB:
         info = dbh.scanInstanceGet(id)
 
         if not info:
-            return self.error("Invalid scan ID.")
+            return self.error("无效扫描ID.")
 
         scanname = info[0]
         scantarget = info[1]
 
         scanconfig = dbh.scanConfigGet(id)
         if not scanconfig:
-            return self.error(f"Error loading config from scan: {id}")
+            return self.error(f"扫描加载配置文件出错: {id}")
 
         modlist = scanconfig['_modulesenabled'].split(',')
         if "GO__stor_stdout" in modlist:
@@ -762,12 +762,12 @@ class GhostOsintWEB:
             p.daemon = True
             p.start()
         except Exception as e:
-            self.log.error(f"[-] Scan [{scanId}] failed: {e}")
-            return self.error(f"[-] Scan [{scanId}] failed: {e}")
+            self.log.error(f"[-] 扫描 [{scanId}] 失败: {e}")
+            return self.error(f"[-] 扫描 [{scanId}] 失败: {e}")
 
         # Wait until the scan has initialized
         while dbh.scanInstanceGet(scanId) is None:
-            self.log.info("Waiting for the scan to initialize...")
+            self.log.info("正在等待扫描初始化...")
             time.sleep(1)
 
         raise cherrypy.HTTPRedirect(f"{self.docroot}/scaninfo?id={scanId}", status=302)
@@ -790,7 +790,7 @@ class GhostOsintWEB:
         for id in ids.split(","):
             info = dbh.scanInstanceGet(id)
             if not info:
-                return self.error("Invalid scan ID.")
+                return self.error("无效扫描ID.")
 
             scanconfig = dbh.scanConfigGet(id)
             scanname = info[0]
@@ -807,7 +807,7 @@ class GhostOsintWEB:
             targetType = GhostOsintHelp.targetTypeFromString(scantarget)
             if targetType is None:
                 # Should never be triggered for a re-run scan..
-                return self.error("Invalid target type. Could not recognize it as a target GhostOSINT supports.")
+                return self.error("无效目标类型. 无法识别目标为 GhostOSINT 支持的类型.")
 
             # Start running a new scan
             scanId = GhostOsintHelp.genScanInstanceId()
@@ -816,12 +816,12 @@ class GhostOsintWEB:
                 p.daemon = True
                 p.start()
             except Exception as e:
-                self.log.error(f"[-] Scan [{scanId}] failed: {e}")
-                return self.error(f"[-] Scan [{scanId}] failed: {e}")
+                self.log.error(f"[-] 扫描 [{scanId}] 失败: {e}")
+                return self.error(f"[-] 扫描 [{scanId}] 失败: {e}")
 
             # Wait until the scan has initialized
             while dbh.scanInstanceGet(scanId) is None:
-                self.log.info("Waiting for the scan to initialize...")
+                self.log.info("正在等待扫描初始化...")
                 time.sleep(1)
 
         templ = Template(filename='ghostosint/templates/scanlist.tmpl', lookup=self.lookup)
@@ -856,7 +856,7 @@ class GhostOsintWEB:
         info = dbh.scanInstanceGet(id)
 
         if not info:
-            return self.error("Invalid scan ID.")
+            return self.error("无效扫描ID.")
 
         scanconfig = dbh.scanConfigGet(id)
         scanname = info[0]
@@ -987,7 +987,7 @@ class GhostOsintWEB:
             str: JSON response
         """
         if not id:
-            return self.jsonify_error('404', "No scan specified")
+            return self.jsonify_error('404', "未指定扫描")
 
         dbh = GhostOsintDB(self.config)
         ids = id.split(',')
@@ -995,10 +995,10 @@ class GhostOsintWEB:
         for scan_id in ids:
             res = dbh.scanInstanceGet(scan_id)
             if not res:
-                return self.jsonify_error('404', f"Scan {scan_id} does not exist")
+                return self.jsonify_error('404', f"扫描 {scan_id} 不存在")
 
             if res[5] in ["RUNNING", "STARTING", "STARTED"]:
-                return self.jsonify_error('400', f"Scan {scan_id} is {res[5]}. You cannot delete running scans.")
+                return self.jsonify_error('400', f"扫描 {scan_id} 是 {res[5]}. 你不能删除正在运行的扫描.")
 
         for scan_id in ids:
             dbh.scanInstanceDelete(scan_id)
@@ -1021,7 +1021,7 @@ class GhostOsintWEB:
             HTTPRedirect: redirect to scan settings
         """
         if str(token) != str(self.token):
-            return self.error(f"Invalid token ({token})")
+            return self.error(f"无效Token ({token})")
 
         if configFile:  # configFile seems to get set even if a file isn't uploaded
             if configFile.file:
@@ -1044,13 +1044,13 @@ class GhostOsintWEB:
 
                     allopts = json.dumps(tmp).encode('utf-8')
                 except Exception as e:
-                    return self.error(f"Failed to parse input file. Was it generated from GhostOSINT? ({e})")
+                    return self.error(f"无法分析输入的文件. 文件是 Ghost OSINT生成的吗? ({e})")
 
         # Reset config to default
         if allopts == "RESET":
             if self.reset_settings():
                 raise cherrypy.HTTPRedirect(f"{self.docroot}/opts?updated=1")
-            return self.error("Failed to reset settings")
+            return self.error("无法重置设置")
 
         # Save settings
         try:
@@ -1068,7 +1068,7 @@ class GhostOsintWEB:
             self.config = GhostOsint.configUnserialize(cleanopts, currentopts)
             dbh.configSet(GhostOsint.configSerialize(self.config))
         except Exception as e:
-            return self.error(f"Processing one or more of your inputs failed: {e}")
+            return self.error(f"处理一个或多个输入失败: {e}")
 
         raise cherrypy.HTTPRedirect(f"{self.docroot}/opts?updated=1")
 
@@ -1086,13 +1086,13 @@ class GhostOsintWEB:
         cherrypy.response.headers['Content-Type'] = "application/json; charset=utf-8"
 
         if str(token) != str(self.token):
-            return json.dumps(["ERROR", f"Invalid token ({token})."]).encode('utf-8')
+            return json.dumps(["ERROR", f"无效 Token ({token})."]).encode('utf-8')
 
         # Reset config to default
         if allopts == "RESET":
             if self.reset_settings():
                 return json.dumps(["SUCCESS", ""]).encode('utf-8')
-            return json.dumps(["ERROR", "Failed to reset settings"]).encode('utf-8')
+            return json.dumps(["ERROR", "无法重置设置"]).encode('utf-8')
 
         # Save settings
         try:
@@ -1110,7 +1110,7 @@ class GhostOsintWEB:
             self.config = GhostOsint.configUnserialize(cleanopts, currentopts)
             dbh.configSet(GhostOsint.configSerialize(self.config))
         except Exception as e:
-            return json.dumps(["ERROR", f"Processing one or more of your inputs failed: {e}"]).encode('utf-8')
+            return json.dumps(["ERROR", f"处理一个或多个输入失败: {e}"]).encode('utf-8')
 
         return json.dumps(["SUCCESS", ""]).encode('utf-8')
 
@@ -1146,17 +1146,17 @@ class GhostOsintWEB:
         dbh = GhostOsintDB(self.config)
 
         if fp not in ["0", "1"]:
-            return json.dumps(["ERROR", "No FP flag set or not set correctly."]).encode('utf-8')
+            return json.dumps(["ERROR", "未设置误报标志或设置不正确."]).encode('utf-8')
 
         try:
             ids = json.loads(resultids)
         except Exception:
-            return json.dumps(["ERROR", "No IDs supplied."]).encode('utf-8')
+            return json.dumps(["ERROR", "未提供ID."]).encode('utf-8')
 
         # Cannot set FPs if a scan is not completed
         status = dbh.scanInstanceGet(id)
         if not status:
-            return self.error(f"Invalid scan ID: {id}")
+            return self.error(f"无效扫描ID: {id}")
 
         if status[5] not in ["ABORTED", "FINISHED", "ERROR-FAILED"]:
             return json.dumps([
@@ -1183,7 +1183,7 @@ class GhostOsintWEB:
         if ret:
             return json.dumps(["SUCCESS", ""]).encode('utf-8')
 
-        return json.dumps(["ERROR", "Exception encountered."]).encode('utf-8')
+        return json.dumps(["ERROR", "遇到异常."]).encode('utf-8')
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
@@ -1248,10 +1248,10 @@ class GhostOsintWEB:
         dbh = GhostOsintDB(self.config)
 
         if not query:
-            return self.jsonify_error('400', "Invalid query.")
+            return self.jsonify_error('400', "查询无效.")
 
         if not query.lower().startswith("select"):
-            return self.jsonify_error('400', "Non-SELECTs are unpredictable and not recommended.")
+            return self.jsonify_error('400', "不选择也可能会出错滴.")
 
         try:
             ret = dbh.dbh.execute(query)
@@ -1283,31 +1283,31 @@ class GhostOsintWEB:
         if not scanname:
             if cherrypy.request.headers.get('Accept') and 'application/json' in cherrypy.request.headers.get('Accept'):
                 cherrypy.response.headers['Content-Type'] = "application/json; charset=utf-8"
-                return json.dumps(["ERROR", "Incorrect usage: scan name was not specified."]).encode('utf-8')
+                return json.dumps(["ERROR", "用法不正确: 未指定扫描名称."]).encode('utf-8')
 
-            return self.error("Invalid request: scan name was not specified.")
+            return self.error("请求无效: 未指定扫描名称.")
 
         if not scantarget:
             if cherrypy.request.headers.get('Accept') and 'application/json' in cherrypy.request.headers.get('Accept'):
                 cherrypy.response.headers['Content-Type'] = "application/json; charset=utf-8"
-                return json.dumps(["ERROR", "Incorrect usage: scan target was not specified."]).encode('utf-8')
+                return json.dumps(["ERROR", "用法不正确: 未指定扫描目标."]).encode('utf-8')
 
-            return self.error("Invalid request: scan target was not specified.")
+            return self.error("请求无效: 未指定扫描目标.")
 
         if not typelist and not modulelist and not usecase:
             if cherrypy.request.headers.get('Accept') and 'application/json' in cherrypy.request.headers.get('Accept'):
                 cherrypy.response.headers['Content-Type'] = "application/json; charset=utf-8"
-                return json.dumps(["ERROR", "Incorrect usage: no modules specified for scan."]).encode('utf-8')
+                return json.dumps(["ERROR", "用法不正确: 没有为扫描指定模块."]).encode('utf-8')
 
-            return self.error("Invalid request: no modules specified for scan.")
+            return self.error("请求无效: 未指定扫描模块.")
 
         targetType = GhostOsintHelp.targetTypeFromString(scantarget)
         if targetType is None:
             if cherrypy.request.headers.get('Accept') and 'application/json' in cherrypy.request.headers.get('Accept'):
                 cherrypy.response.headers['Content-Type'] = "application/json; charset=utf-8"
-                return json.dumps(["ERROR", "Unrecognised target type."]).encode('utf-8')
+                return json.dumps(["ERROR", "无法识别的目标类型."]).encode('utf-8')
 
-            return self.error("Invalid target type. Could not recognize it as a target GhostOSINT supports.")
+            return self.error("目标类型无效. 无法识别为其是否是 Ghost OSINT 支持的目标类型.")
 
         # Swap the globalscantable for the database handler
         dbh = GhostOsintDB(self.config)
@@ -1352,9 +1352,9 @@ class GhostOsintWEB:
         if not modlist:
             if cherrypy.request.headers.get('Accept') and 'application/json' in cherrypy.request.headers.get('Accept'):
                 cherrypy.response.headers['Content-Type'] = "application/json; charset=utf-8"
-                return json.dumps(["ERROR", "Incorrect usage: no modules specified for scan."]).encode('utf-8')
+                return json.dumps(["ERROR", "用法不正确: 没有为扫描指定模块."]).encode('utf-8')
 
-            return self.error("Invalid request: no modules specified for scan.")
+            return self.error("请求无效: 未指定扫描模块.")
 
         # Add our mandatory storage module
         if "GO__stor_db" not in modlist:
@@ -1378,13 +1378,13 @@ class GhostOsintWEB:
             p.daemon = True
             p.start()
         except Exception as e:
-            self.log.error(f"[-] Scan [{scanId}] failed: {e}")
-            return self.error(f"[-] Scan [{scanId}] failed: {e}")
+            self.log.error(f"[-] 扫描 [{scanId}] 失败了: {e}")
+            return self.error(f"[-] 扫描 [{scanId}] 失败了: {e}")
 
         # Wait until the scan has initialized
         # Check the database for the scan status results
         while dbh.scanInstanceGet(scanId) is None:
-            self.log.info("Waiting for the scan to initialize...")
+            self.log.info("正在等待扫描初始化...")
             time.sleep(1)
 
         if cherrypy.request.headers.get('Accept') and 'application/json' in cherrypy.request.headers.get('Accept'):
@@ -1405,7 +1405,7 @@ class GhostOsintWEB:
             str: JSON response
         """
         if not id:
-            return self.jsonify_error('404', "No scan specified")
+            return self.jsonify_error('404', "未指定扫描")
 
         dbh = GhostOsintDB(self.config)
         ids = id.split(',')
@@ -1413,18 +1413,18 @@ class GhostOsintWEB:
         for scan_id in ids:
             res = dbh.scanInstanceGet(scan_id)
             if not res:
-                return self.jsonify_error('404', f"Scan {scan_id} does not exist")
+                return self.jsonify_error('404', f"扫描 {scan_id} 不存在")
 
             scan_status = res[5]
 
             if scan_status == "FINISHED":
-                return self.jsonify_error('400', f"Scan {scan_id} has already finished.")
+                return self.jsonify_error('400', f"扫描 {scan_id} 已经完成了.")
 
             if scan_status == "ABORTED":
-                return self.jsonify_error('400', f"Scan {scan_id} has already aborted.")
+                return self.jsonify_error('400', f"扫描 {scan_id} 已经中止了.")
 
             if scan_status != "RUNNING" and scan_status != "STARTING":
-                return self.jsonify_error('400', f"The running scan is currently in the state '{scan_status}', please try again later or restart GhostOSINT.")
+                return self.jsonify_error('400', f"正在运行的扫描当前处于 '{scan_status}', 请稍后重试或重新启动 Ghost OSINT.")
 
         for scan_id in ids:
             dbh.scanInstanceSet(scan_id, status="ABORT-REQUESTED")
@@ -1672,7 +1672,7 @@ class GhostOsintWEB:
             list: scan history
         """
         if not id:
-            return self.jsonify_error('404', "No scan specified")
+            return self.jsonify_error('404', "未指定扫描")
 
         dbh = GhostOsintDB(self.config)
 

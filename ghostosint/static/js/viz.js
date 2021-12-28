@@ -156,7 +156,7 @@ function sf_viz_vbar(targetId, gdata) {
     function buildPopupMessage(data) {
         message = "<table>";
         message += "<tr><td><b>类型:</b></td><td>" + data.name + "</td></tr>";
-        message += "<tr><td><b>独特元素:</b></td><td>" + data.counter + "</td></tr>";
+        message += "<tr><td><b>特殊元素:</b></td><td>" + data.counter + "</td></tr>";
         message += "<tr><td><b>全部元素:</b></td><td>" + data.total+ "</td></tr>";
         message += "</table>";
         return message;
