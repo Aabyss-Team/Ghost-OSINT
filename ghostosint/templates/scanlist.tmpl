@@ -1,0 +1,45 @@
+<%include file="HEADER.tmpl"/>
+    <h2>扫描 &nbsp;<img id="loader" src="${docroot}/static/img/loader.gif"></h2>
+<div id="scancontent">
+% if newscan:
+<div class="alert alert-success">
+ <button type="button" class="close" data-dismiss="alert">&times;</button>
+ <h4>成功!</h4>
+ 扫描 '${newscan}' 已成功启动,重新加载此页面以获取扫描的最新状态.
+</div>
+% endif
+% if rerunscans:
+<div class="alert alert-success">
+ <button type="button" class="close" data-dismiss="alert">&times;</button>
+ <h4>成功!</h4>
+ 已成功将扫描作为单独的实例重新启动,重新加载此页面以获取扫描的最新状态.
+</div>
+% endif
+% if stoppedscan and len(errors) == 0:
+<div class="alert alert-warning">
+ <button type="button" class="close" data-dismiss="alert">&times;</button>
+ <h4>扫描已中止.</h4>
+ 请等待一两分钟,让扫描完全自行关闭.
+</div>
+% endif
+
+% if stoppedscan and len(errors) > 0:
+<div class="alert alert-warning">
+ <button type="button" class="close" data-dismiss="alert">&times;</button>
+ <h4>错误!!</h4>
+ 无法中止部分或全部扫描:<br>
+<ul>
+    % for err in errors:
+        <li>${err}</li>
+    % endfor
+</ul>
+</div>
+
+% endif
+
+<script type='text/javascript' src="${docroot}/static/js/ghostosint.scanlist.js"></script>
+</div>
+
+<iframe class='hidden' id='exportframe'></iframe>
+
+<%include file="FOOTER.tmpl"/>

@@ -1,0 +1,22 @@
+    </div>
+    <footer class="navbar-default navbar-fixed-bottom">
+      <div class="container-fluid text-center footer">
+        <%
+        messages = [
+            "<i class='glyphicon glyphicon-flash'></i>&nbsp;&nbsp;<a target=_new href='https://github.com/GhostWolfTeam/Ghost-OSINT'>快速创建自己的Ghost OSINT.</a>",
+            "<i class='glyphicon glyphicon-phone'></i>&nbsp;&nbsp;<a target=_new href='http://androidhack.cn/'>想尝试通过安卓手机进行渗透测试么?那就来吧!</a>",
+            "<i class='glyphicon glyphicon-list-alt'></i>&nbsp;&nbsp;<a target=_new href='https://www.freebuf.com/author/Snow%E7%8B%BC%E5%95%8A'>想知道我以前写过的文章吗?那就来吧.</a>",
+            "<i class='glyphicon glyphicon-share'></i>&nbsp;&nbsp;<a target=_new href='http://www.aabyss.cn/'>渊龙SEC团队官网哦.</a>",
+            "<i class='glyphicon glyphicon-film'></i>&nbsp;&nbsp;<a target=_new href='https://space.bilibili.com/377818433'>去我的B站看点好康的.</a>",
+
+        ]
+
+        import random
+        message = messages[random.randint(0, len(messages)-1)]
+        %>
+        <span>${message}</span>
+      </div>
+    </footer>
+
+    </body>
+</html>
