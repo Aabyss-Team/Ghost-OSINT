@@ -2,12 +2,6 @@
 # -------------------------------------------------------------------------------
 # Name:        GO_abstractapi
 # Purpose:     Search AbstractAPI for domain, phone and IP address information.
-#
-# Author:      Krishnasis Mandal <krishnasis@hotmail.com>
-#
-# Created:     29/07/2021
-# Copyright:   (c) Steve Micallef
-# Licence:     GPL
 # -------------------------------------------------------------------------------
 
 import json
@@ -21,7 +15,7 @@ class GO_abstractapi(GhostOsintPlugin):
 
     meta = {
         'name': "AbstractAPI",
-        'summary': "Look up domain, phone and IP address information from AbstractAPI.",
+        'summary': "通过AbstractAPI查找域名,电话或IP地址信息.",
         'flags': ["apikey"],
         'useCases': ["Passive", "Footprint", "Investigate"],
         'categories': ["Search Engines"],
@@ -32,15 +26,15 @@ class GO_abstractapi(GhostOsintPlugin):
                 "https://app.abstractapi.com/",
             ],
             'apiKeyInstructions': [
-                "Visit https://app.abstractapi.com/users/signup",
-                "Register a free account",
-                "Visit https://app.abstractapi.com/api/",
-                "Visit each API page and click on 'Try it out'",
-                "Your API Key will be listed under 'This is your private API key, specific to this API.'",
+                "访问 https://app.abstractapi.com/users/signup",
+                "注册免费账户",
+                "访问 https://app.abstractapi.com/api/",
+                "访问每个API页面并单击 'Try it out'",
+                "你的API密钥将在 'This is your private API key, specific to this API.'",
             ],
             'favIcon': "https://app.abstractapi.com/favicon.ico",
             'logo': "https://app.abstractapi.com/logo192.png",
-            'description': "Abstract provides powerful APIs to help you enrich any user experience or automate any workflow."
+            'description': "Abstract 提供强大的 API 帮助你丰富用户体验和任何自动化流程."
         }
     }
 
@@ -51,9 +45,9 @@ class GO_abstractapi(GhostOsintPlugin):
     }
 
     optdescs = {
-        "companyenrichment_api_key": "AbstractAPI Company Enrichment API key.",
-        "phonevalidation_api_key": "AbstractAPI Phone Validation API key.",
-        "ipgeolocation_api_key": "AbstractAPI IP Geolocation API key.",
+        "companyenrichment_api_key": "AbstractAPI 企业 API key.",
+        "phonevalidation_api_key": "AbstractAPI 电话验证 API key.",
+        "ipgeolocation_api_key": "AbstractAPI IP地理定位 API key.",
     }
 
     results = None

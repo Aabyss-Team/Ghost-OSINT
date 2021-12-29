@@ -3,12 +3,6 @@
 # Name:         GO_adblock
 # Purpose:      GhostOSINT plug-in to test if external/internally linked pages
 #               would be blocked by AdBlock Plus.
-#
-# Author:      Steve Micallef <steve@binarypool.com>
-#
-# Created:     22/09/2014
-# Copyright:   (c) Steve Micallef 2014
-# Licence:     GPL
 # -------------------------------------------------------------------------------
 
 import adblockparser
@@ -19,8 +13,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_adblock(GhostOsintPlugin):
 
     meta = {
-        'name': "AdBlock Check",
-        'summary': "Check if linked pages would be blocked by AdBlock Plus.",
+        'name': "AdBlock 检查",
+        'summary': "检查链接页面是否会被 AdBlock Plus 阻止.",
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
         'dataSource': {
@@ -34,15 +28,15 @@ class GO_adblock(GhostOsintPlugin):
             ],
             'favIcon': "https://www.google.com/s2/favicons?domain=https://adblockplus.org/en/",
             'logo': "https://adblockplus.org/img/navbar-logo.svg",
-            'description': "Adblock Plus is a free extension that allows you to customize your web experience."
-            "You can block annoying ads, disable tracking and lots more."
-            "It’s available for all major desktop browsers and for your mobile devices.\n"
-            "Block ads that interrupt your browsing experience."
-            "Say goodbye to video ads, pop-ups, flashing banners and more."
-            "Blocking these annoyances means pages load faster.\n"
-            "With Adblock Plus avoiding tracking and malware is easy."
-            "Blocking intrusive ads reduces the risk of \"malvertising\" infections."
-            "Blocking tracking stops companies following your online activity."
+            'description': "Adblock Plus 是一个免费扩展插件，允许你自定义WEB体验."
+            "你可以阻止烦人的广告, 禁用跟踪等等."
+            "适用于所有主要的桌面浏览器和移动设备.\n"
+            "阻止或中断你浏览的广告."
+            "告别视频广告, 弹出窗口, 横幅广告等."
+            "阻止这些玩意加载, 你的页面加载也会变得更加快速.\n"
+            "使用 Adblock Plus 可轻松避免跟踪和恶意软件."
+            "阻止侵入性广告可降低 \"恶意\" 感染的风险."
+            "阻止跟踪会阻止公司跟踪你的在线活动."
         }
     }
 
@@ -53,8 +47,8 @@ class GO_adblock(GhostOsintPlugin):
     }
 
     optdescs = {
-        "blocklist": "AdBlockPlus block list.",
-        'cacheperiod': "Hours to cache list data before re-fetching.",
+        "blocklist": "AdBlock Plus 阻止列表.",
+        'cacheperiod': "之前缓存数据提取.",
     }
 
     results = None

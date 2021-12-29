@@ -3,12 +3,6 @@
 # Name:        GO_abusech
 # Purpose:     Check if a host/domain, IP address or netblock is malicious according
 #              to Abuse.ch.
-#
-# Author:       steve@binarypool.com
-#
-# Created:     14/12/2013
-# Copyright:   (c) Steve Micallef, 2013
-# Licence:     GPL
 # -------------------------------------------------------------------------------
 
 from netaddr import IPAddress, IPNetwork
@@ -20,7 +14,7 @@ class GO_abusech(GhostOsintPlugin):
 
     meta = {
         'name': "abuse.ch",
-        'summary': "Check if a host/domain, IP address or netblock is malicious according to Abuse.ch.",
+        'summary': "通过 Abuse.ch 检查主机或域名,IP地址和网段是否是恶意地址.",
         'flags': [],
         'useCases': ["Passive", "Investigate"],
         'categories': ["Reputation Systems"],
@@ -33,22 +27,20 @@ class GO_abusech(GhostOsintPlugin):
                 "https://urlhaus.abuse.ch/",
             ],
             'apiKeyInstructions': [
-                "Visit https://bazaar.abuse.ch/api#api_key",
-                "Login using a Twitter Account",
-                "Navigate to 'Account Settings'",
-                "The API key is listed under 'Your API Key'",
-                "Visit https://urlhaus.abuse.ch/api/",
-                "Login using a Twitter Account at https://urlhaus.abuse.ch/login/",
-                "Navigate to https://urlhaus.abuse.ch/api/#account",
-                "The API Key is listed under 'API-Key'"
+                "访问 https://bazaar.abuse.ch/api#api_key",
+                "使用 Twitter 登录",
+                "导航到 'Account Settings'",
+                "API密钥将在 'Your API Key'",
+                "访问 https://urlhaus.abuse.ch/api/",
+                "使用 Twitter 账号登录 https://urlhaus.abuse.ch/login/",
+                "导航到 https://urlhaus.abuse.ch/api/#account",
+                "API密钥将在 'API-Key'"
             ],
             'favIcon': "https://abuse.ch/favicon.ico",
             'logo': "https://abuse.ch/images/abusech.svg",
-            'description': "abuse.ch is operated by a random swiss guy fighting malware for non-profit, "
-            "running a couple of projects helping internet service providers and "
-            "network operators protecting their infrastructure from malware.\n"
-            "IT-Security researchers, vendors and law enforcement agencies rely on data from abuse.ch,"
-            "trying to make the internet a safer place.",
+            'description': "abuse.ch 由瑞士人运营,为非盈利组织的对抗恶意软件, "
+            "运营着帮助互联网提供商和网络运营商保护其基础设施免受恶意软件侵害的项目"
+            "网络安全研究人员,供应商和执法机构可以通过 abuse.ch 使互联网成为一个更安全的地方.",
         }
     }
 
@@ -66,14 +58,14 @@ class GO_abusech(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'abusefeodoip': "Enable abuse.ch Feodo IP check?",
-        'abusesslblip': "Enable abuse.ch SSL Backlist IP check?",
-        'abuseurlhaus': "Enable abuse.ch URLhaus check?",
-        'checkaffiliates': "Apply checks to affiliates?",
-        'checkcohosts': "Apply checks to sites found to be co-hosted on the target's IP?",
-        'cacheperiod': "Hours to cache list data before re-fetching.",
-        'checknetblocks': "Report if any malicious IPs are found within owned netblocks?",
-        'checksubnets': "Check if any malicious IPs are found within the same subnet of the target?"
+        'abusefeodoip': "启用 abuse.ch 恶意IP地址检查?",
+        'abusesslblip': "启用 abuse.ch SSL反向列表IP地址检查?",
+        'abuseurlhaus': "启用 abuse.ch URLhaus 检查?",
+        'checkaffiliates': "应用检查企业?",
+        'checkcohosts': "应用于检查目标IP地址上托管的站点?",
+        'cacheperiod': "之前缓存数据提取.",
+        'checknetblocks': "报告在 NetBlocks中发现的任何恶意IP地址?",
+        'checksubnets': "检查目标的子网内是否存在恶意地址?"
     }
 
     results = None

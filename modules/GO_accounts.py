@@ -3,12 +3,6 @@
 # Name:         GO_accounts
 # Purpose:      Identify the existence of a given acount on various sites thanks
 #               to Micah Hoffman's (https://github.com/WebBreacher) list.
-#
-# Author:      Steve Micallef <steve@binarypool.com>
-#
-# Created:     18/02/2015
-# Copyright:   (c) Steve Micallef 2015
-# Licence:     GPL
 # -------------------------------------------------------------------------------
 
 import json
@@ -24,8 +18,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_accounts(GhostOsintPlugin):
 
     meta = {
-        'name': "Account Finder",
-        'summary': "Look for possible associated accounts on nearly 200 websites like Ebay, Slashdot, reddit, etc.",
+        'name': "账户查找",
+        'summary': "在Ebay, Slashdot, reddit, 等200多个网站上查找可能关联的用户.",
         'useCases': ["Footprint", "Passive"],
         'categories': ["Social Media"]
     }
@@ -42,12 +36,12 @@ class GO_accounts(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "ignorenamedict": "Don't bother looking up names that are just stand-alone first names (too many false positives).",
-        "ignoreworddict": "Don't bother looking up names that appear in the dictionary.",
-        "musthavename": "The username must be mentioned on the social media page to consider it valid (helps avoid false positives).",
-        "userfromemail": "Extract usernames from e-mail addresses at all? If disabled this can reduce false positives for common usernames but for highly unique usernames it would result in missed accounts.",
-        "permutate": "Look for the existence of account name permutations. Useful to identify fraudulent social media accounts or account squatting.",
-        "_maxthreads": "Maximum threads"
+        "ignorenamedict": "不去查找独立名字 (误报实在是太多了).",
+        "ignoreworddict": "不去查字典中的名字.",
+        "musthavename": "必须在社交媒体页面上提及用户名以考虑其有效性 (有助于避免误报).",
+        "userfromemail": "是否从电子邮件中提取用户名? 如果禁用, 可以减少常见用户名的误报，但对于高度唯一的用户名则会丢失.",
+        "permutate": "查找是否存在账户名称并列, 用于识别社交媒体诈骗或账户占用.",
+        "_maxthreads": "最大线程数"
     }
 
     results = None

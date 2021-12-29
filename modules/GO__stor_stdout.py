@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
 # -------------------------------------------------------------------------------
 # Name:         GO_stor_stdout
-# Purpose:      GhostOSINT plug-in for dumping events to standard output.
-#
-# Author:      Steve Micallef <steve@binarypool.com>
-#
-# Created:     22/10/2018
-# Copyright:   (c) Steve Micallef 2018
-# Licence:     GPL
+# Purpose:      GhostOSINT plugin for dumping events to standard output.
 # -------------------------------------------------------------------------------
 
 import json
@@ -18,8 +12,8 @@ from ghostosint import GhostOsintPlugin
 class GO__stor_stdout(GhostOsintPlugin):
 
     meta = {
-        'name': "Command-line output",
-        'summary': "Dumps output to standard out. Used for when a GhostOSINT scan is run via the command-line."
+        'name': "命令行输出",
+        'summary': "将内容输出,用于运行命令行Ghost OSINT使用."
     }
 
     _priority = 0

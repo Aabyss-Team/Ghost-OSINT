@@ -2,12 +2,6 @@
 # -------------------------------------------------------------------------------
 # Name:        GO_abuseipdb
 # Purpose:     Check if an IP address is malicious according to AbuseIPDB.com.
-#
-# Author:      steve@binarypool.com
-#
-# Created:     06/09/2018
-# Copyright:   (c) Steve Micallef, 2018
-# Licence:     GPL
 # -------------------------------------------------------------------------------
 
 import json
@@ -23,7 +17,7 @@ class GO_abuseipdb(GhostOsintPlugin):
 
     meta = {
         'name': "AbuseIPDB",
-        'summary': "Check if an IP address is malicious according to AbuseIPDB.com blacklist.",
+        'summary': "根据 AbuseIPDB.com 黑名单检查IP地址是否为恶意地址.",
         'flags': ["apikey"],
         'useCases': ["Passive", "Investigate"],
         'categories': ["Reputation Systems"],
@@ -39,19 +33,18 @@ class GO_abuseipdb(GhostOsintPlugin):
                 "https://www.abuseipdb.com/categories"
             ],
             'apiKeyInstructions': [
-                "Visit https://www.abuseipdb.com/pricing",
-                "Select the plan required",
-                "Register a new account with an email",
-                "Navigate to https://www.abuseipdb.com/account/api",
-                "The API Key is listed under 'Keys'"
+                "访问 https://www.abuseipdb.com/pricing",
+                "选择计划",
+                "通过电子邮件注册一个新账户",
+                "导航到 https://www.abuseipdb.com/account/api",
+                "API密钥将在 'Keys'"
             ],
             'favIcon': "https://www.abuseipdb.com/favicon.ico",
             'logo': "https://www.abuseipdb.com/img/abuseipdb.png.pagespeed.ce.CI8T6WsXU7.png",
-            'description': "AbuseIPDB is a project dedicated to helping combat the spread of hackers,"
-            "spammers, and abusive activity on the internet.\n"
-            "Our mission is to help make Web safer by providing a central blacklist for"
-            "webmasters, system administrators, and other interested parties to"
-            "report and find IP addresses that have been associated with malicious activity online."
+            'description': "AbuseIPDB 是一个致力于帮助打击黑客攻击,"
+            "垃圾邮件, 以及互联网活动滥用的项目.\n"
+            "我们的任务是通过网站管理员, 系统管理员, 和其他相关地方"
+            "提供一个黑名单来报告和查找恶意IP地址, 从而帮助提高网络的安全性"
         }
     }
 
@@ -63,10 +56,10 @@ class GO_abuseipdb(GhostOsintPlugin):
     }
 
     optdescs = {
-        'api_key': "AbuseIPDB.com API key.",
-        'confidenceminimum': "The minimium AbuseIPDB confidence level to require.",
-        'checkaffiliates': "Apply checks to affiliates?",
-        'limit': 'Maximum number of results to retrieve.',
+        'api_key': "AbuseIPDB.com API 密钥.",
+        'confidenceminimum': "AbuseIPDB 最小可信度.",
+        'checkaffiliates': "应用检查企业?",
+        'limit': '要检索的最大结果数.',
     }
 
     results = None

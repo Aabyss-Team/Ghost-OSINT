@@ -1,14 +1,8 @@
 # -*- coding: utf-8 -*-
 # -------------------------------------------------------------------------------
 # Name:        GO_abusix
-# Purpose:     GhostOSINT plug-in for looking up whether IPs/Netblocks/Domains
+# Purpose:     GhostOSINT plugin for looking up whether IPs/Netblocks/Domains
 #              appear in the Abusix Mail Intelligence blacklist.
-#
-# Author:      <bcoles@gmail.com>
-#
-# Created:     2021-10-17
-# Copyright:   (c) bcoles 2021
-# Licence:     GPL
 # -------------------------------------------------------------------------------
 
 import ipaddress
@@ -21,8 +15,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_abusix(GhostOsintPlugin):
 
     meta = {
-        'name': "Abusix Mail Intelligence",
-        'summary': "Check if a netblock or IP address is in the Abusix Mail Intelligence blacklist.",
+        'name': "Abusix Mail 情报",
+        'summary': "检查网段或IP地址是否在 Abusix 邮件智能黑名单中.",
         'flags': ['apikey'],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -35,16 +29,16 @@ class GO_abusix(GhostOsintPlugin):
                 "https://docs.abusix.com/105725-detailed-list-information/ami%2Freturn-codes",
             ],
             'apiKeyInstructions': [
-                "Visit https://app.abusix.com/signup",
-                "Register a free account",
-                "Browse to 'Account Settings' page",
-                "The API key is listed on the 'Email protection' page."
+                "访问 https://app.abusix.com/signup",
+                "注册一个免费用户",
+                "浏览到 'Account Settings' 页面",
+                "API密钥将在 'Email protection' 页面上."
             ],
             'logo': "https://abusix.com/wp-content/uploads/2020/10/Footer_logo.png",
-            'description': "Abusix Mail Intelligence is an innovative set of blocklists (RBL/DNSBL) "
-            "that adds real-time threat data to your existing email protection. "
-            "Considered as the first line of defense, blocklists help to prevent email-borne threats "
-            "such as spam and malware from entering your network."
+            'description': "Abusix 智能邮件是一套全新的区块列表(RBL/DNSBL) "
+            "可将实时的威胁数据添加到现有的电子邮件保护中. "
+            "被视为第一道防线的区块列表有助于防止垃圾邮件 "
+            "和恶意软件等电子邮件的传播威胁到你的网络."
         }
     }
 
@@ -61,15 +55,15 @@ class GO_abusix(GhostOsintPlugin):
     }
 
     optdescs = {
-        'api_key': "Abusix Mail Intelligence API key.",
-        'checkaffiliates': "Apply checks to affiliates?",
-        'checkcohosts': "Apply checks to sites found to be co-hosted on the target's IP?",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxv6netblock': "If looking up owned netblocks, the maximum IPv6 netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of for blacklisting?",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxv6subnet': "If looking up subnets, the maximum IPv6 subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
+        'api_key': "Abusix 智能邮件 API 密钥.",
+        'checkaffiliates': "应用检查企业?",
+        'checkcohosts': "应用检查于目标IP地址上托管的站点?",
+        'netblocklookup': "在被视为你的目标所有的网段上查找同一目标子域或域名上可能被列入黑名单的主机的所有IP?",
+        'maxnetblock': "如果查询网段则设置网段最小的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxv6netblock': "如果查询IPV6网段则设置网段最小的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'subnetlookup': "查找目标子网上的所有IP地址是否在黑名单中?",
+        'maxsubnet': "如果查询网段则设置网段最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxv6subnet': "如果查询IPV6网段则设置网段最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
     }
 
     results = None

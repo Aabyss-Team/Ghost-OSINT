@@ -7,7 +7,7 @@
 # Author:      Steve Micallef <steve@binarypool.com>
 #
 # Created:     25/03/2012
-# Copyright:   (c) Steve Micallef 2012
+# Copyright:   (c) Snow Wolf 2021
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 

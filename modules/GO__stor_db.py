@@ -1,14 +1,8 @@
 # -*- coding: utf-8 -*-
 # -------------------------------------------------------------------------------
 # Name:         GO_stor_db
-# Purpose:      GhostOSINT plug-in for storing events to the local GhostOSINT
+# Purpose:      GhostOSINT plugin for storing events to the local GhostOSINT
 #               SQLite database.
-#
-# Author:      Steve Micallef <steve@binarypool.com>
-#
-# Created:     14/05/2012
-# Copyright:   (c) Steve Micallef 2012
-# Licence:     GPL
 # -------------------------------------------------------------------------------
 
 from ghostosint import GhostOsintPlugin
@@ -17,8 +11,8 @@ from ghostosint import GhostOsintPlugin
 class GO__stor_db(GhostOsintPlugin):
 
     meta = {
-        'name': "Storage",
-        'summary': "Stores scan results into the back-end GhostOSINT database. You will need this."
+        'name': "存储",
+        'summary': "将扫描结果储存到 GhostOSINT 数据库中."
     }
 
     _priority = 0
@@ -31,7 +25,7 @@ class GO__stor_db(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'maxstorage': "Maximum bytes to store for any piece of information retrieved (0 = unlimited.)"
+        'maxstorage': "为检索到的任何信息储存最大字节数 (0 为无限.)"
     }
 
     def setup(self, sfc, userOpts=dict()):
