@@ -70,7 +70,7 @@ class GO_accounts(GhostOsintPlugin):
 
         content = self.GhostOsint.cacheGet("sfaccounts", 48)
         if content is None:
-            url = "https://raw.githubusercontent.com/WebBreacher/WhatsMyName/master/web_accounts_list.json"
+            url = "https://raw.githubusercontent.com/GhostWolfTeam/WhatsMyName/master/web_accounts_list.json"
             data = self.GhostOsint.fetchUrl(url, useragent="GhostOSINT")
 
             if data['content'] is None:
