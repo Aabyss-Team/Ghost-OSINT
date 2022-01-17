@@ -20,7 +20,7 @@ class GO_neutrinoapi(GhostOsintPlugin):
 
     meta = {
         'name': "NeutrinoAPI",
-        'summary': "Search NeutrinoAPI for phone location information, IP address information, and host reputation.",
+        'summary': "通过 NeutrinoAPI 搜索电话位置信息、IP地址信息和主机的信誉度.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -35,14 +35,14 @@ class GO_neutrinoapi(GhostOsintPlugin):
                 "https://www.neutrinoapi.com/api/host-reputation/",
             ],
             'apiKeyInstructions': [
-                "Visit https://www.neutrinoapi.com/",
-                "Sign up for a free account",
-                "Click on 'My Account'",
-                "The API key is listed under 'Master Key'"
+                "访问 https://www.neutrinoapi.com/",
+                "注册一个免费账户",
+                "点击 'My Account'",
+                "API 密钥将在 'Master Key'"
             ],
             'favIcon': "https://www.neutrinoapi.com/favicon.png",
             'logo': "https://www.neutrinoapi.com/favicon.png",
-            'description': "Neutrino API - The general-purpose API - Build smarter applications."
+            'description': "Neutrino API - 通用 API - 构建智能的应用程序."
         }
     }
 
@@ -55,9 +55,9 @@ class GO_neutrinoapi(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'user_id': "NeutrinoAPI user ID.",
-        'api_key': "NeutrinoAPI API key.",
-        'timeout': "Query timeout, in seconds."
+        'user_id': "NeutrinoAPI 用户 ID.",
+        'api_key': "NeutrinoAPI API 密钥.",
+        'timeout': "查询超时（秒）."
     }
 
     results = None

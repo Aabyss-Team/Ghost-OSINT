@@ -22,7 +22,7 @@ class GO_trashpanda(GhostOsintPlugin):
 
     meta = {
         'name': "Trashpanda",
-        'summary': "Queries Trashpanda to gather intelligence about mentions of target in pastesites",
+        'summary': "查询 Trashpanda 以收集有关项目中提及目标的情报",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Leaks, Dumps and Breaches"],
@@ -33,12 +33,12 @@ class GO_trashpanda(GhostOsintPlugin):
                 "http://api.got-hacked.wtf:5580/help"
             ],
             'apiKeyInstructions': [
-                "Follow the guide at https://got-hacked.wtf/"
+                "遵循指南 https://got-hacked.wtf/"
             ],
             'favIcon': "https://got-hacked.wtf/wp-content/uploads/2020/07/cropped-IMG_7619.jpg",
             'logo': "https://got-hacked.wtf/wp-content/uploads/2020/07/cropped-IMG_7619.jpg",
-            'description': "The bot searches different paste sites for leaked credentials."
-            "The API itself gives access to all unique credentials the bot ever detected.",
+            'description': "该 bot 搜索不同的粘贴站点以查找泄漏的凭据."
+            "API本身允许访问bot检测到的所有唯一凭据.",
         }
     }
 
@@ -50,8 +50,8 @@ class GO_trashpanda(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key_username': "Trashpanda API Username",
-        'api_key_password': 'Trashpanda API Password',
+        'api_key_username': "Trashpanda API 用户名",
+        'api_key_password': 'Trashpanda API 密码',
     }
 
     results = None

@@ -22,8 +22,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_citadel(GhostOsintPlugin):
 
     meta = {
-        'name': "Leak-Lookup",
-        'summary': "Searches Leak-Lookup.com's database of breaches.",
+        'name': "泄露信息查找",
+        'summary': "查找 Leak-Lookup.com 数据库中的数据泄露.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Leaks, Dumps and Breaches"],
@@ -35,23 +35,18 @@ class GO_citadel(GhostOsintPlugin):
                 "https://leak-lookup.com/databases"
             ],
             'apiKeyInstructions': [
-                "Visit https://leak-lookup.com",
-                "Register an account",
-                "Login to your account",
-                "Click on 'Account'",
-                "Click on 'API'",
-                "The API key is listed under 'API Key'"
+                "访问 https://leak-lookup.com",
+                "注册一个账户",
+                "登录你的账户",
+                "点击 'Account'",
+                "点击 'API'",
+                "API 密钥将在 'API Key'"
             ],
             'favIcon': "https://leak-lookup.com/favicon.png",
             'logo': "https://leak-lookup.com/favicon.png",
-            'description': "Leak-Lookup allows you to search across thousands of data breaches "
-            "to stay on top of credentials that may have been compromised in the wild.\n"
-            "The creators came together when they realized they had a vast trove of data "
-            "that could be of great value to pen-testers seeking weaknesses in client passwords "
-            "and those concerned about which of their credentials have been leaked into the wild.\n"
-            "Always looking forward, Leak-Lookup invests all of its profits back into securing the "
-            "latest data breaches and leaks / dumps as they become available, ensuring that "
-            "as well as historical data, Leak-Lookup becomes a field leader in credential monitoring.",
+            'description': "Leak-Lookup 允许您搜索数以千计的数据泄露，以掌握可能已泄露的凭据，让您能够轻松主动地掌握最新的数据泄露.\n"
+            "当创造者们意识到他们拥有大量的数据时，这些数据对于那些寻找客户端密码弱点的渗透测试人员以及那些关心他们的哪些凭据被泄露到了在野的人来说可能是非常有价值的.\n"
+            "始终向前看，Leak-Lookup 将其所有利润投入到保护最新的数据泄露和泄漏转储，确保泄漏查找与历史数据一样成为凭据监控领域的领导者.",
         }
     }
 
@@ -61,8 +56,8 @@ class GO_citadel(GhostOsintPlugin):
         "timeout": 60
     }
     optdescs = {
-        "api_key": "Leak-Lookup API key. Without this you're limited to the public API.",
-        "timeout": "Custom timeout due to heavy traffic at times."
+        "api_key": "Leak-Lookup API 密钥.",
+        "timeout": "自定义超时时间."
     }
 
     results = None

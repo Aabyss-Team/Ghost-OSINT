@@ -22,7 +22,7 @@ class GO_botscout(GhostOsintPlugin):
 
     meta = {
         'name': "BotScout",
-        'summary': "Searches BotScout.com's database of spam-bot IP addresses and e-mail addresses.",
+        'summary': "搜索 botscout.com 数据库中的垃圾邮件机器人IP地址和电子邮件地址.",
         'flags': ["apikey"],
         'useCases': ["Passive", "Investigate"],
         'categories': ["Reputation Systems"],
@@ -36,18 +36,15 @@ class GO_botscout(GhostOsintPlugin):
                 "http://botscout.com/corp_users.htm"
             ],
             'apiKeyInstructions': [
-                "Visit http://botscout.com/getkey.htm",
-                "Register a free account",
-                "The API key will be emailed to your account"
+                "访问 http://botscout.com/getkey.htm",
+                "注册一个免费账户",
+                "API 密钥将通过电子邮件发送到你的帐户"
             ],
             'favIcon': "https://botscout.com/favicon.ico",
             'logo': "http://botscout.com/image/bslogo.gif",
-            'description': "BotScout helps prevent automated web scripts, known as \"bots\", "
-            "from registering on forums, polluting databases, spreading spam, "
-            "and abusing forms on web sites. We do this by tracking the names, IPs, "
-            "and email addresses that bots use and logging them as unique signatures for future reference. "
-            "We also provide a simple yet powerful API that you can use to test forms "
-            "when they're submitted on your site.",
+            'description': "BotScout有助于防止被称为“bots”的自动化web脚本在论坛上注册、污染数据库、传播垃圾邮件以及在网站上滥用表单. "
+            "我们通过跟踪机器人使用的名称、IP地址和电子邮件地址，并将它们作为唯一的签名记录下来，以备将来参考. "
+            "我们还提供了一个简单但功能强大的API，您可以在表单提交到站点时使用它来测试表单.",
         }
     }
 
@@ -55,7 +52,7 @@ class GO_botscout(GhostOsintPlugin):
         "api_key": ""
     }
     optdescs = {
-        "api_key": "Botscout.com API key. Without this you will be limited to 100 look-ups per day."
+        "api_key": "Botscout.com API 密钥. 否则每天只能查询一百次."
     }
 
     results = None

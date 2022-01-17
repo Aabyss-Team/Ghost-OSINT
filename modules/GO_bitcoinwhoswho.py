@@ -18,8 +18,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 
 class GO_bitcoinwhoswho(GhostOsintPlugin):
     meta = {
-        'name': "Bitcoin Who's Who",
-        'summary': "Check for Bitcoin addresses against the Bitcoin Who's Who database of suspect/malicious addresses.",
+        'name': "Bitcoin 名人录",
+        'summary': "根据比特币名人录数据库检查该比特币地址是否是可疑的或恶意的.",
         'flags': ["apikey"],
         'useCases': ["Passive", "Investigate"],
         'categories': ["Reputation Systems"],
@@ -30,18 +30,17 @@ class GO_bitcoinwhoswho(GhostOsintPlugin):
                 "https://bitcoinwhoswho.com/api"
             ],
             'apiKeyInstructions': [
-                "Visit https://bitcoinwhoswho.com/signup",
-                "Register a free account",
-                "Verify your email and sign into your account",
-                "Visit https://bitcoinwhoswho.com/api/register and request an API Key",
-                "Wait for a few days, you'll receive it to your email"
+                "访问 https://bitcoinwhoswho.com/signup",
+                "注册一个免费账户",
+                "验证你的电子邮件并登录账户",
+                "访问 https://bitcoinwhoswho.com/api/register 并请求 API 密钥",
+                "等待几天，邮件就来了"
             ],
             'favIcon': "https://bitcoinwhoswho.com/public/images/ico/favicon.ico",
             'logo': "https://bitcoinwhoswho.com/public/images/logo2.png",
             'description': (
-                "Bitcoin Who's Who is dedicated to profiling the extraordinary members of the bitcoin "
-                "ecosystem.Our goal is to help you verify a bitcoin address owner and avoid a bitcoin "
-                "scam or fraud."
+                "比特币名人录致力于介绍比特币生态系统的杰出成员.我们的目标是帮助你验证比特币地址所有者并避免比特币的 "
+                "骗局和欺诈."
             ),
         }
     }
@@ -51,7 +50,7 @@ class GO_bitcoinwhoswho(GhostOsintPlugin):
     }
 
     optdescs = {
-        "api_key": "Bitcoin Who's Who API Key."
+        "api_key": "Bitcoin 名人录 API 密钥."
     }
 
     results = None

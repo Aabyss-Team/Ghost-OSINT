@@ -24,7 +24,7 @@ class GO_darksearch(GhostOsintPlugin):
 
     meta = {
         'name': "Darksearch",
-        'summary': "Search the Darksearch.io Tor search engine for mentions of the target domain.",
+        'summary': "在 Darksearch.io Tor 中搜索目标域名的提及.",
         'flags': ["tor"],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["Search Engines"],
@@ -37,10 +37,10 @@ class GO_darksearch(GhostOsintPlugin):
             ],
             'favIcon': "https://darksearch.io/favicons/favicon-64.png",
             'logo': "https://darksearch.io/images/darksearch-logo-02.svg?366834f96a6d3988f0f11f99dba27bf4",
-            'description': "The 1st real Dark Web search engine.\n"
-            "Our DarkWeb search engine is completely free.\n"
-            "Access the results directly, without the need to install Tor.\n"
-            "Our API is available for free to automate your research.",
+            'description': "第一个真正的黑暗网络搜索引擎.\n"
+            "我们的DarkWeb搜索引擎是完全免费的.\n"
+            "直接访问结果，无需安装Tor.\n"
+            "我们的API可免费用于自动化您的研究.",
         }
     }
 
@@ -53,9 +53,9 @@ class GO_darksearch(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'fetchlinks': "Fetch the darknet pages (via TOR, if enabled) to verify they mention your target.",
-        'max_pages': "Maximum number of pages of results to fetch.",
-        'fullnames': "Search for human names?"
+        'fetchlinks': "获取暗网页面（如果启用，则通过Tor）以验证它们是否提到了您的目标.",
+        'max_pages': "提取结果最大页数.",
+        'fullnames': "搜索人名?"
     }
 
     results = None

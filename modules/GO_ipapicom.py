@@ -21,7 +21,7 @@ class GO_ipapicom(GhostOsintPlugin):
 
     meta = {
         'name': "ipapi.com",
-        'summary': "Queries ipapi.com to identify geolocation of IP Addresses using ipapi.com API",
+        'summary': "通过 ipapi.com API 以识别IP地址的地理位置",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Real World"],
@@ -32,17 +32,15 @@ class GO_ipapicom(GhostOsintPlugin):
                 "https://ipapi.com/documentation"
             ],
             'apiKeyInstructions': [
-                "Visit https://ipapi.com/",
-                "Register a free account",
-                "Browse to https://ipapi.com/dashboard",
-                "Your API Key will be listed under Your API Access Key",
+                "访问 https://ipapi.com/",
+                "注册一个免费账户",
+                "浏览 https://ipapi.com/dashboard",
+                "你的API密钥将列在你的API访问密钥下",
             ],
             'favIcon': "https://ipapi.com/site_images/ipapi_shortcut_icon.ico",
             'logo': "https://ipapi.com/site_images/ipapi_icon.png",
-            'description': "ipapi provides an easy-to-use API interface allowing customers "
-            "to look various pieces of information IPv4 and IPv6 addresses are associated with. "
-            "For each IP address processed, the API returns more than 45 unique data points, "
-            "such as location data, connection data, ISP information, time zone, currency and security assessment data.",
+            'description': "ipapi 提供了一个易于使用的 API接口 ，允许客户查看与IPv4和IPv6地址相关的各种信息. "
+            "对于处理的每个IP地址，API返回45个以上的唯一数据点，例如位置数据、连接数据、ISP信息、时区、货币和安全评估数据.",
         }
     }
 
@@ -53,7 +51,7 @@ class GO_ipapicom(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key': "ipapi.com API Key.",
+        'api_key': "ipapi.com API 密钥.",
     }
 
     results = None

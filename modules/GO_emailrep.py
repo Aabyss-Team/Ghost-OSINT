@@ -20,7 +20,7 @@ class GO_emailrep(GhostOsintPlugin):
 
     meta = {
         'name': "EmailRep",
-        'summary': "Search EmailRep.io for email address reputation.",
+        'summary': "在 EmailRep.io 搜索电子邮件的信誉度.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -31,17 +31,15 @@ class GO_emailrep(GhostOsintPlugin):
                 "https://docs.emailrep.io/"
             ],
             'apiKeyInstructions': [
-                "Visit https://emailrep.io/free",
-                "Request a free API Key",
-                "The API key will be sent to registered email account on approval"
+                "访问 https://emailrep.io/free",
+                "请求一个免费的 API 密钥",
+                "API密钥将在批准后发送到注册的电子邮件帐户"
             ],
             'favIcon': "https://emailrep.io/assets/img/favicon.png",
             'logo': "https://emailrep.io/assets/img/logo-light.png",
-            'description': "Illuminate the \"reputation\" behind an email address.\n"
-            "EmailRep uses hundreds of factors like domain age, traffic rankings, "
-            "presence on social media sites, professional networking sites, personal connections, "
-            "public records, deliverability, data breaches, dark web credential leaks, "
-            "phishing emails, threat actor emails, and more to answer these types of questions.",
+            'description': "阐明电子邮件背后的 \"信誉\".\n"
+            "EmailRep 使用数百种因素来回答这些类型的问题，如域名年龄、流量排名、社交媒体网站、专业社交网站、"
+            "个人关系、公共记录、可交付性、数据泄露、暗网网络凭据泄露、网络钓鱼电子邮件、威胁参与者电子邮件等.",
         }
     }
 
@@ -50,7 +48,7 @@ class GO_emailrep(GhostOsintPlugin):
     }
 
     optdescs = {
-        'api_key': 'EmailRep API key.',
+        'api_key': 'EmailRep API 密钥.',
     }
 
     results = None

@@ -20,7 +20,7 @@ class GO_sociallinks(GhostOsintPlugin):
 
     meta = {
         'name': "Social Links",
-        'summary': "Queries SocialLinks.io to gather intelligence from social media platforms and dark web.",
+        'summary': "通过查询 SocialLinks.io 以从社交媒体平台和暗网收集情报.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Real World"],
@@ -31,13 +31,12 @@ class GO_sociallinks(GhostOsintPlugin):
                 "https://docs.osint.rest/"
             ],
             'apiKeyInstructions': [
-                "Visit https://sociallinks.io/",
-                "Register an account",
+                "访问 https://sociallinks.io/",
+                "注册一个账户",
             ],
             'favIcon': "https://static.tildacdn.com/tild6563-6633-4533-b362-663333656461/favicon.ico",
             'logo': "https://static.tildacdn.com/tild3935-6136-4330-b561-643034663032/LogoSL.svg",
-            'description': "Social Links provides instruments for OSINT methods "
-            "that are used by the world's leading investigation and law enforcement agencies",
+            'description': "Social Links 为世界领先的调查和执法机构使用的OSINT方法提供工具.",
         }
     }
 
@@ -48,7 +47,7 @@ class GO_sociallinks(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key': "Social Links API Key",
+        'api_key': "Social Links API 密钥",
     }
 
     results = None

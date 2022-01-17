@@ -21,7 +21,7 @@ class GO_sorbs(GhostOsintPlugin):
 
     meta = {
         'name': "SORBS",
-        'summary': "Query the SORBS database for open relays, open proxies, vulnerable servers, etc.",
+        'summary': "查询 SORBS 数据库中的开放中继、开放代理、易受攻击的服务器等.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -35,12 +35,10 @@ class GO_sorbs(GhostOsintPlugin):
             ],
             'favIcon': "https://www.google.com/s2/favicons?domain=http://www.sorbs.net/",
             'logo': "http://www.sorbs.net/img/pix.gif",
-            'description': "The Spam and Open Relay Blocking System (SORBS) was conceived as an anti-spam project "
-            "where a daemon would check \"on-the-fly\", all servers from which it received email "
-            "to determine if that email was sent via various types of proxy and open-relay servers.\n"
-            "The SORBS (Spam and Open Relay Blocking System) provides free access to its "
-            "DNS-based Block List (DNSBL) to effectively block email from more than 12 million host servers "
-            "known to disseminate spam, phishing attacks and other forms of malicious email.",
+            'description': "垃圾邮件和开放中继阻止系统（SORBS）被认为是一个反垃圾邮件项目，"
+            "其中一个守护进程将'动态'检查接收电子邮件的所有服务器，以确定该电子邮件是否通过各种类型的代理服务器和开放中继服务器发送.\n"
+            "SORBS（垃圾邮件和开放中继阻止系统）提供对其基于DNS的阻止列表（DNSBL）的免费访问，"
+            "有效阻止来自已知传播垃圾邮件、网络钓鱼攻击和其他形式恶意电子邮件的1200多万台主机服务器的电子邮件.",
         }
     }
 
@@ -54,10 +52,10 @@ class GO_sorbs(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of for blacklisting?",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)"
+        'netblocklookup': "在目标的网段上查找所有 IP 地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'subnetlookup': "查找目标子网上的所有IP地址是否在黑名单中?",
+        'maxsubnet': "如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)"
     }
 
     results = None

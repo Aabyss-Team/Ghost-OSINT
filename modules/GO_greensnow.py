@@ -19,7 +19,7 @@ class GO_greensnow(GhostOsintPlugin):
 
     meta = {
         'name': "Greensnow",
-        'summary': "Check if a netblock or IP address is malicious according to greensnow.co.",
+        'summary': "根据 greensnow.co 检查网段或IP地址是否是恶意的.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -32,10 +32,8 @@ class GO_greensnow(GhostOsintPlugin):
             ],
             'favIcon': "https://greensnow.co/favicon.ico",
             'logo': "https://greensnow.co/img/logo.png",
-            'description': "GreenSnow is a team consisting of the best specialists in computer security, "
-            "we harvest a large number of IPs from different computers located around the world. "
-            "GreenSnow is comparable with SpamHaus.org for attacks of any kind except for spam. "
-            "Our list is updated automatically and you can withdraw at any time your IP address if it has been listed.",
+            'description': "Greensow是一个由计算机安全方面的专家组成的团队，我们从世界各地的不同计算机上获取大量IP地址. "
+            "我们的列表会自动更新，如果你的IP地址已列出，你可以随时撤回.",
         }
     }
 
@@ -47,10 +45,10 @@ class GO_greensnow(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliate IP addresses?",
-        'cacheperiod': "Hours to cache list data before re-fetching.",
-        'checknetblocks': "Report if any malicious IPs are found within owned netblocks?",
-        'checksubnets': "Check if any malicious IPs are found within the same subnet of the target?"
+        'checkaffiliates': "对附属IP地址应用检查?",
+        'cacheperiod': "之前缓存数据提取.",
+        'checknetblocks': "报告网段中是否发现任何恶意IP地址?",
+        'checksubnets': "检查在目标的同一子网内是否发现的任何恶意 IP 地址?"
     }
 
     results = None

@@ -21,7 +21,7 @@ class GO_recondev(GhostOsintPlugin):
 
     meta = {
         'name': "Recon.dev",
-        'summary': "Search Recon.dev for subdomains.",
+        'summary': "通过 Recon.dev 搜索子域名.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Passive DNS"],
@@ -30,13 +30,11 @@ class GO_recondev(GhostOsintPlugin):
             'model': "FREE_AUTH_UNLIMITED",
             "references": ["https://recon.dev/api/docs"],
             "apiKeyInstructions": [
-                "Visit https://recon.dev/",
-                "Register an account",
-                "Visit https://recon.dev/account and use the authentication token provided",
+                "访问 https://recon.dev/",
+                "注册一个账户",
+                "访问 https://recon.dev/account 并使用提供的身份验证令牌",
             ],
-            "description": "At Recon.Dev our mission is to build an easy "
-            "to use platform for hackers to easily discover a targets "
-            "assets across the entire public internet.",
+            "description": "Recon.Dev 的任务是为黑客建立一个易于使用的平台，以便在整个公共互联网上轻松发现目标资产.",
         }
     }
 
@@ -47,9 +45,9 @@ class GO_recondev(GhostOsintPlugin):
     }
 
     optdescs = {
-        "api_key": "Recon.dev API key.",
-        "verify": "Verify identified domains still resolve to the associated specified IP address.",
-        "delay": "Delay between requests, in seconds."
+        "api_key": "Recon.dev API 密钥.",
+        "verify": "验证标识的域名是否仍解析为关联的指定IP地址.",
+        "delay": "请求之间的延迟（秒）."
     }
 
     results = None

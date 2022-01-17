@@ -19,7 +19,7 @@ class GO_ipqualityscore(GhostOsintPlugin):
 
     meta = {
         "name": "IPQualityScore",
-        "summary": "Determine if target is malicious using IPQualityScore API",
+        "summary": "使用 IPQualityScore API 确认目标是否是恶意的",
         'flags': ["apikey"],
         "useCases": ["Investigate", "Passive"],
         "categories": ["Reputation Systems"],
@@ -30,17 +30,15 @@ class GO_ipqualityscore(GhostOsintPlugin):
                 "https://www.ipqualityscore.com/documentation/overview"
             ],
             "apiKeyInstructions": [
-                "Visit https://www.ipqualityscore.com/",
-                "Click on 'Plans'",
-                "Register a free account",
-                "Visit https://www.ipqualityscore.com/user/settings",
-                "Your API key will be listed under 'API Key'"
+                "访问 https://www.ipqualityscore.com/",
+                "点击 'Plans'",
+                "注册一个免费账户",
+                "访问 https://www.ipqualityscore.com/user/settings",
+                "API 密钥将在 'API Key'"
             ],
             "favIcon": "https://www.ipqualityscore.com/templates/img/icons/fav/favicon-32x32.png",
             "logo": "https://www.ipqualityscore.com/templates/img/logo.png",
-            "description": "IPQualityScore's suite of fraud prevention tools automate quality control "
-            "to prevent bots, fake accounts, fraudsters, suspicious transactions, "
-            "& malicious users without interrupting the user experience.",
+            "description": "IPQualityScore 是一套欺诈预防工具自动化质量控制，以防止机器人、伪造帐户、欺诈者、可疑交易和恶意用户，而不会中断用户体验.",
         },
     }
 
@@ -51,9 +49,9 @@ class GO_ipqualityscore(GhostOsintPlugin):
     }
 
     optdescs = {
-        "api_key": "IPQualityScore API Key",
-        "abuse_score_threshold": "Minimum abuse score for target to be considered malicious (0 - 100)",
-        "strictness": "Depth of the reputation checks to be performed on the target (0 - 2)"
+        "api_key": "IPQualityScore API 密钥",
+        "abuse_score_threshold": "视为恶意的目标的最低滥用分数（0-100）",
+        "strictness": "要对目标执行的信誉检查的深度（0-2）"
     }
 
     errorState = False

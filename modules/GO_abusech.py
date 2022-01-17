@@ -3,6 +3,11 @@
 # Name:        GO_abusech
 # Purpose:     Check if a host/domain, IP address or netblock is malicious according
 #              to Abuse.ch.
+# Author:      Steve Micallef <steve@binarypool.com>
+#
+# Created:     14/07/2019
+# Copyright:   (c) Steve Micallef 2019
+# Licence:     GPL
 # -------------------------------------------------------------------------------
 
 from netaddr import IPAddress, IPNetwork
@@ -61,11 +66,11 @@ class GO_abusech(GhostOsintPlugin):
         'abusefeodoip': "启用 abuse.ch 恶意IP地址检查?",
         'abusesslblip': "启用 abuse.ch SSL反向列表IP地址检查?",
         'abuseurlhaus': "启用 abuse.ch URLhaus 检查?",
-        'checkaffiliates': "应用检查企业?",
+        'checkaffiliates': "检查关联公司?",
         'checkcohosts': "应用于检查目标IP地址上托管的站点?",
         'cacheperiod': "之前缓存数据提取.",
-        'checknetblocks': "报告在 NetBlocks中发现的任何恶意IP地址?",
-        'checksubnets': "检查目标的子网内是否存在恶意地址?"
+        'checknetblocks': "报告在网段中发现的任何恶意IP地址?",
+        'checksubnets': "检查目标的子网内是否存在恶意IP地址?"
     }
 
     results = None

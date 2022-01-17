@@ -20,7 +20,7 @@ class GO_bgpview(GhostOsintPlugin):
 
     meta = {
         'name': "BGPView",
-        'summary': "Obtain network information from BGPView API.",
+        'summary': "通过 BGPView API 获取网络信息.",
         'flags': [],
         'useCases': ["Investigate", "Footprint", "Passive"],
         'categories': ["Search Engines"],
@@ -33,7 +33,7 @@ class GO_bgpview(GhostOsintPlugin):
             ],
             'favIcon': "https://bgpview.io/favicon-32x32.png",
             'logo': "https://bgpview.io/assets/logo.png",
-            'description': "BGPView is a simple API allowing consumers to view all sort of analytics data about the current state and structure of the internet.",
+            'description': "BGP View 是一个简单的API，允许用户查看有关互联网当前状态和结构的各种分析数据.",
         }
     }
 

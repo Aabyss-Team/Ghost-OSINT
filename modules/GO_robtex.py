@@ -22,7 +22,7 @@ class GO_robtex(GhostOsintPlugin):
 
     meta = {
         'name': "Robtex",
-        'summary': "Search Robtex.com for hosts sharing the same IP.",
+        'summary': "在 Robtex.com 上搜索共享相同IP地址的主机.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Passive DNS"],
@@ -34,10 +34,8 @@ class GO_robtex(GhostOsintPlugin):
             ],
             'favIcon': "https://www.robtex.com/favicon.ico",
             'logo': "https://www.robtex.com/favicon.ico",
-            'description': "Robtex is used for various kinds of research of IP numbers, Domain names, etc\n"
-            "Robtex uses various sources to gather public information about "
-            "IP numbers, domain names, host names, Autonomous systems, routes etc. "
-            "It then indexes the data in a big database and provide free access to the data.",
+            'description': "Robtex 用于IP号码、域名等的各种研究. Robtex使用各种来源收集有关IP号码、域名、主机名、自治系统、路由等的公共信息. "
+            "然后，它将数据索引到一个大数据库中，并提供对数据的免费访问.",
         }
     }
 
@@ -56,15 +54,15 @@ class GO_robtex(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'verify': "Verify co-hosts are valid by checking if they still resolve to the shared IP.",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible co-hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxv6netblock': "If looking up owned netblocks, the maximum IPv6 netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'cohostsamedomain': "Treat co-hosted sites on the same target domain as co-hosting?",
-        'maxcohost': "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting.",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of?",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxv6subnet': "If looking up subnets, the maximum IPv6 subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
+        'verify': "通过检查共享主机是否仍解析为共享IP地址来验证它们是否有效.",
+        'netblocklookup': "在被目标的网段上查找所有IP地址，以查找同一目标在子域名或域名上可能的协作主机?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxv6netblock': "如果查找拥有的网段，则为查找其中所有IP的最大IPv6网段大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'cohostsamedomain': "将同一目标域上的托管站点视为共同托管?",
+        'maxcohost': "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的.",
+        'subnetlookup': "查找目标所属子网上的所有IP地址?",
+        'maxsubnet': "如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxv6subnet': "如果查找子网，则为用于查找其中所有IP的最大IPv6子网大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
     }
 
     results = None

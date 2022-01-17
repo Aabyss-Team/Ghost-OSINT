@@ -20,7 +20,7 @@ class GO_focsec(GhostOsintPlugin):
 
     meta = {
         'name': "Focsec",
-        'summary': "Look up IP address information from Focsec.",
+        'summary': "从 Focsec 中查找 IP地址信息.",
         'flags': ['apikey'],
         'useCases': ["Passive", "Footprint", "Investigate"],
         'categories': ["Search Engines"],
@@ -31,14 +31,14 @@ class GO_focsec(GhostOsintPlugin):
                 "https://docs.focsec.com/#ip",
             ],
             "apiKeyInstructions": [
-                "Visit https://focsec.com/signup",
-                "Register an account",
-                "Visit https://focsec.com/account/dashboard and use the API key provided",
+                "访问 https://focsec.com/signup",
+                "注册一个账户",
+                "访问 https://focsec.com/account/dashboard 并使用提供的 API 密钥",
             ],
             'favIcon': "https://focsec.com/static/favicon.png",
             'logo': "https://focsec.com/static/web/images/logo.png",
-            'description': "Our API lets you know if a user's IP address is associated with a VPN, Proxy, TOR or malicious bots."
-            "Take your applications security to the next level by detecting suspicious activity early on."
+            'description': "我们的 API让 您知道用户的 IP地址 是否与VPN、代理、TOR或恶意机器人程序相关联."
+            "通过及早检测可疑活动，将应用程序的安全性提升到一个新的水平."
         }
     }
 
@@ -47,7 +47,7 @@ class GO_focsec(GhostOsintPlugin):
     }
 
     optdescs = {
-        "api_key": "Focsec API Key.",
+        "api_key": "Focsec API 密钥.",
     }
 
     results = None

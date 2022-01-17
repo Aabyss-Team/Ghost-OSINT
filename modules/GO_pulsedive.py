@@ -26,7 +26,7 @@ class GO_pulsedive(GhostOsintPlugin):
 
     meta = {
         'name': "Pulsedive",
-        'summary': "Obtain information from Pulsedive's API.",
+        'summary': "从 Pulsedive 的 API 获取信息.",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -37,16 +37,15 @@ class GO_pulsedive(GhostOsintPlugin):
                 "https://pulsedive.com/api/"
             ],
             'apiKeyInstructions': [
-                "Visit https://pulsedive.com",
-                "Register a free account",
-                "Navigate to https://pulsedive.com/account",
-                "The API key is listed under 'Your API Key'"
+                "访问 https://pulsedive.com",
+                "注册一个免费账户",
+                "导航到 https://pulsedive.com/account",
+                "API 密钥将在 'Your API Key'"
             ],
             'favIcon': "https://pulsedive.com/favicon.ico?v=3.9.72",
             'logo': "https://pulsedive.com/img/logo.svg",
-            'description': "Why check 30 different solutions for varying snippets of data when you can just check one? "
-            "Pulsedive enriches IOCs but also fetches article summaries from Wikipedia and "
-            "even posts from Reddit and the infosec blogosphere to provide contextual information for threats.",
+            'description': "为什么只需检查一个数据片段就可以检查30个不同的解决方案? "
+            "Pulsedive丰富了IOC，但也从维基百科获取文章摘要，甚至从Reddit和infosec博客圈获取帖子，以提供威胁的上下文信息.",
         }
     }
 
@@ -67,16 +66,16 @@ class GO_pulsedive(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "Pulsedive API Key.",
-        "delay": "Delay between requests, in seconds.",
-        "age_limit_days": "Ignore any records older than this many days. 0 = unlimited.",
-        "checkaffiliates": "Apply checks to affiliates?",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum IPv4 netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxv6netblock': "If looking up owned netblocks, the maximum IPv6 netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of for blacklisting?",
-        'maxsubnet': "If looking up subnets, the maximum IPv4 subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxv6subnet': "If looking up subnets, the maximum IPv6 subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
+        "api_key": "Pulsedive API 密钥.",
+        "delay": "请求之间的延迟（秒）.",
+        "age_limit_days": "忽略该天数之前的任何记录. 0 = 无限.",
+        "checkaffiliates": "检查关联企业?",
+        'netblocklookup': "在目标的网段上查找所有 IP 地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查找拥有的网段，则为查找其中所有IP的最大网段大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxv6netblock': "如果查找拥有的网段，则为查找其中所有IP的最大IPv6网段大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'subnetlookup': "查找目标子网上的所有IP地址是否在黑名单中?",
+        'maxsubnet': "如果查找子网，则为用于查找其中所有IP的最大IPv4子网大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxv6subnet': "如果查找子网，则为用于查找其中所有IP的最大IPv6子网大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
     }
 
     results = None

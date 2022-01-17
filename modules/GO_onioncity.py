@@ -20,7 +20,7 @@ class GO_onioncity(GhostOsintPlugin):
 
     meta = {
         'name': "Onion.link",
-        'summary': "Search Tor 'Onion City' search engine for mentions of the target domain using Google Custom Search.",
+        'summary': "使用 Google 自定义搜索通过 Tor 搜索引擎在 'Onion City' 中搜索与目标域名相关的信息 .",
         'flags': ["apikey", "tor"],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["Search Engines"],
@@ -33,15 +33,15 @@ class GO_onioncity(GhostOsintPlugin):
                 "https://cse.google.com/cse"
             ],
             'apiKeyInstructions': [
-                "Visit https://developers.google.com/custom-search/v1/introduction",
-                "Register a free Google account",
-                "Click on 'Get A Key'",
-                "Connect a Project",
-                "The API Key will be listed under 'YOUR API KEY'"
+                "访问 https://developers.google.com/custom-search/v1/introduction",
+                "注册一个免费的 Google 账户",
+                "点击 'Get A Key'",
+                "连接项目",
+                "API 密钥将在 'YOUR API KEY'"
             ],
             'favIcon': "https://www.google.com/s2/favicons?domain=https://onion.link",
             'logo': "https://onion.link/images/OC.png",
-            'description': "Enabling search and global access to Tor's onionsites.",
+            'description': "允许搜索和全局访问 Tor 的onionsites.",
         }
     }
 
@@ -55,10 +55,10 @@ class GO_onioncity(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "Google API Key for Onion.link search.",
-        "cse_id": "Google Custom Search Engine ID.",
-        'fetchlinks': "Fetch the darknet pages (via TOR, if enabled) to verify they mention your target.",
-        'fullnames': "Search for human names?"
+        "api_key": "Google API 密钥用于 Onion.link 搜索.",
+        "cse_id": "Google 自定义搜索ID.",
+        'fetchlinks': "获取暗网页面（如果启用则通过 Tor ）以验证它们是否与目标相关.",
+        'fullnames': "搜索人名?"
     }
 
     # Target

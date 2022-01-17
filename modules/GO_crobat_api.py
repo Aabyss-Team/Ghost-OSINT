@@ -23,7 +23,7 @@ class GO_crobat_api(GhostOsintPlugin):
 
     meta = {
         'name': "Crobat API",
-        'summary': "Search Crobat API for subdomains.",
+        'summary': "通过 Crobat API 搜索子域名.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Passive DNS"],
@@ -31,8 +31,7 @@ class GO_crobat_api(GhostOsintPlugin):
             'website': "https://sonar.omnisint.io/",
             'model': "FREE_NOAUTH_UNLIMITED",
             'logo': "https://sonar.omnisint.io/img/crobat.png",
-            'description': "The entire Rapid7 Sonar DNS dataset indexed,"
-                " available at your fingertips.",
+            'description': "整个Rapid7 Sonar DNS数据集已编制索引，触手可及.",
         }
     }
 
@@ -43,9 +42,9 @@ class GO_crobat_api(GhostOsintPlugin):
     }
 
     optdescs = {
-        "verify": "DNS resolve each identified subdomain.",
-        "max_pages": "Maximum number of pages of results to fetch.",
-        "delay": "Delay between requests, in seconds."
+        "verify": "DNS解析每个已识别的子域.",
+        "max_pages": "提取结果最大页数.",
+        "delay": "请求之间的延迟（秒）."
     }
 
     results = None

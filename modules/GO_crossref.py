@@ -21,8 +21,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_crossref(GhostOsintPlugin):
 
     meta = {
-        'name': "Cross-Referencer",
-        'summary': "Identify whether other domains are associated ('Affiliates') of the target by looking for links back to the target site(s).",
+        'name': "交叉引用",
+        'summary': "通过查找返回目标站点的链接，确定其他域是否与目标相关联（“附属机构”）.",
         'flags': [],
         'useCases': ["Footprint"],
         'categories': ["Crawling and Scanning"]
@@ -33,7 +33,7 @@ class GO_crossref(GhostOsintPlugin):
     }
 
     optdescs = {
-        "checkbase": "Check the base URL of the potential affiliate if no direct affiliation found?"
+        "checkbase": "如果未找到直接附属关系，请检查潜在附属机构的基本 Url地址 ?"
     }
 
     fetched = None

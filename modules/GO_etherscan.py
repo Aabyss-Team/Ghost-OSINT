@@ -21,7 +21,7 @@ class GO_etherscan(GhostOsintPlugin):
 
     meta = {
         'name': "Etherscan",
-        'summary': "Queries etherscan.io to find the balance of identified ethereum wallet addresses.",
+        'summary': "通过 etherscan.io 查询已识别的以太坊钱包地址的余额.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Public Registries"],
@@ -32,16 +32,16 @@ class GO_etherscan(GhostOsintPlugin):
                 "https://etherscan.io/apis"
             ],
             'apiKeyInstructions': [
-                "Visit https://etherscan.io",
-                "Register a free account",
-                "Browse to https://etherscan.io/myapikey",
-                "Click on Add beside API Key",
-                "Your API Key will be listed under API Key Token",
+                "访问 https://etherscan.io",
+                "注册一个免费账户",
+                "浏览 https://etherscan.io/myapikey",
+                "点击 API 密钥旁边的 'Add'",
+                "你的 API 密钥将列在 API 密钥令牌下",
             ],
             'favIcon': "https://etherscan.io/images/favicon3.ico",
             'logo': "https://etherscan.io/images/brandassets/etherscan-logo-circle.png",
-            'description': "Etherscan allows you to explore and search the Ethereum blockchain "
-            "for transactions, addresses, tokens, prices and other activities taking place on Ethereum (ETH)",
+            'description': "Etherscan允许您探索和搜索以太坊区块链中的交易 "
+            ", 查找在以太坊（ETH）上发生的交易、地址、代币、价格和其他活动.",
         }
     }
 
@@ -53,8 +53,8 @@ class GO_etherscan(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key': "API Key for etherscan.io",
-        'pause': "Number of seconds to wait between each API call."
+        'api_key': "etherscan.io API 密钥",
+        'pause': "每次API调用之间等待的秒数."
     }
 
     results = None

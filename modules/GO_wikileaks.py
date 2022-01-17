@@ -19,7 +19,7 @@ class GO_wikileaks(GhostOsintPlugin):
 
     meta = {
         'name': "Wikileaks",
-        'summary': "Search Wikileaks for mentions of domain names and e-mail addresses.",
+        'summary': "在维基解密中搜索域名和电子邮件地址.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Leaks, Dumps and Breaches"],
@@ -32,9 +32,8 @@ class GO_wikileaks(GhostOsintPlugin):
             ],
             'favIcon': "https://wikileaks.org/IMG/favicon.ico",
             'logo': "https://wikileaks.org/IMG/favicon.ico",
-            'description': "WikiLeaks specializes in the analysis and publication of large datasets of censored "
-            "or otherwise restricted official materials involving war, spying and corruption. "
-            "It has so far published more than 10 million documents and associated analyses.",
+            'description': "WikiLeaks 专门从事分析和出版涉及战争、间谍和腐败的经过审查或其他限制的官方材料的大型数据集. "
+            "迄今为止，它已经发表了1000多万份文件和相关分析.",
         }
     }
 
@@ -46,8 +45,8 @@ class GO_wikileaks(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'daysback': "How many days back to consider a leak valid for capturing. 0 = unlimited.",
-        'external': "Include external leak sources such as Associated Twitter accounts, Snowden + Hammond Documents, Cryptome Documents, ICWatch, This Day in WikiLeaks Blog and WikiLeaks Press, WL Central."
+        'daysback': "多少天后才能认为泄漏对捕获有效. 0 = 无限.",
+        'external': "包括外部泄密源，如相关的Twitter账户、Snowden+Hammond文件、Cryptome文件、ICWatch、This Day in WikiLeaks博客和WikiLeaks Press、WL Central."
     }
 
     results = None

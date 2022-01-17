@@ -21,8 +21,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_dnszonexfer(GhostOsintPlugin):
 
     meta = {
-        'name': "DNS Zone Transfer",
-        'summary': "Attempts to perform a full DNS zone transfer.",
+        'name': "DNS 区域传输",
+        'summary': "尝试执行完整DNS区域传输.",
         'flags': [],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["DNS"]
@@ -33,7 +33,7 @@ class GO_dnszonexfer(GhostOsintPlugin):
     }
 
     optdescs = {
-        "timeout": "Timeout in seconds"
+        "timeout": "超时时间（秒）"
     }
 
     events = None

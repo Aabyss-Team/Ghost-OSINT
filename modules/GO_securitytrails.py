@@ -20,7 +20,7 @@ class GO_securitytrails(GhostOsintPlugin):
 
     meta = {
         'name': "SecurityTrails",
-        'summary': "Obtain Passive DNS and other information from SecurityTrails",
+        'summary': "通过 SecurityTrails 获取目标的被动DNS信息和其他信息",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -32,17 +32,16 @@ class GO_securitytrails(GhostOsintPlugin):
                 "https://docs.securitytrails.com/reference#general"
             ],
             'apiKeyInstructions': [
-                "Visit https://securitytrails.com",
-                "Register a free account",
-                "Navigate to https://securitytrails.com/app/account/credentials",
-                "The API key is listed under 'API Key'"
+                "访问 https://securitytrails.com",
+                "注册一个免费账户",
+                "导航到 https://securitytrails.com/app/account/credentials",
+                "API 密钥将在 'API Key'"
             ],
             'favIcon': "https://securitytrails.com/user/themes/lego/favicon/apple-touch-icon.png",
             'logo': "https://securitytrails.com/user/themes/lego/favicon/apple-touch-icon.png",
-            'description': "Data for Security companies, researchers and teams. Fast, always up API that "
-            "allows you to access current and historical data. "
-            "The API is paid via a simple pricing structure that allows you to embed our data into your applications.\n"
-            "Search nearly 3 billion historical and current WHOIS data and WHOIS changes.",
+            'description': "安全公司、研究人员和团队的数据. 快速、始终处于运行状态的API，允许您访问当前和历史数据. "
+            "API 是通过一种简单的定价结构交付的，它允许您将我们的数据嵌入到您的应用程序中.\n"
+            "搜索近30亿历史和当前 WHOIS 数据以及 WHOIS 的变化.",
         }
     }
 
@@ -56,10 +55,10 @@ class GO_securitytrails(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "SecurityTrails API key.",
-        "verify": "Verify co-hosts are valid by checking if they still resolve to the shared IP.",
-        "cohostsamedomain": "Treat co-hosted sites on the same target domain as co-hosting?",
-        'maxcohost': "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting."
+        "api_key": "SecurityTrails API 密钥.",
+        "verify": "通过检查共享主机是否仍解析为共享IP地址来验证它们是否有效.",
+        "cohostsamedomain": "将同一目标域上的托管站点视为共同托管?",
+        'maxcohost': "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的."
     }
 
     # Be sure to completely clear any class variables in setup()

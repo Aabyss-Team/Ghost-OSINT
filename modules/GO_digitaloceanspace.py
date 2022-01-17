@@ -21,8 +21,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_digitaloceanspace(GhostOsintPlugin):
 
     meta = {
-        'name': "Digital Ocean Space Finder",
-        'summary': "Search for potential Digital Ocean Spaces associated with the target and attempt to list their contents.",
+        'name': "Digital Ocean 空间查找",
+        'summary': "搜索与目标相关的潜在数字海洋空间，并尝试列出其内容.",
         'flags': [],
         'useCases': ["Footprint", "Passive"],
         'categories': ["Crawling and Scanning"],
@@ -41,9 +41,9 @@ class GO_digitaloceanspace(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "endpoints": "Different Digital Ocean locations to check where spaces may exist.",
-        "suffixes": "List of suffixes to append to domains tried as space names",
-        "_maxthreads": "Maximum threads"
+        "endpoints": "不同的数字海洋位置，以检查可能存在的空间.",
+        "suffixes": "要作为空间名称附加到域名的后缀列表",
+        "_maxthreads": "最大线程数"
     }
 
     results = None

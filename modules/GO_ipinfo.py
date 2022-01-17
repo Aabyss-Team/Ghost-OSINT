@@ -20,7 +20,7 @@ class GO_ipinfo(GhostOsintPlugin):
 
     meta = {
         'name': "IPInfo.io",
-        'summary': "Identifies the physical location of IP addresses identified using ipinfo.io.",
+        'summary': "使用 ipinfo.io 查找IP地址的物理位置.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Real World"],
@@ -31,16 +31,15 @@ class GO_ipinfo(GhostOsintPlugin):
                 "https://ipinfo.io/developers"
             ],
             'apiKeyInstructions': [
-                "Visit https://ipinfo.io/",
-                "Sign up for a free account",
-                "Navigate to https://ipinfo.io/account",
-                "The API key is listed above 'is your access token'"
+                "访问 https://ipinfo.io/",
+                "注册一个免费账户",
+                "导航到 https://ipinfo.io/account",
+                "API 密钥将在 'is your access token'"
             ],
             'favIcon': "https://ipinfo.io/static/favicon-96x96.png?v3",
             'logo': "https://ipinfo.io/static/deviceicons/android-icon-96x96.png",
-            'description': "The Trusted Source for IP Address Data.\n"
-            "With IPinfo, you can pinpoint your users’ locations, customize their experiences, "
-            "prevent fraud, ensure compliance, and so much more.",
+            'description': "IP地址数据的受信任源.\n"
+            "使用 IPinfo，你可以精确定位用户的位置、定制用户体验、防止欺诈、确保法规遵从性，等等.",
         }
     }
 
@@ -49,7 +48,7 @@ class GO_ipinfo(GhostOsintPlugin):
         "api_key": ""
     }
     optdescs = {
-        "api_key": "Ipinfo.io access token."
+        "api_key": "Ipinfo.io 的 token."
     }
 
     results = None

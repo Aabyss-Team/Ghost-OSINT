@@ -23,7 +23,7 @@ class GO_whatcms(GhostOsintPlugin):
 
     meta = {
         'name': "WhatCMS",
-        'summary': "Check web technology using WhatCMS.org API.",
+        'summary': "使用 whatcms.org API 检查Web技术.",
         'flags': ["apikey", "slow"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Content Analysis"],
@@ -35,14 +35,14 @@ class GO_whatcms(GhostOsintPlugin):
                 "https://whatcms.org/Documentation"
             ],
             'apiKeyInstructions': [
-                "Visit https://whatcms.org/API",
-                "Register a free account",
-                "Navigate to https://whatcms.org/APIKey",
-                "The API key is listed under 'Your API Key'"
+                "访问 https://whatcms.org/API",
+                "注册一个免费账户",
+                "导航到 https://whatcms.org/APIKey",
+                "API 密钥将在 'Your API Key'"
             ],
             'favIcon': "https://whatcms.org/themes/what_bootstrap4/favicon.ico",
             'logo': "https://whatcms.org/themes/what_bootstrap4/favicon.ico",
-            'description': "Detect what CMS a site is using.",
+            'description': "检测站点正在使用的CMS.",
         }
     }
 
@@ -61,9 +61,9 @@ class GO_whatcms(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key': 'WhatCMS API key',
-        'timeout': 'Query timeout, in seconds.',
-        'delay': 'Delay between requests, in seconds.'
+        'api_key': 'WhatCMS API 密钥',
+        'timeout': '查询超时（秒）.',
+        'delay': '请求之间的延迟（秒）.'
     }
 
     results = None

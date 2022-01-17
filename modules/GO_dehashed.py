@@ -20,7 +20,7 @@ class GO_dehashed(GhostOsintPlugin):
 
     meta = {
         'name': "Dehashed",
-        'summary': "Gather breach data from Dehashed API.",
+        'summary': "通过 Dehashed API 搜索违规数据.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Leaks, Dumps and Breaches"],
@@ -31,19 +31,17 @@ class GO_dehashed(GhostOsintPlugin):
                 "https://www.dehashed.com/docs"
             ],
             'apiKeyInstructions': [
-                "Visit https://www.dehashed.com/register"
-                "Register a free account",
-                "Visit https://www.dehashed.com/profile",
-                "Your API key is listed under 'API Key'",
+                "访问 https://www.dehashed.com/register"
+                "注册一个免费账户",
+                "访问 https://www.dehashed.com/profile",
+                "API 密钥将在 'API Key'",
             ],
             'favIcon': "https://www.dehashed.com/assets/img/favicon.ico",
             'logo': "https://www.dehashed.com/assets/img/logo.png",
-            'description': "Have you been compromised? "
-            "DeHashed provides free deep-web scans and protection against credential leaks. "
-            "A modern personal asset search engine created for "
-            "security analysts, journalists, security companies, "
-            "and everyday people to help secure accounts and provide insight on compromised assets. "
-            "Free breach alerts & breach notifications.",
+            'description': "你已经妥协了吗? "
+            "DeHashed 提供免费的 Deep-Web 扫描和凭证泄漏保护. "
+            "为安全分析师、记者、安全公司和普通人创建的现代个人资产搜索引擎，帮助保护帐户并提供对受损资产的洞察. "
+            "免费违约警报和违约通知.",
         }
     }
 
@@ -58,11 +56,11 @@ class GO_dehashed(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key_username': 'Dehashed username.',
-        'api_key': 'Dehashed API key.',
-        'per_page': 'Maximum number of results per page.(Max: 10000)',
-        'max_pages': 'Maximum number of pages to fetch(Max: 10 pages)',
-        'pause': 'Number of seconds to wait between each API call.'
+        'api_key_username': 'Dehashed 用户名.',
+        'api_key': 'Dehashed API 密钥.',
+        'per_page': '每页最大结果数.(最大: 10000)',
+        'max_pages': '要提取的最大页数(最大: 10 pages)',
+        'pause': '每个API调用之间等待的秒数.'
     }
 
     results = None

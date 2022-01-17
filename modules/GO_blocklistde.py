@@ -19,7 +19,7 @@ class GO_blocklistde(GhostOsintPlugin):
 
     meta = {
         'name': "blocklist.de",
-        'summary': "Check if a netblock or IP is malicious according to blocklist.de.",
+        'summary': "根据blocklist.de检查网段或IP地址是否是恶意的.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -35,10 +35,8 @@ class GO_blocklistde(GhostOsintPlugin):
             ],
             'favIcon': "http://www.blocklist.de/templates/css/logo_web-size.jpg",
             'logo': "http://www.blocklist.de/templates/css/logo_web-size.jpg",
-            'description': "www.blocklist.de is a free and voluntary service provided by a Fraud/Abuse-specialist, "
-            "whose servers are often attacked via SSH-, Mail-Login-, FTP-, Webserver- and other services.\n"
-            "The mission is to report any and all attacks to the respective abuse departments of the infected PCs/servers, "
-            "to ensure that the responsible provider can inform their customer about the infection and disable the attacker."
+            'description': "www.blocklist.de 是为欺诈和滥用提供的免费自愿服务，其服务器经常通过SSH、邮件登录、FTP、Web服务器和其他服务受到攻击.\n"
+            "任务是向受感染PC或服务器的各个滥用部门报告所有攻击，以确保责任提供商能够将感染情况告知其客户并使攻击者失效."
         }
     }
 
@@ -50,10 +48,10 @@ class GO_blocklistde(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?",
-        'cacheperiod': "Hours to cache list data before re-fetching.",
-        'checknetblocks': "Report if any malicious IPs are found within owned netblocks?",
-        'checksubnets': "Check if any malicious IPs are found within the same subnet of the target?"
+        'checkaffiliates': "检查关联公司?",
+        'cacheperiod': "之前缓存数据提取.",
+        'checknetblocks': "报告网段中是否发现任何恶意IP地址?",
+        'checksubnets': "检查在目标的同一子网内是否发现任何恶意IP地址?"
     }
 
     results = None

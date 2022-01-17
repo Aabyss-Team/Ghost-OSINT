@@ -22,7 +22,7 @@ class GO_urlscan(GhostOsintPlugin):
 
     meta = {
         'name': "URLScan.io",
-        'summary': "Search URLScan.io cache for domain information.",
+        'summary': "在 urlscan.io 缓存中搜索域名信息.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -34,13 +34,10 @@ class GO_urlscan(GhostOsintPlugin):
             ],
             'favIcon': "https://urlscan.io/img/urlscan_256.png",
             'logo': "https://urlscan.io/img/urlscan_256.png",
-            'description': "urlscan.io is a service to scan and analyse websites. "
-            "When a URL is submitted to urlscan.io, an automated process will browse to the URL "
-            "like a regular user and record the activity that this page navigation creates. "
-            "This includes the domains and IPs contacted, the resources (JavaScript, CSS, etc) requested from "
-            "those domains, as well as additional information about the page itself. "
-            "urlscan.io will take a screenshot of the page, record the DOM content, JavaScript global variables, "
-            "cookies created by the page, and a myriad of other observations.",
+            'description': "urlscan.io 是一项扫描和分析网站的服务. "
+            "当 Url地址 提交到 urlscan.io 时，一个自动过程会像普通用户一样浏览 Url地址，并记录此页面导航和创建的活动. "
+            "这包括所联系的域和IP、从这些域请求的资源(JavaScript、CSS等)，以及关于页面本身的附加信息. "
+            "urlscan.io 将页面进行屏幕截图，记录 DOM 内容、JavaScript 全局变量、页面创建的 cookie 以及大量其他观察结果.",
         }
     }
 
@@ -48,7 +45,7 @@ class GO_urlscan(GhostOsintPlugin):
         'verify': True
     }
     optdescs = {
-        'verify': 'Verify that any hostnames found on the target domain still resolve?'
+        'verify': '验证在目标域名上找到的任何主机名是否仍可解析?'
     }
 
     results = None

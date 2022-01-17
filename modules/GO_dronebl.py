@@ -21,7 +21,7 @@ class GO_dronebl(GhostOsintPlugin):
 
     meta = {
         'name': "DroneBL",
-        'summary': "Query the DroneBL database for open relays, open proxies, vulnerable servers, etc.",
+        'summary': "查询 DroneBL 数据库中的开放中继、开放代理、易受攻击的服务器等等内容.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -35,9 +35,8 @@ class GO_dronebl(GhostOsintPlugin):
             ],
             'favIcon': "https://dronebl.org/images/favicon.ico",
             'logo': "https://dronebl.org/images/dronebl-logo.svg",
-            'description': "DroneBL is a realtime monitor of abusable IPs, which has "
-            "the goal of stopping abuse of infected machines.\n"
-            "A real-time tracker of abusable IPs.",
+            'description': "DroneBL 是滥用IP地址的实时监视器，其目标是阻止对受感染机器的滥用.\n"
+            "滥用IP地址的实时追踪器！！",
         }
     }
 
@@ -51,10 +50,10 @@ class GO_dronebl(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of for blacklisting?",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)"
+        'netblocklookup': "在目标的网段上查找所有 IP 地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'subnetlookup': "查找目标子网上的所有IP地址是否在黑名单中?",
+        'maxsubnet': "如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)"
     }
 
     results = None

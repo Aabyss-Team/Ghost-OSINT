@@ -19,8 +19,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_company(GhostOsintPlugin):
 
     meta = {
-        'name': "Company Name Extractor",
-        'summary': "Identify company names in any obtained data.",
+        'name': "企业名称提取",
+        'summary': "在任何获得的数据中识别公司名称.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Content Analysis"]
@@ -31,7 +31,7 @@ class GO_company(GhostOsintPlugin):
     }
 
     optdescs = {
-        'filterjscss': "Filter out company names that originated from CSS/JS content. Enabling this avoids detection of popular Javascript and web framework author company names."
+        'filterjscss': "过滤掉来自 CSS和JS 内容的公司名称. 启用此功能可避免检测到流行的 JavaScript 和 Web框架 作者公司名称."
     }
 
     def setup(self, sfc, userOpts=dict()):

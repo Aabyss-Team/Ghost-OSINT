@@ -18,8 +18,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_sslcert(GhostOsintPlugin):
 
     meta = {
-        'name': "SSL Certificate Analyzer",
-        'summary': "Gather information about SSL certificates used by the target's HTTPS sites.",
+        'name': "SSL 证书分析",
+        'summary': "收集目标的 HTTPS 站点使用的 SSL证书 的信息.",
         'flags': [],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["Crawling and Scanning"]
@@ -35,10 +35,10 @@ class GO_sslcert(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "tryhttp": "Also try to HTTPS-connect to HTTP sites and hostnames.",
-        'verify': "Verify certificate subject alternative names resolve.",
-        "ssltimeout": "Seconds before giving up trying to HTTPS connect.",
-        "certexpiringdays": "Number of days in the future a certificate expires to consider it as expiring."
+        "tryhttp": "尝试从HTTPS连接到 HTTP站点 和主机名.",
+        'verify': "验证证书使用者备用名称解析.",
+        "ssltimeout": "几秒后放弃尝试 HTTPS 连接.",
+        "certexpiringdays": "将证书视为过期的未来过期天数."
     }
 
     # Be sure to completely clear any class variables in setup()

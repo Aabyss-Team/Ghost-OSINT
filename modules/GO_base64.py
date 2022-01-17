@@ -19,8 +19,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_base64(GhostOsintPlugin):
 
     meta = {
-        'name': "Base64 Decoder",
-        'summary': "Identify Base64-encoded strings in URLs, often revealing interesting hidden information.",
+        'name': "Base64 解码",
+        'summary': "识别URL中的base64编码字符串.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Content Analysis"]
@@ -33,7 +33,7 @@ class GO_base64(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'minlength': "The minimum length a string that looks like a base64-encoded string needs to be."
+        'minlength': "看似 Base64 编码的字符串所需的最小长度."
     }
 
     def setup(self, sfc, userOpts=dict()):

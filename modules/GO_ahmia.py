@@ -3,11 +3,10 @@
 # Name:        GO_ahmia
 # Purpose:     Searches the Tor search engine 'Ahmia' for content related to the
 #              target.
-#
 # Author:      Steve Micallef <steve@binarypool.com>
 #
-# Created:     20/06/2017
-# Copyright:   (c) Steve Micallef 2017
+# Created:     14/07/2019
+# Copyright:   (c) Steve Micallef 2019
 # Licence:     GPL
 # -------------------------------------------------------------------------------
 
@@ -22,9 +21,9 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_ahmia(GhostOsintPlugin):
 
     meta = {
-        'name': "Ahmia",
+        'name': "Ahmia Tor 搜索引擎",
         'flags': ["tor"],
-        'summary': "Search Tor 'Ahmia' search engine for mentions of the target.",
+        'summary': "在 Ahmia Tor 搜索引擎搜索目标信息.",
         'useCases': ["Footprint", "Investigate"],
         'categories': ["Search Engines"],
         'dataSource': {
@@ -38,14 +37,14 @@ class GO_ahmia(GhostOsintPlugin):
             ],
             'favIcon': "https://ahmia.fi/static/images/favicon.ico",
             'logo': "https://ahmia.fi/static/images/ahmiafi_black.png",
-            'description': "Ahmia searches hidden services on the Tor network. To access these hidden services,"
-            "you need the Tor browser bundle. Abuse material is not allowed on Ahmia. "
-            "See our service blacklist and report abuse material if you find it in the index. "
-            "It will be removed as soon as possible.\n"
-            "Contributors to Ahmia believe that the Tor network is an important and "
-            "resilient distributed platform for anonymity and privacy worldwide. "
-            "By providing a search engine for what many call the \"deep web\" or \"dark net\", "
-            "Ahmia makes hidden services accessible to a wide range of people, not just Tor network early adopters."
+            'description': "Ahmia 在 Tor 网络上搜索隐藏的服务. 要访问这些隐藏的服务,"
+            "你需要安装 Tor 浏览器. 禁止滥用 Ahmia 提供的内容. "
+            "如果您在索引中找到滥用材料，请查看我们的服务黑名单并报告. "
+            "它将尽快被移除.\n"
+            "Ahmia 贡献者认为 Tor是一个重要的 "
+            "适用于全球匿名和隐私的弹性分布式平台. "
+            "通过提供一个搜索引擎，许多人称之为 \"深网\" 或者 \"暗网\", "
+            "Ahmia 让更多的人可以使用隐藏服务，而不仅仅是Tor网络的早期使用者."
         }
     }
 
@@ -57,8 +56,8 @@ class GO_ahmia(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'fetchlinks': "Fetch the darknet pages (via TOR, if enabled) to verify they mention your target.",
-        'fullnames': "Search for human names?"
+        'fetchlinks': "获取暗网页面 (如果启用则会通过 Tor ) 以验证你提交的目标是否在暗网中.",
+        'fullnames': "搜索人名?"
     }
 
     results = None

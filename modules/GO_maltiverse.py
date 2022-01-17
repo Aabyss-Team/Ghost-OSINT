@@ -23,7 +23,7 @@ class GO_maltiverse(GhostOsintPlugin):
 
     meta = {
         'name': "Maltiverse",
-        'summary': "Obtain information about any malicious activities involving IP addresses",
+        'summary': "获取有关涉及IP地址的任何恶意活动的信息",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -36,9 +36,8 @@ class GO_maltiverse(GhostOsintPlugin):
             ],
             'favIcon': "https://maltiverse.com/favicon.ico",
             'logo': "https://maltiverse.com/assets/images/logo/logo.png",
-            'description': "The Open IOC Search Engine.\n"
-                           "Enhance your SIEM or Firewall and crosscheck your event data with "
-                           "top quality Threat Intelligence information to highlight what requires action.",
+            'description': "开放 IOC 搜索引擎.\n"
+                           "增强您的SIEM或防火墙，并使用高质量的威胁情报信息交叉检查您的事件数据，以突出显示需要采取的行动.",
         }
     }
 
@@ -53,12 +52,12 @@ class GO_maltiverse(GhostOsintPlugin):
 
     # Option descriptions. Delete any options not applicable to this module.
     optdescs = {
-        'checkaffiliates': "Check affiliates?",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of?",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        "age_limit_days": "Ignore any records older than this many days. 0 = unlimited.",
+        'checkaffiliates': "检查关联公司?",
+        'subnetlookup': "查找目标所属子网上的所有IP地址?",
+        'netblocklookup': "在目标的网段上查找所有 IP 地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxsubnet': "如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        "age_limit_days": "忽略该天数之前的任何记录. 0 = 无限.",
     }
 
     results = None

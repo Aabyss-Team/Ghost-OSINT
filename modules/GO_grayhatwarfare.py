@@ -20,7 +20,7 @@ class GO_grayhatwarfare(GhostOsintPlugin):
 
     meta = {
         'name': "Grayhat Warfare",
-        'summary': "Find bucket names matching the keyword extracted from a domain from Grayhat API.",
+        'summary': "通过 Grayhat API 查找与从域名中提取的关键字所匹配的存储桶名称.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -31,16 +31,16 @@ class GO_grayhatwarfare(GhostOsintPlugin):
                 "https://buckets.grayhatwarfare.com/docs/api/v1"
             ],
             'apiKeyInstructions': [
-                "Visit https://grayhatwarfare.com/register",
-                "Register an account",
-                "Visit https://grayhatwarfare.com/account/settings",
-                "Your API key is listed under 'Api Key'",
+                "访问 https://grayhatwarfare.com/register",
+                "注册一个账户",
+                "访问 https://grayhatwarfare.com/account/settings",
+                "API 密钥将在 'Api Key'",
             ],
             'favIcon': "https://buckets.grayhatwarfare.com/assets/template/images/favicon.png",
             'logo': "https://buckets.grayhatwarfare.com/assets/images/logo/logo-sm.png",
-            'description': "It is a searchable database of open buckets."
-            "Has up to million results of each bucket."
-            "Full text search with binary logic (can search for keywords and also stopwords)",
+            'description': "它是一个开放存储桶的可搜索数据库."
+            "每个桶有多达一百万个结果."
+            "使用二进制逻辑进行全文搜索（可以搜索关键字，也可以搜索禁用词）",
         }
     }
 
@@ -54,10 +54,10 @@ class GO_grayhatwarfare(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key': 'Grayhat Warfare API key.',
-        'per_page': 'Maximum number of results per page (Max: 1000).',
-        'max_pages': 'Maximum number of pages to fetch.',
-        'pause': 'Number of seconds to wait between each API call.'
+        'api_key': 'Grayhat Warfare API 密钥.',
+        'per_page': '每页最大结果数 (Max: 1000).',
+        'max_pages': '要提取的最大页数.',
+        'pause': '每次API调用之间等待的秒数.'
     }
 
     results = None

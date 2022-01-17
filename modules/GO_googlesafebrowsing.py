@@ -19,8 +19,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_googlesafebrowsing(GhostOsintPlugin):
 
     meta = {
-        "name": "Google SafeBrowsing",
-        "summary": "Check if the URL is included on any of the Safe Browsing lists.",
+        "name": "Google 安全浏览",
+        "summary": "检查该 Url地址 是否包含在任何安全浏览列表中.",
         'flags': ["slow", "apikey"],
         "useCases": ["Passive", "Investigate"],
         "categories": ["Reputation Systems"],
@@ -31,29 +31,28 @@ class GO_googlesafebrowsing(GhostOsintPlugin):
                 "https://developers.google.com/safe-browsing/v4/reference/rest"
             ],
             "apiKeyInstructions": [
-                "Visit https://console.developers.google.com/",
-                "Register a free Google account or sign in",
-                "Create or select existing Google Developer Console project",
-                "Go to the Cloud Console API Library https://console.cloud.google.com/apis/library",
-                "From the projects list, select the project you want to use",
-                "In the API Library select 'Safe Browsing APIs'",
-                "On the API page, click ENABLE",
-                "Navigate to the APIs & Services→Credentials panel in Cloud Console",
-                "Select Create credentials, then select API key from the dropdown menu",
-                "The API key created dialog box displays your newly created key",
+                "访问 https://console.developers.google.com/",
+                "注册一个免费的 Google 账户或者登录",
+                "创建或选择现有的 Google 开发人员控制台项目",
+                "转到云控制台 API库 https://console.cloud.google.com/apis/library",
+                "从“项目”列表中，选择要使用的项目",
+                "在API库中，选择 'Safe Browsing APIs'",
+                "在 API 页面上, 点击 ENABLE",
+                "导航到 API & Services→Credential 在云控制台中",
+                "选择创建凭据，然后从下拉菜单中选择 API密钥 ",
+                " 'API密钥已创建' 对话框将显示新创建的密钥",
             ],
             "favIcon": "https://www.gstatic.com/devrel-devsite/prod/v1241c04ebcb2127897d6c18221acbd64e7ed5c46e5217fd83dd808e592c47bf6/developers/images/favicon.png",
             "logo": "https://developers.google.com/safe-browsing/images/SafeBrowsing_Icon.png",
-            "description": "The Safe Browsing APIs (v4) let your client applications check URLs "
-            "against Google's constantly updated lists of unsafe web resources. "
-            "Any URL found on a Safe Browsing list is considered unsafe.",
+            "description": "安全浏览API（v4）允许您的客户端应用程序根据Google更新不安全 WEB 资源列表以检查 Url地址 . "
+            "在安全浏览列表中找到的任何URL都被认为是不安全的.",
         },
     }
 
     opts = {"api_key": ""}
 
     optdescs = {
-        "api_key": "Google Safe Browsing API key.",
+        "api_key": "Google 安全浏览 API 密钥.",
     }
 
     results = None

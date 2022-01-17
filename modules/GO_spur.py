@@ -22,7 +22,7 @@ class GO_spur(GhostOsintPlugin):
 
     meta = {
         'name': "spur.us",
-        'summary': "Obtain information about any malicious activities involving IP addresses found",
+        'summary': "获取有关涉及 IP地址 的任何恶意活动的信息",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -33,18 +33,18 @@ class GO_spur(GhostOsintPlugin):
                 "https://spur.us/api"
             ],
             'apiKeyInstructions': [
-                "Visit https://spur.us",
-                "Register an account",
-                "Pay for a subscription",
-                "Navigate to https://spur.us/app/context/tokens",
-                "The API key is listed under 'Token'"
+                "访问 https://spur.us",
+                "注册一个账户",
+                "付费订阅",
+                "导航到 https://spur.us/app/context/tokens",
+                "API 密钥将在 'Token'"
             ],
             'favIcon': "https://www.google.com/s2/favicons?domain=https://spur.us",
             'logo': "https://spur.us/app/horizontal_logo.svg",
-            'description': "We expose VPNs, residential proxies, botnets, anonymization behavior, geo-fraud, and more. "
-            "Anonymous infrastructure has changed; it is time the security industry caught up.\n"
-            "Identify commercial and private VPN exit points along with the name of the service. "
-            "We expose over 80 different commercial providers.",
+            'description': "我们揭露 VPN 、代理、僵尸网络、匿名行为、地理欺诈等. "
+            "匿名基础设施发生了变化；现在是安全行业迎头赶上的时候了.\n"
+            "识别商业和专用 VPN 出口以及服务名称. "
+            "我们公开了80多家不同的商业供应商.",
         }
     }
 
@@ -59,12 +59,12 @@ class GO_spur(GhostOsintPlugin):
 
     # Option descriptions. Delete any options not applicable to this module.
     optdescs = {
-        "api_key": "spur.us API Key",
-        'checkaffiliates': "Check affiliates?",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of?",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)"
+        "api_key": "spur.us API 密钥",
+        'checkaffiliates': "检查关联公司?",
+        'subnetlookup': "查找目标所属子网上的所有IP地址?",
+        'netblocklookup': "在目标的网段上查找所有 IP 地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxsubnet': "如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)"
     }
 
     results = None

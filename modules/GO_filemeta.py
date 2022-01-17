@@ -28,8 +28,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_filemeta(GhostOsintPlugin):
 
     meta = {
-        'name': "File Metadata Extractor",
-        'summary': "Extracts meta data from documents and images.",
+        'name': "文件源数据提取器",
+        'summary': "从文档和图像中提取源数据.",
         'flags': [],
         'useCases': ["Footprint"],
         'categories': ["Content Analysis"]
@@ -43,8 +43,8 @@ class GO_filemeta(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'fileexts': "File extensions of files you want to analyze the meta data of (only PDF, DOCX, XLSX and PPTX are supported.)",
-        'timeout': "Download timeout for files, in seconds."
+        'fileexts': "要分析其元数据的文件的文件扩展名（仅支持PDF、DOCX、XLSX和PPTX）",
+        'timeout': "文件下载超时（秒）."
     }
 
     results = None

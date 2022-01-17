@@ -22,8 +22,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_countryname(GhostOsintPlugin):
 
     meta = {
-        'name': "Country Name Extractor",
-        'summary': "Identify country names in any obtained data.",
+        'name': "国家名称提取器",
+        'summary': "在任何获得的数据中确定国家.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Content Analysis"]
@@ -37,10 +37,10 @@ class GO_countryname(GhostOsintPlugin):
     }
 
     optdescs = {
-        'cohosted': "Obtain country name from co-hosted sites",
-        'affiliate': "Obtain country name from affiliate sites",
-        'noncountrytld': "Parse TLDs not associated with any country as default country domains",
-        'similardomain': "Obtain country name from similar domains"
+        'cohosted': "从共同托管的网站获取国家名称",
+        'affiliate': "从联盟网站获取国家名称",
+        'noncountrytld': "将不与任何国家/地区关联的TLD解析为默认国家或地区域名",
+        'similardomain': "从类似的域名中获取国家名称"
     }
 
     results = None

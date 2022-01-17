@@ -100,11 +100,11 @@ class GO_template(GhostOsintPlugin):
             # Each array element is a step. Ensure URLs are full URLs so they can be linked
             # automatically in the UI.
             'apiKeyInstructions': [
-                "Visit https://www.datasource.com",
-                "Register a free account",
+                "访问 https://www.datasource.com",
+                "注册一个免费账户",
                 "Click on 'Account Settings'",
                 "Click on 'Developer'",
-                "The API key is listed under 'Your API Key'"
+                "API 密钥将在 'Your API Key'"
             ],
 
             # URL of the favicon for the data source.
@@ -163,14 +163,14 @@ class GO_template(GhostOsintPlugin):
     optdescs = {
         "api_key": "SomeDataource API Key.",
         'checkcohosts': "Check co-hosted sites?",
-        'checkaffiliates': "Check affiliates?",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of?",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxcohost': "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting.",
-        "cohostsamedomain": "Treat co-hosted sites on the same target domain as co-hosting?",
-        'verify': 'Verify that any hostnames found on the target domain still resolve?'
+        'checkaffiliates': "检查关联公司?",
+        'netblocklookup': "在目标的网段上查找所有 IP 地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'subnetlookup': "查找目标所属子网上的所有IP地址?",
+        'maxsubnet': "如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxcohost': "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的.",
+        "cohostsamedomain": "将同一目标域上的托管站点视为共同托管?",
+        'verify': '验证在目标域名上找到的任何主机名是否仍可解析?'
 
     }
 

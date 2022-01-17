@@ -21,14 +21,14 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_tool_nmap(GhostOsintPlugin):
 
     meta = {
-        'name': "Tool - Nmap",
-        'summary': "Identify what Operating System might be used.",
+        'name': "Nmap - 工具",
+        'summary': "确定可能使用的操作系统.",
         'flags': ["tool", "slow", "invasive"],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["Crawling and Scanning"],
         'toolDetails': {
             'name': "Nmap",
-            'description': "Nmap (\"Network Mapper\") is a free and open source utility for network discovery and security auditing.\n"
+            'description': "Nmap (\"Network Mapper\") 是一个用于网络发现和安全审核的免费开源实用程序.\n"
             "Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, "
             "what services (application name and version) those hosts are offering, "
             "what operating systems (and OS versions) they are running, "
@@ -47,9 +47,9 @@ class GO_tool_nmap(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'nmappath': "Path to the where the nmap binary lives. Must be set.",
-        'netblockscan': "Port scan all IPs within identified owned netblocks?",
-        'netblockscanmax': "Maximum netblock/subnet size to scan IPs within (CIDR value, 24 = /24, 16 = /16, etc.)"
+        'nmappath': "指向 nmap 二进制文件所在位置的路径. 必须设置.",
+        'netblockscan': "端口扫描网段内的所有IP地址?",
+        'netblockscanmax': "扫描IP地址所需的最大网段/子网大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)"
     }
 
     results = None

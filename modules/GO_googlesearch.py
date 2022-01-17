@@ -17,7 +17,7 @@ class GO_googlesearch(GhostOsintPlugin):
 
     meta = {
         'name': "Google",
-        'summary': "Obtain information from the Google Custom Search API to identify sub-domains and links.",
+        'summary': "从 Google 自定义搜索 API 中获取信息以识别子域名和链接.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -30,18 +30,18 @@ class GO_googlesearch(GhostOsintPlugin):
                 "https://cse.google.com/cse"
             ],
             'apiKeyInstructions': [
-                "Visit https://developers.google.com/custom-search/v1/introduction",
-                "Register a free Google account",
-                "Click on 'Get A Key'",
-                "Connect a Project",
-                "The API Key will be listed under 'YOUR API KEY'"
+                "访问 https://developers.google.com/custom-search/v1/introduction",
+                "注册一个免费的 Google 账户",
+                "点击 'Get A Key'",
+                "连接项目",
+                "API 密钥将在 'YOUR API KEY'"
             ],
             'favIcon': "https://www.gstatic.com/devrel-devsite/prod/v2210deb8920cd4a55bd580441aa58e7853afc04b39a9d9ac4198e1cd7fbe04ef/developers/images/favicon.png",
             'logo': "https://www.gstatic.com/devrel-devsite/prod/v2210deb8920cd4a55bd580441aa58e7853afc04b39a9d9ac4198e1cd7fbe04ef/developers/images/favicon.png",
-            'description': "Google Custom Search enables you to create a search engine for your website, your blog, or a collection of websites. "
-            "You can configure your engine to search both web pages and images. "
-            "You can fine-tune the ranking, add your own promotions and customize the look and feel of the search results. "
-            "You can monetize the search by connecting your engine to your Google AdSense account.",
+            'description': "Google 自定义搜索使你能够为你的网站、博客或网站集合创建搜索引擎. "
+            "你可以将引擎配置为同时搜索网页和图像. "
+            "你可以微调排名，添加自己的促销活动，自定义搜索结果的外观和感觉. "
+            "你可以通过将你的搜索引擎连接到你的 Google AdSense 帐户来赚钱.",
         }
     }
 
@@ -53,8 +53,8 @@ class GO_googlesearch(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "Google API Key for Google search.",
-        "cse_id": "Google Custom Search Engine ID."
+        "api_key": "Google API 密钥用来 Google 查询.",
+        "cse_id": "Google 自定义搜索引擎 ID."
     }
 
     # Target

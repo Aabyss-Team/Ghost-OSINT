@@ -23,8 +23,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_portscan_tcp(GhostOsintPlugin):
 
     meta = {
-        'name': "Port Scanner - TCP",
-        'summary': "Scans for commonly open TCP ports on Internet-facing systems.",
+        'name': "端口扫描 - TCP",
+        'summary': "扫描面向 Internet 系统上通常打开的 TCP 端口.",
         'flags': ["slow", "invasive"],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["Crawling and Scanning"]
@@ -48,12 +48,12 @@ class GO_portscan_tcp(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'maxthreads': "Number of ports to try to open simultaneously (number of threads to spawn at once.)",
-        'ports': r"The TCP ports to scan. Prefix with an '@' to iterate through a file containing ports to try (one per line), e.g. @C:\ports.txt or @/home/bob/ports.txt. Or supply a URL to load the list from there.",
-        'timeout': "Seconds before giving up on a port.",
-        'randomize': "Randomize the order of ports scanned.",
-        'netblockscan': "Port scan all IPs within identified owned netblocks?",
-        'netblockscanmax': "Maximum netblock/subnet size to scan IPs within (CIDR value, 24 = /24, 16 = /16, etc.)"
+        'maxthreads': "尝试同时打开的端口数(一次生成的线程数).",
+        'ports': "要扫描的TCP端口. 前缀为“@”，以遍历包含要尝试的端口的文件(每行一个),例如 @C:\ports.txt or @/home/bob/ports.txt. 或者提供一个 Url 地址来加载列表.",
+        'timeout': "放弃端口前的秒数.",
+        'randomize': "随机化扫描端口的顺序.",
+        'netblockscan': "端口扫描识别的网段内所有 IP地址?",
+        'netblockscanmax': "扫描IP地址所需的最大网段/子网大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)"
     }
 
     results = None

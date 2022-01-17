@@ -25,7 +25,7 @@ class GO_shodan(GhostOsintPlugin):
 
     meta = {
         'name': "SHODAN",
-        'summary': "Obtain information from SHODAN about identified IP addresses.",
+        'summary': "从 SHODAN 获取有关IP地址的信息.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -37,17 +37,16 @@ class GO_shodan(GhostOsintPlugin):
                 "https://developer.shodan.io/apps"
             ],
             'apiKeyInstructions': [
-                "Visit https://shodan.io",
-                "Register a free account",
-                "Navigate to https://account.shodan.io/",
-                "The API key is listed under 'API Key'"
+                "访问 https://shodan.io",
+                "注册一个免费账户",
+                "导航到 https://account.shodan.io/",
+                "API 密钥将在 'API Key'"
             ],
             'favIcon': "https://static.shodan.io/shodan/img/favicon.png",
             'logo': "https://static.shodan.io/developer/img/logo.png",
-            'description': "Shodan is the world's first search engine for Internet-connected devices.\n"
-            "Use Shodan to discover which of your devices are connected to the Internet, where they are located and who is using them."
-            "Keep track of all the computers on your network that are directly accessible from the Internet. "
-            "Shodan lets you understand your digital footprint.",
+            'description': "Shodan 是世界上第一个互联网连接设备的搜索引擎.\n"
+            "使用 Shodan 要了解您的哪些设备已连接到Internet、它们位于何处以及谁在使用它们."
+            "跟踪网络上可直接从 Internet 访问的所有计算机。Shodan 让你了解你的数字足迹.",
         }
     }
 
@@ -60,9 +59,9 @@ class GO_shodan(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "SHODAN API Key.",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)"
+        "api_key": "SHODAN API 密钥.",
+        'netblocklookup': "在目标的网段上查找同一目标子域或域上可能存在的主机的所有IP地址?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)"
     }
 
     results = None

@@ -20,7 +20,7 @@ class GO_metadefender(GhostOsintPlugin):
 
     meta = {
         'name': "MetaDefender",
-        'summary': "Search MetaDefender API for IP address and domain IP reputation.",
+        'summary': "通过 MetaDefender API 搜索IP地址和域名及IP地址的信誉度.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -31,16 +31,16 @@ class GO_metadefender(GhostOsintPlugin):
                 "https://onlinehelp.opswat.com/mdcloud/"
             ],
             'apiKeyInstructions': [
-                "Visit https://metadefender.opswat.com/",
-                "Register a free account",
-                "Navigate to https://metadefender.opswat.com/account",
-                "The API key is listed under 'API key'"
+                "访问 https://metadefender.opswat.com/",
+                "注册一个免费账户",
+                "导航到 https://metadefender.opswat.com/account",
+                "API 密钥将在 'API key'"
             ],
             'favIcon': "https://mcl-cdn.opswat.com/1.40.3-729f31db/city/icons/icon-48x48.png?v=61be50566cce944a710aaa90ba6bbb8d",
             'logo': "https://mcl-cdn.opswat.com/1.40.3-729f31db/city/icons/icon-48x48.png?v=61be50566cce944a710aaa90ba6bbb8d",
-            'description': "File Analysis - Analyzing binaries with 30+ anti-malware engines.\n"
-            "Heuristic analysis to detect more unknown and targeted attacks.\n"
-            "Binary vulnerability data assessment, IP/Domain reputation, Threat Intelligence Feeds",
+            'description': "文件分析-使用30多个反恶意软件引擎分析二进制文件.\n"
+            "用于检测更多未知和目标攻击的启发式分析.\n"
+            "二进制漏洞数据评估、IP/域信誉、威胁情报源",
         }
     }
 
@@ -54,8 +54,8 @@ class GO_metadefender(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key': 'MetaDefender API key.',
-        'delay': 'Delay between requests, in seconds.'
+        'api_key': 'MetaDefender API 密钥.',
+        'delay': '请求之间的延迟（秒）.'
     }
 
     results = None

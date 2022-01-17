@@ -20,7 +20,7 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_dnsdb(GhostOsintPlugin):
     meta = {
         "name": "DNSDB",
-        "summary": "Query FarSight's DNSDB for historical and passive DNS data.",
+        "summary": "查询 FarSight 的 DNSDB 以获取历史记录和 被动查询DNS 数据.",
         'flags': ["apikey"],
         "useCases": ["Passive", "Footprint", "Investigate"],
         "categories": ["Passive DNS"],
@@ -33,17 +33,15 @@ class GO_dnsdb(GhostOsintPlugin):
                 "https://www.farsightsecurity.com/solutions/dnsdb/",
             ],
             "apiKeyInstructions": [
-                "Visit https://www.farsightsecurity.com/get-started/",
-                "Select the model that best fit your needs (free or premium)",
-                "Fill in the form to get API key",
-                "Check your email for your API Key ",
+                "访问 https://www.farsightsecurity.com/get-started/",
+                "选择最适合您需求的型号（免费或高级）",
+                "填写表单以获取API密钥",
+                "检查您的电子邮件以获取API密钥 ",
             ],
             "favIcon": "https://www.farsightsecurity.com/favicon.ico",
             "logo": "https://www.farsightsecurity.com/assets/media/svg/farsight-logo.svg",
-            "description": "Farsight Security’s DNSDB is the world’s largest "
-            "database of DNS resolution and change data. Started in 2010 and "
-            "updated in real-time, DNSDB provides the most comprehensive "
-            "history of domains and IP addresses worldwide.",
+            "description": "Farsight Security 的 DNSDB 世界上最大的DNS解析和更改数据数据库."
+            "从2010年开始实时更新，DNSDB提供了世界范围内最全面的域名和 IP地址 历史记录.",
         },
     }
 
@@ -56,11 +54,11 @@ class GO_dnsdb(GhostOsintPlugin):
     }
 
     optdescs = {
-        "api_key": "DNSDB API Key.",
-        "age_limit_days": "Ignore any DNSDB records older than this many days. 0 = unlimited.",
-        "verify": "Verify co-hosts are valid by checking if they still resolve to the shared IP.",
-        "cohostsamedomain": "Treat co-hosted sites on the same target domain as co-hosting?",
-        "maxcohost": "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting.",
+        "api_key": "DNSDB API 密钥.",
+        "age_limit_days": "忽略该天数前的DNSDB记录. 0 = 无限.",
+        "verify": "通过检查共享主机是否仍解析为共享IP地址来验证它们是否有效.",
+        "cohostsamedomain": "将同一目标域上的托管站点视为共同托管?",
+        "maxcohost": "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的.",
     }
 
     results = None

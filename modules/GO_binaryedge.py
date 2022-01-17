@@ -22,7 +22,7 @@ class GO_binaryedge(GhostOsintPlugin):
 
     meta = {
         'name': "BinaryEdge",
-        'summary': "Obtain information from BinaryEdge.io Internet scanning systems, including breaches, vulnerabilities, torrents and passive DNS.",
+        'summary': "从 BinaryEdge.io 联网扫描系统信息, 包括违规, 漏洞, torrents 和 被动 DNS.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -34,19 +34,19 @@ class GO_binaryedge(GhostOsintPlugin):
                 "https://www.binaryedge.io/data.html"
             ],
             'apiKeyInstructions': [
-                "Visit https://www.binaryedge.io/pricing.html",
-                "Select a plan",
-                "Sign up with new account",
-                "Go to Account",
-                "The API key is listed under 'API Access'"
+                "访问 https://www.binaryedge.io/pricing.html",
+                "选择一个计划",
+                "注册新账户",
+                "转到账户",
+                "API密钥将在 'API Access'"
             ],
             'favIcon': "https://www.binaryedge.io/img/favicon/favicon-32x32.png",
             'logo': "https://www.binaryedge.io/img/logo.png",
-            'description': "We scan the entire public internet, create real-time threat intelligence streams, "
-            "and reports that show the exposure of what is connected to the Internet.\n"
-            "We have built a distributed platform of scanners and honeypots, to acquire, classify and correlate different types of data.\n"
-            "We use all of these datapoints to match those digital assets to an organization, "
-            "allowing us to provide a global, up-to-date, view of organizations known and unknown assets.",
+            'description': "我们扫描整个公共互联网, 创建实时威胁情报流, "
+            "以及显示连接到互联网的内容的暴露情况的报告.\n"
+            "我们已经建立了一个由扫描器和蜜罐组成的分布式平台，以获取、分类和关联不同类型的数据。.\n"
+            "我们使用所有这些数据点将这些数字资产与组织相匹配, "
+            "使我们能够提供组织已知和未知资产的全局、最新视图.",
         }
     }
 
@@ -65,17 +65,17 @@ class GO_binaryedge(GhostOsintPlugin):
     }
 
     optdescs = {
-        'binaryedge_api_key': "BinaryEdge.io API Key.",
-        'torrent_age_limit_days': "Ignore any torrent records older than this many days. 0 = unlimited.",
-        'cve_age_limit_days': "Ignore any vulnerability records older than this many days. 0 = unlimited.",
-        'port_age_limit_days': "Ignore any discovered open ports/banners older than this many days. 0 = unlimited.",
-        'verify': 'Verify that any hostnames found on the target domain still resolve?',
-        'maxpages': "Maximum number of pages to iterate through, to avoid exceeding BinaryEdge API usage limits. APIv2 has a maximum of 500 pages (10,000 results).",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of?",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxcohost': "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting."
+        'binaryedge_api_key': "BinaryEdge.io API 密钥.",
+        'torrent_age_limit_days': "忽略此天数之前的所有 torrent 记录. 0 = 无限.",
+        'cve_age_limit_days': "忽略此天数之前的任何漏洞记录. 0 = 无限.",
+        'port_age_limit_days': "忽略发现的任何超过此天数的开放端口和 banners. 0 = 无限.",
+        'verify': '验证在目标域上找到的任何主机名是否仍可解析?',
+        'maxpages': "要循环访问的最大页数, 避免超过 BinaryEdge API密钥的使用限制. APIv2 最多有500个页面 (10,000 个结果).",
+        'netblocklookup': "在目标拥有的网段上查找所有IP地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查询网段则设置网段最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'subnetlookup': "查找目标所属子网上的所有IP?",
+        'maxsubnet': "如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxcohost': "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的."
     }
 
     results = None

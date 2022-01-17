@@ -19,7 +19,7 @@ class GO_whoisology(GhostOsintPlugin):
 
     meta = {
         'name': "Whoisology",
-        'summary': "Reverse Whois lookups using Whoisology.com.",
+        'summary': "使用 Whoisology.com 反向 Whois 查找.",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -31,17 +31,16 @@ class GO_whoisology(GhostOsintPlugin):
                 "https://whoisology.com/tutorial"
             ],
             'apiKeyInstructions': [
-                "Visit https://whoisology.com/",
-                "Register a free account",
-                "Navigate to https://whoisology.com/account",
-                "Click on API Access",
-                "Pay for Access and receive the API Key"
+                "访问 https://whoisology.com/",
+                "注册一个免费账户",
+                "导航到 https://whoisology.com/account",
+                "点击 API Access",
+                "付费访问后即可获得 API 密钥"
             ],
             'favIcon': "https://whoisology.com/img/w-logo.png",
             'logo': "https://whoisology.com/assets/images/il1.gif",
-            'description': "Whoisology is a domain name ownership archive with literally billions of searchable and cross referenced domain name whois records.\n"
-            "Our main focus is reverse whois which is used for cyber crime investigation / InfoSec, "
-            "corporate intelligence, legal research, business development, and for good ol' fashioned poking around.",
+            'description': "Whoisology 是一个域名所有权档案，拥有数十亿可搜索和交叉引用的域名 whois 记录. "
+            "我们的主要关注点是反向 whois ，用于网络犯罪调查/信息安全、企业情报、法律研究、业务发展和良好的侦查. ",
         }
     }
 
@@ -52,7 +51,7 @@ class GO_whoisology(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "Whoisology.com API key.",
+        "api_key": "Whoisology.com API 密钥.",
     }
 
     # Be sure to completely clear any class variables in setup()

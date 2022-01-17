@@ -19,7 +19,7 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_ipregistry(GhostOsintPlugin):
     meta = {
         "name": "ipregistry",
-        "summary": "Query the ipregistry.co database for reputation and geo-location.",
+        "summary": "在 ipregistry.co 数据库中查询信誉度和地理位置.",
         'flags': ["apikey"],
         "useCases": ["Passive", "Footprint", "Investigate"],
         "categories": ["Reputation Systems"],
@@ -28,17 +28,14 @@ class GO_ipregistry(GhostOsintPlugin):
             "model": "FREE_AUTH_LIMITED",
             "references": ["https://ipregistry.co/docs"],
             "apiKeyInstructions": [
-                "Visit https://dashboard.ipregistry.co/signup",
-                "Register a free account",
-                "Click on 'API Keys' in left navbar",
-                "Click on 'Click to reveal API key' for existing Default key",
+                "访问 https://dashboard.ipregistry.co/signup",
+                "注册一个免费账户",
+                "点击 'API Keys' in left navbar",
+                "点击 'Click to reveal API key' ",
             ],
             "favIcon": "https://cdn.ipregistry.co/icons/favicon-32x32.png",
             "logo": "https://ipregistry.co/assets/ipregistry.svg",
-            "description": "Ipregistry is a trusted and in-depth IP "
-            "Geolocation and Threat detections source of information that can"
-            "benefit publishers, ad networks, retailers, financial services, "
-            "e-commerce stores and more.",
+            "description": "Ipregistry 是一个值得信赖的、深入的IP地理定位和威胁检测信息源，可使出版商、广告网络、零售商、金融服务、电子商务商店等受益.",
         },
     }
 
@@ -47,7 +44,7 @@ class GO_ipregistry(GhostOsintPlugin):
     }
 
     optdescs = {
-        "api_key": "Ipregistry API Key.",
+        "api_key": "Ipregistry API 密钥.",
     }
 
     results = None

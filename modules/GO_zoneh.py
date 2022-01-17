@@ -19,8 +19,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_zoneh(GhostOsintPlugin):
 
     meta = {
-        'name': "Zone-H Defacement Check",
-        'summary': "Check if a hostname/domain appears on the zone-h.org 'special defacements' RSS feed.",
+        'name': "Zone-H 损坏检查",
+        'summary': "检查 zone-h.org 'special defacements' RSS 提要上是否包含该主机名或域名.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Leaks, Dumps and Breaches"],
@@ -33,12 +33,11 @@ class GO_zoneh(GhostOsintPlugin):
             ],
             'favIcon': "https://zone-h.org/images/logo.gif",
             'logo': "https://zone-h.org/images/logo.gif",
-            'description': "Once a defaced website is submitted to Zone-H, it is mirrored on the Zone-H servers. "
-            "The website is then moderated by the Zone-H staff to check if the defacement was fake. "
-            "Sometimes, the hackers themselves submit their hacked pages to the site.\n"
-            "It is an Internet security portal containing original IT security news, digital warfare news, "
-            "geopolitics, proprietary and general advisories, analyses, forums, researches. "
-            "Zone-H is the largest web intrusions archive. It is published in several languages.",
+            'description': "一旦损坏的网站提交到 Zone-H ，它将镜像到 Zone-H 服务器上. "
+            "该网站随后由 Zone-H 工作人员主持，以检查损坏是否为伪造. "
+            "有时，黑客自己会将被黑客攻击的页面提交到该网站.\n"
+            "它是一个互联网安全门户，包含原始It安全新闻、数字战争新闻、地缘政治、专有和一般咨询、分析、论坛、研究. Zone-H 是最大的 WEB 入侵存档. "
+            "它以多种语言出版.",
         }
     }
 
@@ -50,8 +49,8 @@ class GO_zoneh(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'checkcohosts': "Check co-hosted sites?",
-        'checkaffiliates': "Check affiliates?"
+        'checkcohosts': "检查共同托管的网站?",
+        'checkaffiliates': "检查关联公司?"
     }
 
     # Be sure to completely clear any class variables in setup()

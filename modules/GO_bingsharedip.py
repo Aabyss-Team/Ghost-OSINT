@@ -18,8 +18,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_bingsharedip(GhostOsintPlugin):
 
     meta = {
-        'name': "Bing (Shared IPs)",
-        'summary': "Search Bing for hosts sharing the same IP.",
+        'name': "Bing (共享主机IP搜索)",
+        'summary': "在 Bing 中搜索共享IP地址的主机.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -30,15 +30,15 @@ class GO_bingsharedip(GhostOsintPlugin):
                 "https://docs.microsoft.com/en-us/azure/cognitive-services/bing-web-search/"
             ],
             'apiKeyInstructions': [
-                "Visit https://azure.microsoft.com/en-in/services/cognitive-services/bing-web-search-api/",
-                "Register a free account",
-                "Select on Bing Custom Search",
-                "The API keys are listed under 'Key1' and 'Key2' (both should work)"
+                "访问 https://azure.microsoft.com/en-in/services/cognitive-services/bing-web-search-api/",
+                "注册一个免费账户",
+                "在 Bing 上自定义搜索",
+                "API 密钥将在 'Key1' 和 'Key2' (两个都能用)"
             ],
             'favIcon': "https://www.bing.com/sa/simg/bing_p_rr_teal_min.ico",
             'logo': "https://www.bing.com/sa/simg/bing_p_rr_teal_min.ico",
-            'description': "The Bing Search APIs let you build web-connected apps and services that "
-            "find webpages, images, news, locations, and more without advertisements.",
+            'description': "Bing 搜索 API 允许你构建网络连接的应用程序和服务 "
+            ", 在没有广告的情况下查找网页、图片、新闻、位置等.",
         }
     }
 
@@ -53,11 +53,11 @@ class GO_bingsharedip(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "cohostsamedomain": "Treat co-hosted sites on the same target domain as co-hosting?",
-        "pages": "Number of max bing results to request from API.",
-        "verify": "Verify co-hosts are valid by checking if they still resolve to the shared IP.",
-        "maxcohost": "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting.",
-        "api_key": "Bing API Key for shared IP search."
+        "cohostsamedomain": "将同一目标域上的共同托管站点视为共同托管?",
+        "pages": "从 API 请求的 bing 最大结果数.",
+        "verify": "通过检查协作主机是否仍解析为共享IP地址来验证它们是否有效.",
+        "maxcohost": "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的.",
+        "api_key": "Bing API 密钥."
     }
 
     results = None

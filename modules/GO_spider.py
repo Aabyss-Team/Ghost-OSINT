@@ -20,8 +20,8 @@ from ghostosint import GhostOsintEvent, GhostOsintHelp, GhostOsintPlugin
 class GO_spider(GhostOsintPlugin):
 
     meta = {
-        'name': "Web Spider",
-        'summary': "Spidering of web-pages to extract content for searching.",
+        'name': "Web 爬虫",
+        'summary': "爬取网页以提供内容.",
         'flags': ["slow"],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["Crawling and Scanning"]
@@ -48,17 +48,17 @@ class GO_spider(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'robotsonly': "Only follow links specified by robots.txt?",
-        'usecookies': "Accept and use cookies?",
-        'pausesec': "Number of seconds to pause between page fetches.",
-        'start': "Prepend targets with these until you get a hit, to start spidering.",
-        'maxpages': "Maximum number of pages to fetch per starting point identified.",
-        'maxlevels': "Maximum levels to traverse per starting point (e.g. hostname or link identified by another module) identified.",
-        'filterfiles': "File extensions to ignore (don't fetch them.)",
-        'filtermime': "MIME types to ignore.",
-        'filterusers': "Skip spidering of /~user directories?",
-        'nosubs': "Skip spidering of subdomains of the target?",
-        'reportduplicates': "Report links every time one is found, even if found before?"
+        'robotsonly': "仅遵循 robots.txt 指定的链接?",
+        'usecookies': "允许使用 cookie?",
+        'pausesec': "提取页面之间暂停的秒数.",
+        'start': "预先设定目标，直到命中内容才开始爬行.",
+        'maxpages': "标识的每个起始点要提取的最大页数.",
+        'maxlevels': "每个起始点（例如由另一个模块标识的主机名或链接）要遍历的最大级别.",
+        'filterfiles': "忽略的文件扩展名",
+        'filtermime': "忽略的 MIME 类型.",
+        'filterusers': "跳过 /~user 目录爬取?",
+        'nosubs': "跳过目标子域名爬取?",
+        'reportduplicates': "每次找到链接时报告链接，即使以前找到过?"
     }
 
     # If using robots.txt, this will get populated with filter rules

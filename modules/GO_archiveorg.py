@@ -20,8 +20,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_archiveorg(GhostOsintPlugin):
 
     meta = {
-        'name': "Archive.org",
-        'summary': "Identifies historic versions of interesting files/pages from the Wayback Machine.",
+        'name': "Archive 互联网档案馆",
+        'summary': "识别来自 Wayback Machine 有趣文件和历史版本.",
         'flags': ["slow"],
         'useCases': ["Footprint", "Passive"],
         'categories': ["Search Engines"],
@@ -63,16 +63,16 @@ class GO_archiveorg(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'farback': "Number of days back to look for older versions of files/pages in the Wayback Machine snapshots. Comma-separate the values, so for example 30,60,90 means to look for snapshots 30 days, 60 days and 90 days back.",
-        'intfiles': "Query the Wayback Machine for historic versions of Interesting Files.",
-        'passwordpages': "Query the Wayback Machine for historic versions of URLs with passwords.",
-        'formpages': "Query the Wayback Machine for historic versions of URLs with forms.",
-        'uploadpages': "Query the Wayback Machine for historic versions of URLs accepting uploads.",
-        'flashpages': "Query the Wayback Machine for historic versions of URLs containing Flash.",
-        'javapages': "Query the Wayback Machine for historic versions of URLs using Java Applets.",
-        'staticpages': "Query the Wayback Machine for historic versions of purely static URLs.",
-        "webframeworkpages": "Query the Wayback Machine for historic versions of URLs using Javascript frameworks.",
-        "javascriptpages": "Query the Wayback Machine for historic versions of URLs using Javascript."
+        'farback': "在 Wayback Machine 快照中查找旧版本文件/页面的返回天数. 以逗号分隔这些值，例如，30，60，90表示查找30天、60天和90天前的快照.",
+        'intfiles': "向 Wayback Machine 查询感兴趣文件的历史版本.",
+        'passwordpages': "向 Wayback Machine 查询带有密码的URL地址的历史版本.",
+        'formpages': "在 Wayback Machine 中查询带有表单的URL地址的历史版本.",
+        'uploadpages': "向 Wayback Machine 查询接受上传的URL地址的历史版本.",
+        'flashpages': "在Wayback Machine中查询包含Flash的URL地址的历史版本.",
+        'javapages': "使用 Java 小程序向 Wayback Machine 查询URL地址的历史版本.",
+        'staticpages': "向 Wayback Machine 查询纯静态URL地址的历史版本.",
+        "webframeworkpages": "使用 JavaScript 框架在 Wayback Machine 上查询URL地址的历史版本.",
+        "javascriptpages": "使用 JavaScript 框架向 Wayback Machine 查询URL地址的历史版本."
     }
 
     results = None

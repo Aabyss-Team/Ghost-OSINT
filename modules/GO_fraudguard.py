@@ -24,7 +24,7 @@ class GO_fraudguard(GhostOsintPlugin):
 
     meta = {
         'name': "Fraudguard",
-        'summary': "Obtain threat information from Fraudguard.io",
+        'summary': "从 Fraudguard.io 获取威胁情报",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -36,18 +36,16 @@ class GO_fraudguard(GhostOsintPlugin):
                 "https://faq.fraudguard.io/"
             ],
             'apiKeyInstructions': [
-                "Visit https://app.fraudguard.io/register",
-                "Register a free account",
-                "Navigate to https://app.fraudguard.io/keys",
-                "The API key combination is listed under Username and Password"
+                "访问 https://app.fraudguard.io/register",
+                "注册一个免费账户",
+                "导航到 https://app.fraudguard.io/keys",
+                "API 密钥将显示在用户名和密码下"
             ],
             'favIcon': "https://fraudguard.io/img/favicon.ico",
             'logo': "https://s3.amazonaws.com/fraudguard.io/img/header.png",
-            'description': "FraudGuard is a service designed to provide an easy way to validate usage "
-            "by continuously collecting and analyzing real-time internet traffic. "
-            "Utilizing just a few simple API endpoints we make integration as simple as possible "
-            "and return data such as: Risk Level, Threat Type, Geo Location, etc. Super fast, super simple.\n"
-            "Lookup any IP address by querying our threat engine.",
+            'description': "FraudGuard是一项服务，旨在通过不断收集和分析实时互联网流量，提供一种简单的方法来验证使用情况. "
+            "我们仅利用几个简单的API端点，使集成尽可能简单，并返回数据，如：风险级别、威胁类型、地理位置等.\n"
+            "超快速，超简单。通过查询我们的威胁引擎查找任何IP地址.",
         }
     }
 
@@ -67,16 +65,16 @@ class GO_fraudguard(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "fraudguard_api_key_account": "Fraudguard.io API username.",
-        "fraudguard_api_key_password": "Fraudguard.io API password.",
-        "age_limit_days": "Ignore any records older than this many days. 0 = unlimited.",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum IPv4 netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxv6netblock': "If looking up owned netblocks, the maximum IPv6 netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of for blacklisting?",
-        'maxsubnet': "If looking up subnets, the maximum IPv4 subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxv6subnet': "If looking up subnets, the maximum IPv6 subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'checkaffiliates': "Apply checks to affiliates?"
+        "fraudguard_api_key_account": "Fraudguard.io API 用户名.",
+        "fraudguard_api_key_password": "Fraudguard.io API 密码.",
+        "age_limit_days": "忽略该天数之前的任何记录. 0 = 无限.",
+        'netblocklookup': "在目标的网段上查找所有 IP 地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查找拥有的网段，则为查找其中所有IP的最大网段大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxv6netblock': "如果查找拥有的网段，则为查找其中所有IP的最大IPv6网段大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'subnetlookup': "查找目标子网上的所有IP地址是否在黑名单中?",
+        'maxsubnet': "如果查找子网，则为用于查找其中所有IP的最大IPv4子网大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxv6subnet': "如果查找子网，则为用于查找其中所有IP的最大IPv6子网大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'checkaffiliates': "检查关联企业?"
     }
 
     results = None

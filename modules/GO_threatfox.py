@@ -20,7 +20,7 @@ class GO_threatfox(GhostOsintPlugin):
 
     meta = {
         'name': "ThreatFox",
-        'summary': "Check if an IP address is malicious according to ThreatFox.",
+        'summary': "根据 ThreatFox 检查IP地址是否为恶意地址.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -32,9 +32,7 @@ class GO_threatfox(GhostOsintPlugin):
             'website': "https://threatfox.abuse.ch",
             'favIcon': 'https://threatfox.abuse.ch/favicon.ico',
             'logo': "https://threatfox.abuse.ch/images/threatfox_logo.png",
-            'description': "ThreatFox is a free platform from abuse.ch with the goal of sharing"
-            "indicators of compromise (IOCs) associated with malware with the infosec community,"
-            "AV vendors and threat intelligence providers.",
+            'description': "ThreatFox 是一个来自 abuse.ch 的免费平台，目标是与信息安全社区、AV供应商和威胁情报提供商共享与恶意软件相关的危害指示器（IOCs）.",
         }
     }
 
@@ -43,7 +41,7 @@ class GO_threatfox(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?"
+        'checkaffiliates': "检查关联企业?"
     }
 
     results = None

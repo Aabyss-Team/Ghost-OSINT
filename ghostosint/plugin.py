@@ -129,7 +129,7 @@ class GhostOsintPlugin():
     GhostOsint = None
     # Configuration, set in each module's setup() function
     opts = dict()
-    # Maximum threads
+    # Maximum thread
     maxThreads = 1
 
     def __init__(self):

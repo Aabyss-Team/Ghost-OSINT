@@ -23,7 +23,7 @@ class GO_numverify(GhostOsintPlugin):
 
     meta = {
         'name': "numverify",
-        'summary': "Lookup phone number location and carrier information from numverify.com.",
+        'summary': "从 numverify.com 查找电话号码位置和运营商信息.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Real World"],
@@ -35,18 +35,16 @@ class GO_numverify(GhostOsintPlugin):
                 "https://numverify.com/faq"
             ],
             'apiKeyInstructions': [
-                "Visit https://numverify.com",
-                "Sign up for a free account",
-                "Navigate to https://numverify.com/dashboard",
-                "The API key is listed under 'Your API Access Key'"
+                "访问 https://numverify.com",
+                "注册一个免费账户",
+                "导航到 https://numverify.com/dashboard",
+                "API 密钥将在 'Your API Access Key'"
             ],
             'favIcon': "https://numverify.com/images/icons/numverify_shortcut_icon.ico",
             'logo': "https://numverify.com/images/logos/numverify_header.png",
-            'description': "Global Phone Number Validation & Lookup JSON API.\n"
-            "NumVerify offers a full-featured yet simple RESTful JSON API for "
-            "national and international phone number validation and information lookup for a total of 232 countries around the world.\n"
-            "Requested numbers are processed in real-time, cross-checked with the latest international numbering plan databases "
-            "and returned in handy JSON format enriched with useful carrier, geographical location and line type data.",
+            'description': "全局电话号码验证和查找 JSON API.\n"
+            "NumVerify 为全世界232个国家/地区的国内和国际电话号码验证和信息查找提供了一个功能齐全但简单的 RESTful JSON API.\n"
+            "请求的编号实时处理并与最新的国际编号计划数据库交叉核对，并以方便的 JSON 格式返回，其中包含有用的载体、地理位置和线型数据.",
         }
     }
 
@@ -57,7 +55,7 @@ class GO_numverify(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key': 'numverify API key.'
+        'api_key': 'numverify API 密钥.'
     }
 
     results = None

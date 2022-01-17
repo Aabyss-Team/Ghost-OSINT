@@ -20,7 +20,7 @@ class GO_leakix(GhostOsintPlugin):
 
     meta = {
         'name': "LeakIX",
-        'summary': "Search LeakIX for host data leaks, open ports, software and geoip.",
+        'summary': "在 LeakIX 中搜索主机数据泄露、开放端口、软件和地理位置.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Leaks, Dumps and Breaches"],
@@ -31,17 +31,16 @@ class GO_leakix(GhostOsintPlugin):
                 "https://leakix.net/api-documentation"
             ],
             'apiKeyInstructions': [
-                "Visit https://leakix.net/",
-                "Register a free account",
-                "Go to your 'Settings'",
-                "Click on 'API key'",
-                "Click on 'Reset key' to generate a new key"
+                "访问 https://leakix.net/",
+                "注册一个免费账户",
+                "点击 'Settings'",
+                "点击 'API key'",
+                "点击 'Reset key' to generate a new key"
             ],
             'favIcon': "https://leakix.net/public/img/favicon.png",
             'logo': "https://leakix.net/public/img/logoleakix-v1.png",
-            'description': "LeakIX provides insights into devices and servers that are compromised "
-            "and compromised database schemas online.\n"
-            "In this scope we inspect found services for weak credentials.",
+            'description': "LeakIX 深入了解在线受损和受损数据库架构的设备和服务器.\n"
+            "在此范围内，我们检查发现的服务的弱凭据.",
         }
     }
 
@@ -54,9 +53,9 @@ class GO_leakix(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key': "LeakIX API key",
-        'delay': 'Delay between requests, in seconds.',
-        "verify": "Verify discovered hostnames are valid by checking if they still resolve.",
+        'api_key': "LeakIX API 密钥",
+        'delay': '请求之间的延迟（秒）.',
+        "verify": "通过检查发现的主机名是否仍然解析来验证它们是否有效.",
     }
 
     results = None

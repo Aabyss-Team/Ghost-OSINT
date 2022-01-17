@@ -19,8 +19,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_multiproxy(GhostOsintPlugin):
 
     meta = {
-        'name': "multiproxy.org Open Proxies",
-        'summary': "Check if an IP address is an open proxy according to multiproxy.org open proxy list.",
+        'name': "multiproxy.org 开放代理",
+        'summary': " 根据 multiproxy.org 开放代理列表检查IP地址是否为开放代理.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Secondary Networks"],
@@ -35,12 +35,10 @@ class GO_multiproxy(GhostOsintPlugin):
             ],
             'favIcon': "https://www.google.com/s2/favicons?domain=https://multiproxy.org/",
             'logo': "https://multiproxy.org/images/mproxy_title.png",
-            'description': "MultiProxy is a multifunctional personal proxy server that protects your privacy "
-            "while on the Internet as well as speeds up your downloads, "
-            "especially if you are trying to get several files form overseas or from otherwise rather slow server. "
-            "It can also completely hide your IP address by dynamically connecting to "
-            "non-transparent anonymizing public proxy servers. "
-            "You can also test a list of proxy servers and sort them by connection speed and level of anonimity.",
+            'description': "MultiProxy 是一个多功能的个人代理服务器，在互联网上保护你的隐私，并加快你的下载速度，"
+            "特别是当您试图从海外或其他速度较慢的服务器获取多个文件时. "
+            "它还可以通过动态连接到不透明的匿名公共代理服务器来完全隐藏您的IP地址. "
+            "你还可以测试代理服务器列表，并根据连接速度和匿名级别对其进行排序.",
         }
     }
 
@@ -50,8 +48,8 @@ class GO_multiproxy(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?",
-        'cacheperiod': "Hours to cache list data before re-fetching."
+        'checkaffiliates': "检查关联企业?",
+        'cacheperiod': "之前缓存数据提取."
     }
 
     results = None

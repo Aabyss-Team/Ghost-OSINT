@@ -19,7 +19,7 @@ class GO_isc(GhostOsintPlugin):
 
     meta = {
         'name': "Internet Storm Center",
-        'summary': "Check if an IP address is malicious according to SANS ISC.",
+        'summary': "根据 SANS ISC 检查IP地址是否为恶意地址.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -35,16 +35,10 @@ class GO_isc(GhostOsintPlugin):
             ],
             'favIcon': "https://isc.sans.edu/iscfavicon.ico",
             'logo': "https://isc.sans.edu/images/logos/isc/large.png",
-            'description': "The ISC provides a free analysis and warning service to thousands of Internet users "
-            "and organizations, and is actively working with Internet Service Providers to "
-            "fight back against the most malicious attackers.\n"
-            "Thousands of sensors that work with most firewalls, intrusion detection systems, "
-            "home broadband devices, and nearly all operating systems are constantly collecting information about "
-            "unwanted traffic arriving from the Internet. "
-            "These devices feed the DShield database where human volunteers as well as machines pour through "
-            "the data looking for abnormal trends and behavior. "
-            "The resulting analysis is posted to the ISC's main web page where it can be automatically retrieved "
-            "by simple scripts or can be viewed in near real time by any Internet user.",
+            'description': "ISC 向数千名互联网用户和组织提供免费分析和警告服务，并积极与互联网服务提供商合作，打击最恶意的攻击者.\n"
+            "与大多数防火墙、入侵检测系统、家庭宽带设备和几乎所有操作系统一起工作的数以万计的传感器不断收集来自互联网的不必要流量的信息. "
+            "这些设备为 DShield 数据库提供数据，在那里，人类志愿者和机器通过数据寻找异常趋势和行为. "
+            "由此产生的分析被发布到 ISC 的主页上，在那里可以通过简单的脚本自动检索，也可以被任何互联网用户近实时地查看.",
         }
     }
 
@@ -53,7 +47,7 @@ class GO_isc(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?"
+        'checkaffiliates': "检查关联企业?"
     }
 
     results = None

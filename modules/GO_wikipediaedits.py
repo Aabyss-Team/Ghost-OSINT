@@ -24,8 +24,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_wikipediaedits(GhostOsintPlugin):
 
     meta = {
-        'name': "Wikipedia Edits",
-        'summary': "Identify edits to Wikipedia articles made from a given IP address or username.",
+        'name': "Wikipedia 编辑",
+        'summary': "识别给定 IP地址 或 用户名 对维基百科文章所做的编辑.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Secondary Networks"],
@@ -39,8 +39,7 @@ class GO_wikipediaedits(GhostOsintPlugin):
             ],
             'favIcon': "https://www.wikipedia.org/static/favicon/wikipedia.ico",
             'logo': "https://www.wikipedia.org/static/apple-touch/wikipedia.png",
-            'description': "Wikipedia is a multilingual online encyclopedia created and maintained as an "
-            "open collaboration project by a community of volunteer editors, using a wiki-based editing system.",
+            'description': "Wikipedia 是一个多语言在线百科全书，由志愿者编辑社区使用基于维基的编辑系统创建和维护，作为一个开放的协作项目.",
         }
     }
 
@@ -49,7 +48,7 @@ class GO_wikipediaedits(GhostOsintPlugin):
     }
 
     optdescs = {
-        "days_limit": "Maximum age of data to be considered valid (0 = unlimited)."
+        "days_limit": "视为有效数据的最长期限 (0 = 无限)."
     }
 
     results = None

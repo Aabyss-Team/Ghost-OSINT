@@ -18,7 +18,7 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_c99(GhostOsintPlugin):
     meta = {
         "name": "C99",
-        "summary": "Queries the C99 API which offers various data (geo location, proxy detection, phone lookup, etc).",
+        "summary": "通过 C99 的 API 查询各种数据 (地理位置、代理检测、电话查询等).",
         'flags': ["apikey"],
         "useCases": ["Footprint", "Passive", "Investigate"],
         "categories": ["Search Engines"],
@@ -27,18 +27,16 @@ class GO_c99(GhostOsintPlugin):
             "model": "COMMERCIAL_ONLY",
             "references": ["https://api.c99.nl/api_overview", "https://api.c99.nl/faq"],
             "apiKeyInstructions": [
-                "Visit https://api.c99.nl",
-                "Click shop in the top navigation or go to https://api.c99.nl/dashboard/shop",
-                "Click purchase key on option 'C99.NL API KEY' (you can also purchase a 1 year key)",
-                "You will receive your API key by email.",
+                "访问 https://api.c99.nl",
+                "点击顶部导航栏中的 'shop' 或访问  https://api.c99.nl/dashboard/shop",
+                "点击选项中的购买 'C99.NL API KEY' (也可以购买一年的 API 密钥)",
+                "你将通过电子邮件收到您的API密钥.",
             ],
             "favIcon": "https://api.c99.nl/favicon.ico",
             "logo": "https://api.c99.nl/assets/images/logo.png",
-            "description": "C99 API service is versatile source of information. "
-            "They offer over 57 different APIs of which 10 are integrated in this module. "
-            "APIs that are integrated are subdomain finder, phone lookup, Skype resolver, "
-            "IP to Skype, firewall technology WAF detector, domain history, "
-            "IP to domains, IP geo location, proxy detector.",
+            "description": "C99 API 服务是多功能的信息源. "
+            "他们提供超过57个不同的API，其中10个集成在此模块中. "
+            "集成的API包括子域名查找、电话查找、Skype解析器、Skype IP地址、防火墙技术和WAF检测、域名历史记录、域名IP地址、IP地址地理位置、代理检测.",
         },
     }
 
@@ -50,10 +48,10 @@ class GO_c99(GhostOsintPlugin):
     }
 
     optdescs = {
-        "api_key": "C99 API Key.",
-        "verify": "Verify identified domains still resolve to the associated specified IP address.",
-        "maxcohost": "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting.",
-        "cohostsamedomain": "Treat co-hosted sites on the same target domain as co-hosting?",
+        "api_key": "C99 API 密钥.",
+        "verify": "验证标识域是否仍解析为关联的指定IP地址.",
+        "maxcohost": "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的.",
+        "cohostsamedomain": "将同一目标域上的托管站点视为共同托管的?",
     }
 
     results = None

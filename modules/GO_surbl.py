@@ -20,7 +20,7 @@ class GO_surbl(GhostOsintPlugin):
 
     meta = {
         'name': "SURBL",
-        'summary': "Check if a netblock, IP address or domain is in the SURBL blacklist.",
+        'summary': "检查网段、IP地址或域名是否在 SURBL 黑名单中.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -32,8 +32,8 @@ class GO_surbl(GhostOsintPlugin):
                 "http://www.surbl.org/guidelines",
             ],
             'logo': "http://www.surbl.org/images/logo.png",
-            'description': "SURBLs are lists of web sites that have appeared in unsolicited messages. "
-            "Unlike most lists, SURBLs are not lists of message senders."
+            'description': "SURBLs 是在未经请求的消息中出现的网站列表. "
+            "与大多数列表不同，SURBL 不是消息发送者的列表."
         }
     }
 
@@ -47,12 +47,12 @@ class GO_surbl(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?",
-        'checkcohosts': "Apply checks to sites found to be co-hosted on the target's IP?",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of for blacklisting?",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)"
+        'checkaffiliates': "检查关联企业?",
+        'checkcohosts': "检查目标 IP地址 上共同托管的站点?",
+        'netblocklookup': "在目标的网段上查找所有 IP 地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'subnetlookup': "查找目标子网上的所有IP地址是否在黑名单中?",
+        'maxsubnet': "如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)"
     }
 
     results = None

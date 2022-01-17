@@ -25,7 +25,7 @@ class GO_xforce(GhostOsintPlugin):
 
     meta = {
         'name': "XForce Exchange",
-        'summary': "Obtain IP reputation and passive DNS information from IBM X-Force Exchange.",
+        'summary': "从 IBM X-Force Exchange 平台获取 IP地址信誉 和 被动DNS 信息.",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -37,20 +37,18 @@ class GO_xforce(GhostOsintPlugin):
                 "https://exchange.xforce.ibmcloud.com/faq",
             ],
             'apiKeyInstructions': [
-                "Visit https://exchange.xforce.ibmcloud.com",
-                "Register a free account",
-                "Navigate to https://exchange.xforce.ibmcloud.com/settings",
-                "Click on 'API Access'",
-                "Provide an API name, and click 'Generate'",
-                "The API key combination is listed under 'API Key' and 'API Password'"
+                "访问 https://exchange.xforce.ibmcloud.com",
+                "注册一个免费账户",
+                "导航到 https://exchange.xforce.ibmcloud.com/settings",
+                "点击 'API Access'",
+                "提供一个 API 名称，然后单击 'Generate'",
+                "API 密钥组合列在 'API Key' 和 'API Password'"
             ],
             'favIcon': "https://exchange.xforce.ibmcloud.com/images/shortcut-icons/apple-icon-57x57.png",
             'logo': "https://exchange.xforce.ibmcloud.com/images/shortcut-icons/apple-icon-57x57.png",
-            'description': "IBM® X-Force Exchange is a cloud-based, threat intelligence sharing platform that you can use "
-            "to rapidly research the latest global security threats, aggregate actionable intelligence, "
-            "consult with experts and collaborate with peers. "
-            "IBM X-Force Exchange, supported by human- and machine-generated intelligence, "
-            "leverages the scale of IBM X-Force to help users stay ahead of emerging threats.",
+            'description': "IBM® X-Force Exchange 是一个基于云的威胁情报共享平台，"
+            "可用于快速研究最新的全球安全威胁、聚合可采取行动的情报、咨询专家和与同行协作. "
+            "IBM X-Force Exchange, 由人工和机器生成的智能支持，利用 IBM X-Force 的规模帮助用户领先于新出现的威胁.",
         }
     }
 
@@ -71,19 +69,19 @@ class GO_xforce(GhostOsintPlugin):
     }
 
     optdescs = {
-        "xforce_api_key": "X-Force Exchange API Key.",
-        "xforce_api_key_password": "X-Force Exchange API Password.",
-        "age_limit_days": "Ignore any records older than this many days. 0 = unlimited.",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxv6netblock': "If looking up owned netblocks, the maximum IPv6 netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of for blacklisting?",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxv6subnet': "If looking up subnets, the maximum IPv6 subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxcohost': "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting.",
-        "cohostsamedomain": "Treat co-hosted sites on the same target domain as co-hosting?",
-        'checkaffiliates': "Apply checks to affiliates?",
-        'verify': "Verify co-hosts are valid by checking if they still resolve to the shared IP.",
+        "xforce_api_key": "X-Force Exchange API 密钥.",
+        "xforce_api_key_password": "X-Force Exchange API 密码.",
+        "age_limit_days": "忽略该天数之前的任何记录. 0 = 无限.",
+        'netblocklookup': "在目标的网段上查找所有 IP 地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxv6netblock': "如果查找拥有的网段，则为查找其中所有IP的最大IPv6网段大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'subnetlookup': "查找目标子网上的所有IP地址是否在黑名单中?",
+        'maxsubnet': "如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxv6subnet': "如果查找子网，则为用于查找其中所有IP的最大IPv6子网大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxcohost': "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的.",
+        "cohostsamedomain": "将同一目标域上的托管站点视为共同托管?",
+        'checkaffiliates': "检查关联企业?",
+        'verify': "通过检查共享主机是否仍解析为共享IP地址来验证它们是否有效.",
     }
 
     results = None

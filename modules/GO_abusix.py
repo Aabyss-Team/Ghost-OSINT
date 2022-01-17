@@ -3,6 +3,11 @@
 # Name:        GO_abusix
 # Purpose:     GhostOSINT plugin for looking up whether IPs/Netblocks/Domains
 #              appear in the Abusix Mail Intelligence blacklist.
+# Author:      Steve Micallef <steve@binarypool.com>
+#
+# Created:     14/07/2019
+# Copyright:   (c) Steve Micallef 2019
+# Licence:     GPL
 # -------------------------------------------------------------------------------
 
 import ipaddress
@@ -56,9 +61,9 @@ class GO_abusix(GhostOsintPlugin):
 
     optdescs = {
         'api_key': "Abusix 智能邮件 API 密钥.",
-        'checkaffiliates': "应用检查企业?",
+        'checkaffiliates': "检查关联公司?",
         'checkcohosts': "应用检查于目标IP地址上托管的站点?",
-        'netblocklookup': "在被视为你的目标所有的网段上查找同一目标子域或域名上可能被列入黑名单的主机的所有IP?",
+        'netblocklookup': "在被视为你的目标所有的网段上查找同一目标子域或域名上可能被列入黑名单的主机的所有IP地址?",
         'maxnetblock': "如果查询网段则设置网段最小的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
         'maxv6netblock': "如果查询IPV6网段则设置网段最小的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
         'subnetlookup': "查找目标子网上的所有IP地址是否在黑名单中?",

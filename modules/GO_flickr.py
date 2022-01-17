@@ -25,7 +25,7 @@ class GO_flickr(GhostOsintPlugin):
 
     meta = {
         'name': "Flickr",
-        'summary': "Search Flickr for domains, URLs and emails related to the specified domain.",
+        'summary': "在 Flickr 中所与指定域名相关的域名、Url地址和电子邮件.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Social Media"],
@@ -39,14 +39,11 @@ class GO_flickr(GhostOsintPlugin):
             ],
             'favIcon': "https://combo.staticflickr.com/pw/favicon.ico",
             'logo': "https://combo.staticflickr.com/pw/favicon.ico",
-            'description': "Flickr is almost certainly the best online photo management and sharing application in the world.\n "
-                           "On Flickr, members upload photos, share them securely, supplement their photos with "
-                           "metadata like license information, geo-location, people, tags, etc., "
-                           "and interact with their family, friends, contacts or anyone in the community. "
-                           "Practically all the features on Flickr's various platforms -- web, mobile and desktop -- "
-                           "are accompanied by a longstanding API program. "
-                           "Since 2005, developers have collaborated on top of Flickr's APIs to build fun, creative, "
-                           "and gorgeous experiences around photos that extend beyond Flickr.",
+            'description': "Flickr 几乎可以肯定是世界上最好的在线照片管理和共享应用程序.\n "
+                           "在Flickr上，会员上传照片，安全地共享照片，使用元数据（如许可证信息、地理位置、人员、标签等）补充照片，"
+                           "并与家人、朋友、联系人或社区中的任何人进行互动. "
+                           "实际上，Flickr各种平台上的所有功能——web、移动和桌面——都伴随着一个长期存在的API程序. "
+                           "自2005年以来，开发人员在Flickr的API之上进行合作，围绕照片构建有趣、创意和华丽的体验，这些体验超越了Flickr.",
         }
     }
 
@@ -60,10 +57,10 @@ class GO_flickr(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'pause': "Number of seconds to pause between fetches.",
-        'per_page': "Maximum number of results per page.",
-        'maxpages': "Maximum number of pages of results to fetch.",
-        'dns_resolve': "DNS resolve each identified domain.",
+        'pause': "读取之间暂停的秒数.",
+        'per_page': "每页最大结果数.",
+        'maxpages': "提取结果最大页数.",
+        'dns_resolve': "DNS解析每个已识别到的域.",
     }
 
     results = None

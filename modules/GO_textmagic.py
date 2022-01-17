@@ -19,7 +19,7 @@ class GO_textmagic(GhostOsintPlugin):
 
     meta = {
         "name": "TextMagic",
-        "summary": "Obtain phone number type from TextMagic API",
+        "summary": "通过 TextMagic API 获取电话号码类型",
         'flags': ["apikey"],
         "useCases": ["Passive"],
         "categories": ["Search Engines"],
@@ -30,16 +30,15 @@ class GO_textmagic(GhostOsintPlugin):
                 "https://docs.textmagic.com/"
             ],
             "apiKeyInstructions": [
-                "Visit https://textmagic.com",
-                "Register a free trial account",
-                "Visit https://my.textmagic.com/online/api/rest-api/keys",
-                "Click on 'Add new API Key'",
-                "Your API key will be listed beside 'The new API Key is'"
+                "访问 https://textmagic.com",
+                "注册一个免费账户",
+                "访问 https://my.textmagic.com/online/api/rest-api/keys",
+                "点击 'Add new API Key'",
+                "API 密钥将在 'The new API Key is'"
             ],
             "favIcon": "https://www.textmagic.com/wp-content/themes/textmagic-genesis/assets/app/images/favicon.png",
             "logo": "https://www.textmagic.com/wp-content/uploads/2015/04/logo.png",
-            "description": "TextMagic is a business text-messaging service for sending "
-            "notifications, alerts, reminders, confirmations and SMS marketing campaigns.",
+            "description": "TextMagic 是一种商业短信服务，用于发送通知、警报、提醒、确认和短信营销活动.",
         },
     }
 
@@ -49,8 +48,8 @@ class GO_textmagic(GhostOsintPlugin):
     }
 
     optdescs = {
-        "api_key_username": "TextMagic API Username",
-        "api_key": "TextMagic API Key",
+        "api_key_username": "TextMagic API 用户名",
+        "api_key": "TextMagic API 密钥",
     }
 
     errorState = False

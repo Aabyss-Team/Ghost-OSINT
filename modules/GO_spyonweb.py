@@ -22,7 +22,7 @@ class GO_spyonweb(GhostOsintPlugin):
 
     meta = {
         'name': "SpyOnWeb",
-        'summary': "Search SpyOnWeb for hosts sharing the same IP address, Google Analytics code, or Google Adsense code.",
+        'summary': "在 SpyOnWeb 中搜索共享IP地址的主机、Google Analytics代码或Google AdSense代码的主机.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Passive DNS"],
@@ -34,15 +34,14 @@ class GO_spyonweb(GhostOsintPlugin):
                 "https://api.spyonweb.com/"
             ],
             'apiKeyInstructions': [
-                "Visit https://api.spyonweb.com",
-                "Sign up for a free account",
-                "Click on 'Dashboard'",
-                "The API key is listed under 'Access Token'"
+                "访问 https://api.spyonweb.com",
+                "登录或注册一个免费账户",
+                "点击 'Dashboard'",
+                "API 密钥将在 'Access Token'"
             ],
             'favIcon': "http://spyonweb.com/favicon.ico",
             'logo': "http://spyonweb.com/favicon.ico",
-            'description': "We take the information from public sources, then structure it for your quick and convenient search "
-            "for the websites that probably belong to the same owner.",
+            'description': "我们从公共来源获取信息，然后构建它，以便你快速方便地搜索可能属于同一所有者的网站.",
         }
     }
 
@@ -59,13 +58,13 @@ class GO_spyonweb(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key': "SpyOnWeb API key.",
-        'limit': "Maximum number of results to fetch.",
-        'timeout': "Query timeout, in seconds.",
-        'maxage': "The maximum age of the data returned, in days, in order to be considered valid.",
-        'verify': "Verify co-hosts are valid by checking if they still resolve to the shared IP.",
-        'cohostsamedomain': "Treat co-hosted sites on the same target domain as co-hosting?",
-        'maxcohost': "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting.",
+        'api_key': "SpyOnWeb API 密钥.",
+        'limit': "提取最大结果数.",
+        'timeout': "查询超时（秒）.",
+        'maxage': "返回的数据被视为有效的最长时间（天）.",
+        'verify': "通过检查共享主机是否仍解析为共享IP地址来验证它们是否有效.",
+        'cohostsamedomain': "将同一目标域上的托管站点视为共同托管?",
+        'maxcohost': "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的.",
     }
 
     cohostcount = 0

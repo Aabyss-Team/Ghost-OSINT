@@ -3,6 +3,11 @@
 # Name:         GO_adblock
 # Purpose:      GhostOSINT plug-in to test if external/internally linked pages
 #               would be blocked by AdBlock Plus.
+# Author:      Steve Micallef <steve@binarypool.com>
+#
+# Created:     14/07/2019
+# Copyright:   (c) Steve Micallef 2019
+# Licence:     GPL
 # -------------------------------------------------------------------------------
 
 import adblockparser

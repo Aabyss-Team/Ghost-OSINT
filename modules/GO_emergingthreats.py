@@ -20,7 +20,7 @@ class GO_emergingthreats(GhostOsintPlugin):
 
     meta = {
         'name': "Emerging Threats",
-        'summary': "Check if a netblock or IP address is malicious according to EmergingThreats.net.",
+        'summary': "根据 EmergingThreats.net 检查网段或IP地址是否是恶意的.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -32,12 +32,9 @@ class GO_emergingthreats(GhostOsintPlugin):
             ],
             'favIcon': "https://doc.emergingthreats.net/pub/Main/WebPreferences/favicon.ico",
             'logo': "https://doc.emergingthreats.net/logo.png",
-            'description': "Emerging Threats delivers the most timely and accurate threat intelligence.\n"
-            "Emerging Threat (ET) intelligence helps prevent attacks and reduce risk by "
-            "helping you understand the historical context of where these threats originated, "
-            "who is behind them, when have they attacked, what methods they used, and what they're after. "
-            "Get on-demand access to current and historical metadata on IPs, domains, "
-            "and other related threat intelligence to help research threats and investigate incidents.",
+            'description': "Emerging Threats 提供最及时、最准确的威胁情报.\n"
+            "Emerging Threat (ET) 情报通过帮助您了解这些威胁的历史背景、幕后策划者、攻击时间、使用的方法以及攻击目的，有助于防止攻击并降低风险. "
+            "按访问IP地址、域名和其他相关威胁情报的当前和历史源数据，以帮助研究威胁和调查事件.",
         }
     }
 
@@ -49,10 +46,10 @@ class GO_emergingthreats(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliate IP addresses?",
-        'cacheperiod': "Hours to cache list data before re-fetching.",
-        'checknetblocks': "Report if any malicious IPs are found within owned netblocks?",
-        'checksubnets': "Check if any malicious IPs are found within the same subnet of the target?"
+        'checkaffiliates': "对附属IP地址应用检查?",
+        'cacheperiod': "之前缓存数据提取.",
+        'checknetblocks': "报告网段中是否发现任何恶意IP地址?",
+        'checksubnets': "检查在目标的同一子网内是否发现的任何恶意 IP 地址?"
     }
 
     results = None

@@ -17,7 +17,7 @@ class GO_vxvault(GhostOsintPlugin):
 
     meta = {
         'name': "VXVault.net",
-        'summary': "Check if a domain or IP address is malicious according to VXVault.net.",
+        'summary': "根据 vxvault.net 检查域名或 IP地址 是否是恶意的.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -30,10 +30,9 @@ class GO_vxvault(GhostOsintPlugin):
             ],
             'favIcon': "",
             'logo': "http://vxvault.net/header.png",
-            'description': "VxVault is a malware management program to automatically download and classify malware samples. "
-            "VxVault downloads malware samples from links from online sources such as webpages or RSS feeds, "
-            "downloads them and attempts to identify the malware using VirusTotal. "
-            "It then sort the malware onto a local file system and into a SQLite database.",
+            'description': "VxVault 是一个恶意软件管理程序，用于自动下载和分类恶意软件样本. "
+            "VxVault 从网页或 RSS 提要等在线来源的链接下载恶意软件示例，下载它们并尝试使用 VirusTotal 识别恶意软件. "
+            "然后将恶意软件分类到本地文件系统和 SQLite 数据库中.",
         }
     }
 
@@ -46,9 +45,9 @@ class GO_vxvault(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?",
-        'checkcohosts': "Apply checks to sites found to be co-hosted on the target's IP?",
-        'cacheperiod': "Hours to cache list data before re-fetching."
+        'checkaffiliates': "检查关联企业?",
+        'checkcohosts': "检查目标 IP地址 上共同托管的站点?",
+        'cacheperiod': "之前缓存数据提取."
     }
 
     results = None

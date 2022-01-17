@@ -18,8 +18,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_names(GhostOsintPlugin):
 
     meta = {
-        'name': "Human Name Extractor",
-        'summary': "Attempt to identify human names in fetched content.",
+        'name': "人名提取器",
+        'summary': "尝试在获取的内容中查找人名.",
         'flags': ["errorprone"],
         'useCases': ["Footprint", "Passive"],
         'categories': ["Content Analysis"]
@@ -34,9 +34,9 @@ class GO_names(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'algolimit': "A value between 0-100 to tune the sensitivity of the name finder. Less than 40 will give you a lot of junk, over 50 and you'll probably miss things but will have less false positives.",
-        'emailtoname': "Convert e-mail addresses in the form of firstname.surname@target to names?",
-        'filterjscss': "Filter out names that originated from CSS/JS content. Enabling this avoids detection of popular Javascript and web framework author names."
+        'algolimit': "0-100之间的值，用于调整名称查找器的敏感度. 低于40会给你很多垃圾内容, 超过50，你可能会错过一些东西，但会有较少的误报.",
+        'emailtoname': "将 firstname.surname@target 格式的电子邮件地址转换为名称?",
+        'filterjscss': "过滤掉来自 CSS/JS 内容的名称. 启用此功能可以避免检测到流行的 JavaScript 和 Web框架 作者姓名."
     }
 
     results = None

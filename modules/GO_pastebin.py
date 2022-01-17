@@ -20,7 +20,7 @@ class GO_pastebin(GhostOsintPlugin):
 
     meta = {
         'name': "PasteBin",
-        'summary': "PasteBin search (via Google Search API) to identify related content.",
+        'summary': "PasteBin (通过 Google 搜索 API) 搜索以识别相关内容.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Leaks, Dumps and Breaches"],
@@ -32,18 +32,17 @@ class GO_pastebin(GhostOsintPlugin):
                 "https://pastebin.com/faq"
             ],
             'apiKeyInstructions': [
-                "Visit https://developers.google.com/custom-search/v1/introduction",
-                "Register a free Google account",
-                "Click on 'Get A Key'",
-                "Connect a Project",
-                "The API Key will be listed under 'YOUR API KEY'"
+                "访问 https://developers.google.com/custom-search/v1/introduction",
+                "注册一个免费的 Google 账户",
+                "点击 'Get A Key'",
+                "连接项目",
+                "API 密钥将在 'YOUR API KEY'"
             ],
             'favIcon': "https://pastebin.com/favicon.ico",
             'logo': "https://pastebin.com/favicon.ico",
-            'description': "Pastebin is a website where you can store any text online for easy sharing. "
-            "The website is mainly used by programmers to store pieces of source code or "
-            "configuration information, but anyone is more than welcome to paste any type of text. "
-            "The idea behind the site is to make it more convenient for people to share large amounts of text online.",
+            'description': "Pastebin 是一个可以在线存储任何文本以便于共享的网站. "
+            "该网站主要由程序员用来存储源代码或配置信息，但欢迎任何人粘贴任何类型的文本. "
+            "该网站背后的理念是让人们更方便地在线共享大量文本.",
         }
     }
 
@@ -55,8 +54,8 @@ class GO_pastebin(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "Google API Key for PasteBin search.",
-        "cse_id": "Google Custom Search Engine ID.",
+        "api_key": "Google API 密钥用于 PasteBin 搜索.",
+        "cse_id": "Google 自定义搜索引擎 ID.",
     }
 
     domains = {

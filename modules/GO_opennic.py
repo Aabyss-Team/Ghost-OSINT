@@ -20,7 +20,7 @@ class GO_opennic(GhostOsintPlugin):
 
     meta = {
         'name': "OpenNIC DNS",
-        'summary': "Resolves host names in the OpenNIC alternative DNS system.",
+        'summary': "解析 OpenNIC 备用 DNS 系统中的主机名.",
         'flags': [],
         'useCases': ["Investigate", "Footprint", "Passive"],
         'categories': ["DNS"],
@@ -31,8 +31,7 @@ class GO_opennic(GhostOsintPlugin):
                 "https://wiki.opennic.org/",
                 "https://servers.opennic.org",
             ],
-            'description': "An organization of hobbyists who run an alternative DNS network, "
-            "also provides access to domains not administered by ICANN."
+            'description': "一个由运行备用DNS网络的爱好者组成的组织，还提供对不由ICANN管理的域的访问."
         }
     }
 
@@ -41,7 +40,7 @@ class GO_opennic(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?",
+        'checkaffiliates': "检查关联企业?",
     }
 
     results = None

@@ -20,7 +20,7 @@ class GO_zetalytics(GhostOsintPlugin):
     BASE_URL = "https://zonecruncher.com/api/v1"
     meta = {
         "name": "Zetalytics",
-        "summary": "Query the Zetalytics database for hosts on your target domain(s).",
+        "summary": "在 Zetalytics 数据库中查询目标域名上的主机.",
         'flags': ["apikey"],
         "useCases": ["Passive"],
         "categories": ["Passive DNS"],
@@ -29,20 +29,20 @@ class GO_zetalytics(GhostOsintPlugin):
             "model": "FREE_AUTH_LIMITED",
             "references": ["https://zonecruncher.com/api-v1-docs/"],
             "apiKeyInstructions": [
-                "Visit https://mailchi.mp/zetalytics/trial-access-request",
-                "Register a free account and request an API key",
+                "访问 https://mailchi.mp/zetalytics/trial-access-request",
+                "注册一个免费账户并请求 API 密钥",
             ],
             "favIcon": "https://zetalytics.com/favicon.ico",
             "logo": "https://zetalytics.com/assets/images/logo.png",
-            "description": "Zetalytics database provides several useful endpoints to perform passive DNS analysis",
+            "description": "Zetalytics 数据库提供了几个有用的端点来执行 被动DNS 分析. ",
         },
     }
 
     opts = {"api_key": "", "verify": True}
 
     optdescs = {
-        "api_key": "Zetalytics API Key.",
-        "verify": "Verify that any hostnames found on the target domain still resolve?",
+        "api_key": "Zetalytics API 密钥.",
+        "verify": "验证在目标域名上找到的任何主机名是否仍可解析?",
     }
 
     results = None

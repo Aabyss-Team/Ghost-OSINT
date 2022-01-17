@@ -19,7 +19,7 @@ class GO_clearbit(GhostOsintPlugin):
 
     meta = {
         'name': "Clearbit",
-        'summary': "Check for names, addresses, domains and more based on lookups of e-mail addresses on clearbit.com.",
+        'summary': "根据 clearbit.com 上的电子邮件地址来检查姓名、地址和域名等信息.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -30,22 +30,19 @@ class GO_clearbit(GhostOsintPlugin):
                 "https://clearbit.com/docs"
             ],
             'apiKeyInstructions': [
-                "Visit https://clearbit.com",
-                "Register account for a Free Trial",
-                "Navigate to https://dashboard.clearbit.com/api",
-                "The API key is listed under 'Your API Key'"
+                "访问 https://clearbit.com",
+                "注册账户以获得免费使用",
+                "导航到 https://dashboard.clearbit.com/api",
+                "API 密钥将在 'Your API Key'"
             ],
             'favIcon': "https://clearbit.com/assets/site/logo.png",
             'logo': "https://clearbit.com/assets/site/logo.png",
-            'description': "Clearbit is the marketing data engine for all of your customer interactions. "
-            "Deeply understand your customers, identify future prospects, "
-            "and personalize every single marketing and sales interaction.\n"
-            "Rely on fresh, accurate data with our proprietary real-time lookups. "
-            "Then act on new information immediately, with sales alerting and job change notifications.\n"
-            "Get company attributes like employee count, technologies used, and industry classification—and "
-            "get employee details like role, seniority, and even job change notifications, right at your fingertips.\n"
-            "With our dataset and machine learning algorithms, you’ll have all of "
-            "the information you need to convert leads and grow your business.",
+            'description': "Clearbit 是所有客户交互的营销数据引擎. "
+            "深入了解您的客户，确定未来前景，并个性化每一次营销和互动营销.\n"
+            "通过我们专有的实时查找，依靠新鲜、准确的数据. "
+            "然后立即对新信息采取行动，并发出销售警报和工作变更通知.\n"
+            "获取公司属性，如员工数量、使用的技术和行业分类，并随时获取员工详细信息，如角色、资历，甚至工作变动通知.\n"
+            "利用我们的数据集和机器学习算法，您将拥有转换潜在客户和发展业务所需的所有信息.",
         }
     }
 
@@ -56,7 +53,7 @@ class GO_clearbit(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "Clearbit.com API key."
+        "api_key": "Clearbit.com API 密钥."
     }
 
     # Be sure to completely clear any class variables in setup()

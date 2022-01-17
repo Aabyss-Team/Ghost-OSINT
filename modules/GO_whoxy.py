@@ -19,7 +19,7 @@ class GO_whoxy(GhostOsintPlugin):
 
     meta = {
         'name': "Whoxy",
-        'summary': "Reverse Whois lookups using Whoxy.com.",
+        'summary': "使用 Whoxy.com 反向 Whois 查找.",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -32,17 +32,15 @@ class GO_whoxy(GhostOsintPlugin):
                 "https://www.whoxy.com/free-whois-api/"
             ],
             'apiKeyInstructions': [
-                "Visit https://www.whoxy.com/pricing.php",
-                "Select a plan and register an account",
-                "Pay for the plan",
-                "The API key will be presented upon payment"
+                "访问 https://www.whoxy.com/pricing.php",
+                "选择计划并注册帐户",
+                "支付计划费用",
+                "API 密钥将在付款时提供"
             ],
             'favIcon': "https://www.whoxy.com/favicon.ico",
             'logo': "https://www.whoxy.com/images/logo.png",
-            'description': "Whois API is a hosted web service that returns well-parsed WHOIS fields "
-            "to your application in popular XML & JSON formats per HTTP request. "
-            "Leave all the hard work to us, as you need not worry about the query limit and "
-            "restrictions imposed by various domain registrars.",
+            'description': "Whois API 是一个托管的 WEB 服务，它以流行的 XM L和 JSON 格式为每个 HTTP 请求向应用程序返回解析良好的 WHOIS 字段. "
+            "把所有的辛苦工作留给我们吧，因为你不必担心各种域名注册商强加的查询限制和限制.",
         }
     }
 
@@ -53,7 +51,7 @@ class GO_whoxy(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "Whoxy.com API key.",
+        "api_key": "Whoxy.com API 密钥.",
     }
 
     # Be sure to completely clear any class variables in setup()

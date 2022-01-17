@@ -23,7 +23,7 @@ class GO_jsonwhoiscom(GhostOsintPlugin):
 
     meta = {
         'name': "JsonWHOIS.com",
-        'summary': "Search JsonWHOIS.com for WHOIS records associated with a domain.",
+        'summary': "在 JsonWHOIS.com 中搜索与域名关联的 WHOIS 记录.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -34,17 +34,16 @@ class GO_jsonwhoiscom(GhostOsintPlugin):
                 "https://jsonwhois.com/docs"
             ],
             'apiKeyInstructions': [
-                "Visit https://jsonwhois.com",
-                "Sign up for a free account",
-                "Navigate to https://jsonwhois.com/dashboard",
-                "The API key is listed under 'Api Key'"
+                "访问 https://jsonwhois.com",
+                "注册一个免费账户",
+                "导航到 https://jsonwhois.com/dashboard",
+                "API 密钥将在 'Api Key'"
             ],
             'favIcon': "https://jsonwhois.com/assets/fav.ico",
             'logo': "https://jsonwhois.com/assets/fav.ico",
-            'description': "Get access to accurate Whois records for generic and country TLDs. "
-            "Around 1000 gTLDs include .com, .org, .net, .us, .biz, .info, .mobi, .pro, .asia and many other new ones.\n"
-            "Raw and parsed Whois data are both accessible for downloads in the form of "
-            "MYSQL or MYSQL database dumps and Comma Separated Values (.CSV) files.",
+            'description': "获取有关通用 TLD 和 国家TLD 的准确Whois记录. "
+            "包括大约 1000 gTLDs .com, .org, .net, .us, .biz, .info, .mobi, .pro, .asia 以及许多其他新的.\n"
+            "原始和解析的 Whois 数据都可以通过 MYSQL 或 MYSQL 数据库转储和逗号分隔值（.CSV）文件的形式下载.",
         }
     }
 
@@ -56,8 +55,8 @@ class GO_jsonwhoiscom(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "JsonWHOIS.com API key.",
-        "delay": "Delay between requests, in seconds.",
+        "api_key": "JsonWHOIS.com API 密钥.",
+        "delay": "请求之间的延迟（秒）.",
     }
 
     results = None

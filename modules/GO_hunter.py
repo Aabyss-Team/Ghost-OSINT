@@ -21,7 +21,7 @@ class GO_hunter(GhostOsintPlugin):
 
     meta = {
         'name': "Hunter.io",
-        'summary': "Check for e-mail addresses and names on hunter.io.",
+        'summary': "检查 hunter.io 上的电子邮件地址和姓名.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -32,18 +32,17 @@ class GO_hunter(GhostOsintPlugin):
                 "https://hunter.io/api"
             ],
             'apiKeyInstructions': [
-                "Visit https://hunter.io/",
-                "Sign up for a free account",
-                "Click on 'Account Settings'",
-                "Click on 'API'",
-                "The API key is listed under 'Your API Key'"
+                "访问 https://hunter.io/",
+                "注册一个免费账户",
+                "点击 'Account Settings'",
+                "点击 'API'",
+                "API 密钥将在 'Your API Key'"
             ],
             'favIcon': "https://hunter.io/assets/head/favicon-d5796c45076e78aa5cf22dd53c5a4a54155062224bac758a412f3a849f38690b.ico",
             'logo': "https://hunter.io/assets/head/touch-icon-iphone-fd9330e31552eeaa12b177489943de997551bfd991c4c44e8c3d572e78aea5f3.png",
-            'description': "Hunter lets you find email addresses in seconds and connect with the people that matter for your business.\n"
-            "The Domain Search lists all the people working in a company with their name "
-            "and email address found on the web. With 100+ million email addresses indexed, "
-            "effective search filters and scoring, it's the most powerful email-finding tool ever created.",
+            'description': "Hunter 可以让你在几秒钟内找到电子邮件地址，并与对你的业务有重要影响的人联系.\n"
+            "搜索域名会列出在一家公司工作的所有人员，他们的姓名和电子邮件地址都在网上找到. 它拥有1亿多个电子邮件地址索引、有效的搜索过滤器和评分"
+            "，是有史以来最强大的电子邮件查找工具.",
         }
     }
 
@@ -54,7 +53,7 @@ class GO_hunter(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "Hunter.io API key."
+        "api_key": "Hunter.io API 密钥."
     }
 
     # Be sure to completely clear any class variables in setup()

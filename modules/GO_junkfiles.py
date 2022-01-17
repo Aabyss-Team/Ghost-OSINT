@@ -18,8 +18,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_junkfiles(GhostOsintPlugin):
 
     meta = {
-        'name': "Junk File Finder",
-        'summary': "Looks for old/temporary and other similar files.",
+        'name': "垃圾文件查找器",
+        'summary': "查找旧文件或临时文件以及其他的类似文件.",
         'flags': ["slow", "errorprone", "invasive"],
         'useCases': ["Footprint"],
         'categories': ["Crawling and Scanning"]
@@ -36,10 +36,10 @@ class GO_junkfiles(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'fileexts': "File extensions to try.",
-        'urlextstry': "Try those extensions against URLs with these extensions.",
-        'files': "Try to fetch each of these files from the directory of the URL.",
-        'dirs': "Try to fetch the containing folder with these extensions."
+        'fileexts': "要尝试的文件扩展名.",
+        'urlextstry': "针对具有这些扩展名的 Url地址 尝试这些扩展名.",
+        'files': "尝试从 Url地址 的目录中获取这些文件.",
+        'dirs': "尝试获取具有这些扩展名的包含文件夹."
     }
 
     results = None

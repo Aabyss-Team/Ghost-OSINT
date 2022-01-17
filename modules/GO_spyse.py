@@ -21,7 +21,7 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_spyse(GhostOsintPlugin):
     meta = {
         'name': "Spyse",
-        'summary': "Search Spyse.com Internet assets registry for information about domains, IP addresses, host info, potential vulnerabilities, passive DNS, etc.",
+        'summary': "在 Spyse.com 互联网资产中搜索有关域名、IP地址、主机信息、潜在漏洞、被动DNS等的信息.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -33,20 +33,16 @@ class GO_spyse(GhostOsintPlugin):
                 "https://spyse-dev.readme.io/reference/quick-start",
             ],
             'apiKeyInstructions': [
-                "Visit https://spyse.com",
-                "Register a free account",
-                "Navigate to https://spyse.com/user",
-                "The API key is listed under 'API token'"
+                "访问 https://spyse.com",
+                "注册一个免费账户",
+                "导航到 https://spyse.com/user",
+                "API 密钥将在 'API token'"
             ],
             'favIcon': "https://spyse.com/favicon/favicon-32x32.png",
             'logo': "https://spyse.com/favicon/favicon-32x32.png",
-            'description': "Spyse is a platform that collects, analyzes, and delivers data about devices and websites "
-                           "available on the Internet. It regularly probes every public IP address, crawls every "
-                           "website, curates and enriches the resulting data, and makes it intelligible through an "
-                           "interactive search engine and API.\n"
-                           "Supported data models: IPv4 hosts, open ports, WHOIS, domains, websites, passive DNS, "
-                           "potential vulnerabilities, autonomous systems, technologies, subnets, emails, IP "
-                           "reputation, organization, etc."
+            'description': "Spyse 是一个收集、分析和提供互联网上可用设备和网站数据的平台. "
+                           "它定期探测每个公共IP地址，抓取每个网站，整理和丰富结果数据，并通过交互式搜索引擎和API使其易于理解.\n"
+                           "支持的数据模型：IPv4主机、开放端口、WHOIS、域、网站、被动DNS、潜在漏洞、自治系统、技术、子网、电子邮件、IP信誉、组织等."
 
         }
     }
@@ -62,11 +58,11 @@ class GO_spyse(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key': 'Spyse API key.',
-        'delay': 'Delay between requests, in seconds.',
-        'verify': "Verify co-hosts are valid by checking if they still resolve to the shared IP.",
-        'cohostsamedomain': "Treat co-hosted sites on the same target domain as co-hosting?",
-        'maxcohost': "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting.",
+        'api_key': 'Spyse API 密钥.',
+        'delay': '请求之间的延迟（秒）.',
+        'verify': "通过检查共享主机是否仍解析为共享IP地址来验证它们是否有效.",
+        'cohostsamedomain': "将同一目标域上的托管站点视为共同托管?",
+        'maxcohost': "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的.",
     }
 
     cohostcount = 0

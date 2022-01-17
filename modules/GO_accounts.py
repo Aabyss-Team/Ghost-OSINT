@@ -3,6 +3,11 @@
 # Name:         GO_accounts
 # Purpose:      Identify the existence of a given acount on various sites thanks
 #               to Micah Hoffman's (https://github.com/WebBreacher) list.
+# Author:      Steve Micallef <steve@binarypool.com>
+#
+# Created:     14/07/2019
+# Copyright:   (c) Steve Micallef 2019
+# Licence:     GPL
 # -------------------------------------------------------------------------------
 
 import json
@@ -70,7 +75,7 @@ class GO_accounts(GhostOsintPlugin):
 
         content = self.GhostOsint.cacheGet("sfaccounts", 48)
         if content is None:
-            url = "https://raw.githubusercontent.com/GhostWolfTeam/WhatsMyName/master/web_accounts_list.json"
+            url = "https://raw.githubusercontent.com/GhostWolfTeam/Ghost-OSINT/master/web_accounts_list.json"
             data = self.GhostOsint.fetchUrl(url, useragent="GhostOSINT")
 
             if data['content'] is None:

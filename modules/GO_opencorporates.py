@@ -21,7 +21,7 @@ class GO_opencorporates(GhostOsintPlugin):
 
     meta = {
         'name': "OpenCorporates",
-        'summary': "Look up company information from OpenCorporates.",
+        'summary': "从 OpenCorporates 查找公司信息.",
         'flags': ["apikey"],
         'useCases': ["Passive", "Footprint", "Investigate"],
         'categories': ["Search Engines"],
@@ -32,19 +32,18 @@ class GO_opencorporates(GhostOsintPlugin):
                 "https://api.opencorporates.com/documentation/API-Reference"
             ],
             'apiKeyInstructions': [
-                "Visit https://opencorporates.com/api_accounts/new"
-                "Register a new account with an email",
-                "Navigate to https://opencorporates.com/users/account and select 'Get Account'",
-                "Select the plan required",
-                "Navigate to https://opencorporates.com/users/account",
-                "The API key is listed under 'API Account'",
+                "访问 https://opencorporates.com/api_accounts/new"
+                "使用电子邮件注册一个账户",
+                "导航到 https://opencorporates.com/users/account and select 'Get Account'",
+                "选择计划",
+                "导航到 https://opencorporates.com/users/account",
+                "API 密钥将在 'API Account'",
             ],
             'favIcon': "https://opencorporates.com/assets/favicons/favicon.png",
             'logo': "https://opencorporates.com/contents/ui/theme/img/oc-logo.svg",
-            'description': "The largest open database of companies in the world.\n"
-            "As the largest, open database of companies in the world, "
-            "our business is making high-quality, official company data openly available. "
-            "Data that can be trusted, accessed, analysed and interrogated when and how it’s needed.",
+            'description': "世界上最大的公司开放数据库.\n"
+            "作为世界上最大的开放式公司数据库，我们的业务是公开提供高质量的官方公司数据. "
+            "在需要时以及以何种方式可以信任、访问、分析和查询的数据.",
         }
     }
 
@@ -54,8 +53,8 @@ class GO_opencorporates(GhostOsintPlugin):
     }
 
     optdescs = {
-        'confidence': "Confidence that the search result objects are correct (numeric value between 0 and 100).",
-        'api_key': 'OpenCorporates.com API key. Without this you will be limited to 50 look-ups per day.'
+        'confidence': "确信搜索结果对象是正确的（数值介于0和100之间）.",
+        'api_key': 'OpenCorporates.com API 密钥. 否则，你每天只能进行50次查询.'
     }
 
     results = None

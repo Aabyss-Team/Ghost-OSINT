@@ -20,8 +20,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_pgp(GhostOsintPlugin):
 
     meta = {
-        'name': "PGP Key Servers",
-        'summary': "Look up e-mail addresses in PGP public key servers.",
+        'name': "PGP 公钥服务器",
+        'summary': "在 PGP 公钥服务器中查找电子邮件地址.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Public Registries"]
@@ -40,10 +40,10 @@ class GO_pgp(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'keyserver_search1': "PGP public key server URL to find e-mail addresses on a domain. Domain will get appended.",
-        'keyserver_fetch1': "PGP public key server URL to find the public key for an e-mail address. Email address will get appended.",
-        'keyserver_search2': "Backup PGP public key server URL to find e-mail addresses on a domain. Domain will get appended.",
-        'keyserver_fetch2': "Backup PGP public key server URL to find the public key for an e-mail address. Email address will get appended."
+        'keyserver_search1': "用于查找域名中电子邮件地址的 PGP 公钥服务器 Url 地址. 域名将被附加.",
+        'keyserver_fetch1': "用于查找电子邮件地址公钥的PGP公钥服务器 Url 地址. 将附加电子邮件地址.",
+        'keyserver_search2': "备份PGP公钥服务器 Url地址 以查找域中的电子邮件地址. 域名将被附加.",
+        'keyserver_fetch2': "备份PGP公钥服务器 Url地址 以查找电子邮件地址的公钥. 将附加电子邮件地址."
     }
 
     def setup(self, sfc, userOpts=dict()):

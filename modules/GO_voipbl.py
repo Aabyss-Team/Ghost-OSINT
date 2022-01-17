@@ -19,8 +19,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_voipbl(GhostOsintPlugin):
 
     meta = {
-        'name': "VoIP Blacklist (VoIPBL)",
-        'summary': "Check if an IP address or netblock is malicious according to VoIP Blacklist (VoIPBL).",
+        'name': "VoIP 黑名单 (VoIPBL)",
+        'summary': "根据 VoIP 黑名单 (VoIPBL) 检查 IP地址 或网段是否是恶意的.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -33,8 +33,7 @@ class GO_voipbl(GhostOsintPlugin):
             ],
             'favIcon': "",
             'logo': "https://voipbl.org/images/scopserv.png",
-            'description': "VoIPBL is a distributed VoIP blacklist that is aimed to protect against\n"
-            "VoIP Fraud and minimizing abuse for network that have publicly accessible PBXs."
+            'description': "VoIPBL 是一个分布式VoIP黑名单，旨在防止VoIP欺诈，并最大限度地减少对具有可公开访问PBX的网络的滥用."
         }
     }
 
@@ -46,10 +45,10 @@ class GO_voipbl(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?",
-        'cacheperiod': "Hours to cache list data before re-fetching.",
-        'checknetblocks': "Report if any malicious IPs are found within owned netblocks?",
-        'checksubnets': "Check if any malicious IPs are found within the same subnet of the target?"
+        'checkaffiliates': "检查关联企业?",
+        'cacheperiod': "之前缓存数据提取.",
+        'checknetblocks': "报告网段中是否发现任何恶意IP地址?",
+        'checksubnets': "检查在目标的同一子网内是否发现的任何恶意 IP 地址?"
     }
 
     results = None

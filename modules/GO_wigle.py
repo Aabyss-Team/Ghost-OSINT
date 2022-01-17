@@ -22,7 +22,7 @@ class GO_wigle(GhostOsintPlugin):
 
     meta = {
         'name': "WiGLE",
-        'summary': "Query WiGLE to identify nearby WiFi access points.",
+        'summary': "查询 Wigle 以识别附近的 WiFi 接入点.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Secondary Networks"],
@@ -34,17 +34,16 @@ class GO_wigle(GhostOsintPlugin):
                 "https://api.wigle.net/swagger"
             ],
             'apiKeyInstructions': [
-                "Visit https://wigle.net/",
-                "Register a free account",
-                "Navigate to https://wigle.net/account",
-                "Click on 'Show my token'",
-                "The API key is listed under 'API Token'"
+                "访问 https://wigle.net/",
+                "注册一个免费账户",
+                "导航到 https://wigle.net/account",
+                "点击 'Show my token'",
+                "API 密钥将在 'API Token'"
             ],
             'favIcon': "https://wigle.net/favicon.ico?v=A0Ra9gElOR",
             'logo': "https://wigle.net/images/planet-bubble.png",
-            'description': "We consolidate location and information of wireless networks world-wide to a central database, "
-            "and have user-friendly desktop and web applications that can map, "
-            "query and update the database via the web.",
+            'description': "我们将全球无线网络的位置和信息整合到一个中央数据库中，"
+            "并拥有用户友好的桌面和 WEB 应用程序，可以通过 WEB 映射、查询和更新数据库.",
         }
     }
 
@@ -57,9 +56,9 @@ class GO_wigle(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key_encoded": "Wigle.net base64-encoded API name/token pair.",
-        "days_limit": "Maximum age of data to be considered valid.",
-        "variance": "How tightly to bound queries against the latitude/longitude box extracted from idenified addresses. This value must be between 0.001 and 0.2."
+        "api_key_encoded": "Wigle.net base64 编码 API 名称/token 对.",
+        "days_limit": "视为有效数据的最长期限.",
+        "variance": "如何紧密地将查询绑定到从标识地址中提取的纬度/经度框. 此值必须介于 0.001 和 0.2 之间."
 
     }
 

@@ -23,7 +23,7 @@ class GO_onionsearchengine(GhostOsintPlugin):
 
     meta = {
         'name': "Onionsearchengine.com",
-        'summary': "Search Tor onionsearchengine.com for mentions of the target domain.",
+        'summary': "搜索 Tor onionsearchengine.com 中搜索目标域名的相关信息.",
         'flags': ["tor"],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["Search Engines"],
@@ -36,8 +36,8 @@ class GO_onionsearchengine(GhostOsintPlugin):
             ],
             'favIcon': "https://as.onionsearchengine.com/images/onionsearchengine.jpg",
             'logo': "https://as.onionsearchengine.com/images/onionsearchengine.jpg",
-            'description': "No cookies, no javascript, no trace. We protect your privacy.\n"
-            "Onion search engine is search engine with ability to find content on tor network / deepweb / darkweb.",
+            'description': "没有 cookie，没有 javascript，没有跟踪。我们保护你的隐私.\n"
+            "洋葱搜索引擎是一种能够在tor 网络/深网/暗网上查找内容的搜索引擎.",
         }
     }
 
@@ -52,11 +52,11 @@ class GO_onionsearchengine(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'timeout': "Query timeout, in seconds.",
-        'max_pages': "Maximum number of pages of results to fetch.",
-        'fetchlinks': "Fetch the darknet pages (via TOR, if enabled) to verify they mention your target.",
-        'blacklist': "Exclude results from sites matching these patterns.",
-        'fullnames': "Search for human names?"
+        'timeout': "查询超时（秒）.",
+        'max_pages': "提取结果最大页数.",
+        'fetchlinks': "获取暗网页面（如果启用则通过 Tor ）以验证它们是否与目标相关.",
+        'blacklist': "从与这些模式匹配的网站中排除结果.",
+        'fullnames': "搜索人名?"
     }
 
     results = None

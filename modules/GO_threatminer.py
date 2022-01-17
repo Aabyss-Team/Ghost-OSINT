@@ -23,7 +23,7 @@ class GO_threatminer(GhostOsintPlugin):
 
     meta = {
         'name': "ThreatMiner",
-        'summary': "Obtain information from ThreatMiner's database for passive DNS and threat intelligence.",
+        'summary': "从 ThreatMiner 的 被动DNS 和威胁情报数据库中获取信息.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -36,11 +36,9 @@ class GO_threatminer(GhostOsintPlugin):
             ],
             'favIcon': "https://www.threatminer.org/images/favicon.gif",
             'logo': "https://www.threatminer.org/images/logo.png",
-            'description': "ThreatMiner is a threat intelligence portal designed to enable analysts to research under a single interface. "
-            "It is used in the SANS FOR578 Cyber Threat Intelligence course.\n"
-            "Threat intelligence and intrusion analysts who regularly perform research "
-            "into malware and network infrastructure often find the need to rely on "
-            "mutliple websites that individually holds a small piece of the larger puzzle.",
+            'description': "ThreatMiner 是一个威胁情报门户，旨在使分析师能够在单一界面下进行研究. "
+            "它用于SANS的578网络威胁情报课程.\n"
+            "定期对恶意软件和网络基础设施进行研究的威胁情报和入侵分析人员经常发现，需要依赖于多个网站，这些网站各自占据了更大难题的一小部分.",
         }
     }
     # Default options
@@ -56,13 +54,13 @@ class GO_threatminer(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'verify': 'Verify that any hostnames found on the target domain still resolve?',
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of?",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxcohost': "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting.",
-        "age_limit_days": "Ignore records older than this many days. 0 = Unlimited."
+        'verify': '验证在目标域名上找到的任何主机名是否仍可解析?',
+        'netblocklookup': "在目标的网段上查找所有 IP 地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'subnetlookup': "查找目标所属子网上的所有IP地址?",
+        'maxsubnet': "如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxcohost': "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的.",
+        "age_limit_days": "忽略早于此天数的记录. 0为无限."
     }
 
     # Be sure to completely clear any class variables in setup()

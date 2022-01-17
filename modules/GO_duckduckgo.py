@@ -19,7 +19,7 @@ class GO_duckduckgo(GhostOsintPlugin):
 
     meta = {
         'name': "DuckDuckGo",
-        'summary': "Query DuckDuckGo's API for descriptive information about your target.",
+        'summary': "查询 DuckDuckGo 的 API 以获取有关目标的详细信息.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -33,8 +33,8 @@ class GO_duckduckgo(GhostOsintPlugin):
             ],
             'favIcon': "https://duckduckgo.com/favicon.ico",
             'logo': "https://duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png",
-            'description': "Our Instant Answer API gives you free access to many of our instant answers like: "
-            "topic summaries , categories, disambiguation, and !bang redirects.",
+            'description': "我们的即时显示 API 允许您免费访问我们的许多即时内容，如: "
+            "主题摘要 , 类别, 解疑, and 芜湖! 重定向.",
         }
     }
 
@@ -45,7 +45,7 @@ class GO_duckduckgo(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "affiliatedomains": "For affiliates, look up the domain name, not the hostname. This will usually return more meaningful information about the affiliate."
+        "affiliatedomains": "对于分支机构会查找域名，而不是主机名。这通常会返回有关企业的信息."
     }
 
     results = None

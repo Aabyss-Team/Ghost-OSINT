@@ -21,8 +21,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_bitcoin(GhostOsintPlugin):
 
     meta = {
-        'name': "Bitcoin Finder",
-        'summary': "Identify bitcoin addresses in scraped webpages.",
+        'name': "Bitcoin 查找器",
+        'summary': "在抓取的网页中识别比特币地址.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Content Analysis"]

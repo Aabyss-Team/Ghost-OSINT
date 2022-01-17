@@ -25,7 +25,7 @@ class GO_virustotal(GhostOsintPlugin):
 
     meta = {
         'name': "VirusTotal",
-        'summary': "Obtain information from VirusTotal about identified IP addresses.",
+        'summary': "从 VirusTotal 获取有关IP地址的信息.",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -36,16 +36,15 @@ class GO_virustotal(GhostOsintPlugin):
                 "https://developers.virustotal.com/reference"
             ],
             'apiKeyInstructions': [
-                "Visit https://www.virustotal.com/",
-                "Register a free account",
-                "Click on your profile",
-                "Click on API Key",
-                "The API key is listed under 'API Key'"
+                "访问 https://www.virustotal.com/",
+                "注册一个免费账户",
+                "点击你的个人资料",
+                "点击 API Key",
+                "API 密钥将在 'API Key'"
             ],
             'favIcon': "https://www.virustotal.com/gui/images/favicon.png",
             'logo': "https://www.virustotal.com/gui/images/logo.svg",
-            'description': "Analyze suspicious files and URLs to detect types of malware, "
-            "automatically share them with the security community.",
+            'description': "分析可疑文件和URL以检测恶意软件类型，并自动与安全社区共享.",
         }
     }
 
@@ -62,15 +61,15 @@ class GO_virustotal(GhostOsintPlugin):
     }
 
     optdescs = {
-        'api_key': 'VirusTotal API Key.',
-        'publicapi': 'Are you using a public key? If so GhostOSINT will pause for 15 seconds after each query to avoid VirusTotal dropping requests.',
-        'checkcohosts': 'Check co-hosted sites?',
-        'checkaffiliates': 'Check affiliates?',
-        'netblocklookup': 'Look up all IPs on netblocks deemed to be owned by your target for possible hosts on the same target subdomain/domain?',
-        'maxnetblock': 'If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)',
-        'subnetlookup': 'Look up all IPs on subnets which your target is a part of?',
-        'maxsubnet': 'If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)',
-        'verify': 'Verify that any hostnames found on the target domain still resolve?'
+        'api_key': 'VirusTotal API 密钥.',
+        'publicapi': '你使用的是公钥吗？如果是这样，GhostOSINT 将在每次查询后暂停15秒，以避免 VirusTotal 丢弃请求.',
+        'checkcohosts': '检查共同托管的网站?',
+        'checkaffiliates': '检查关联公司?',
+        'netblocklookup': '在目标的网段上查找同一目标子域或域上可能存在的主机的所有IP地址?',
+        'maxnetblock': '如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)',
+        'subnetlookup': '查找目标所属子网上的所有IP地址?',
+        'maxsubnet': '如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)',
+        'verify': '验证在目标域名上找到的任何主机名是否仍可解析?'
     }
 
     results = None

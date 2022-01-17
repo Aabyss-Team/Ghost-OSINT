@@ -20,7 +20,7 @@ class GO_github(GhostOsintPlugin):
 
     meta = {
         'name': "Github",
-        'summary': "Identify associated public code repositories on Github.",
+        'summary': "在 Github 上识别关联的公共代码库.",
         'flags': [],
         'useCases': ["Footprint", "Passive"],
         'categories': ["Social Media"],
@@ -32,8 +32,7 @@ class GO_github(GhostOsintPlugin):
             ],
             'favIcon': "https://github.githubassets.com/favicons/favicon.png",
             'logo': "https://github.githubassets.com/favicons/favicon.png",
-            'description': "GitHub brings together the world's largest community of "
-            "developers to discover, share, and build better software.",
+            'description': "GitHub 汇集了世界上最大的开发者社区，以发现、共享和构建更好的软件.",
         }
     }
 
@@ -44,7 +43,7 @@ class GO_github(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'namesonly': "Match repositories by name only, not by their descriptions. Helps reduce false positives."
+        'namesonly': "仅按名称而不是按描述来匹配存储库.有助于减少误报."
     }
 
     def setup(self, sfc, userOpts=dict()):

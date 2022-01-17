@@ -21,8 +21,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_torexits(GhostOsintPlugin):
 
     meta = {
-        'name': "TOR Exit Nodes",
-        'summary': "Check if an IP adddress or netblock appears on the Tor Metrics exit node list.",
+        'name': "TOR 出口节点",
+        'summary': "检查 IP地址 或网段是否出现在 Tor 指标出口节点列表上.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Secondary Networks"],
@@ -34,7 +34,7 @@ class GO_torexits(GhostOsintPlugin):
             ],
             'favIcon': "https://metrics.torproject.org/images/favicon.ico",
             'logo': "https://metrics.torproject.org/images/tor-metrics-white@2x.png",
-            'description': "The relay search tool displays data about single relays and bridges in the Tor network."
+            'description': "中继搜索工具显示有关 Tor 网络中单个中继和网桥的数据."
         },
     }
 
@@ -45,9 +45,9 @@ class GO_torexits(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?",
-        'cacheperiod': "Hours to cache list data before re-fetching.",
-        'checknetblocks': "Report if any malicious IPs are found within owned netblocks?",
+        'checkaffiliates': "检查关联企业?",
+        'cacheperiod': "之前缓存数据提取.",
+        'checknetblocks': "报告网段中是否发现任何恶意IP地址?",
     }
 
     results = None

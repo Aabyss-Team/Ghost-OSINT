@@ -19,7 +19,7 @@ class GO__stor_db(GhostOsintPlugin):
 
     # Default options
     opts = {
-        'maxstorage': 1024,  # max bytes for any piece of info stored (0 = unlimited)
+        'maxstorage': 1024,  # max bytes for any piece of info stored (0 = 无限)
         '_store': True
     }
 

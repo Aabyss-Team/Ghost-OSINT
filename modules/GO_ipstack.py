@@ -20,7 +20,7 @@ class GO_ipstack(GhostOsintPlugin):
 
     meta = {
         'name': "ipstack",
-        'summary': "Identifies the physical location of IP addresses identified using ipstack.com.",
+        'summary': "通过 ipstack.com 查找标识的IP地址的物理位置.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Real World"],
@@ -32,16 +32,15 @@ class GO_ipstack(GhostOsintPlugin):
                 "https://ipstack.com/faq"
             ],
             'apiKeyInstructions': [
-                "Visit https://ipstack.com/product",
-                "Click on 'Get Free API Key'",
-                "Click on 'Dashboard'",
-                "The API key is listed under 'Your API Access Key'"
+                "访问 https://ipstack.com/product",
+                "点击 'Get Free API Key'",
+                "点击 'Dashboard'",
+                "API 密钥将在 'Your API Access Key'"
             ],
             'favIcon': "https://ipstack.com/ipstack_images/ipstack_logo.svg",
             'logo': "https://ipstack.com/ipstack_images/ipstack_logo.svg",
-            'description': "Locate and identify website visitors by IP address.\n"
-            "ipstack offers one of the leading IP to geolocation APIS "
-            "and global IP database services worldwide.",
+            'description': "通过IP地址定位和识别网站访问者.\n"
+            "ipstack 提供全球领先的IP到地理位置API和全球IP数据库服务之一.",
         }
     }
 
@@ -50,7 +49,7 @@ class GO_ipstack(GhostOsintPlugin):
         "api_key": ""
     }
     optdescs = {
-        "api_key": "Ipstack.com API key."
+        "api_key": "Ipstack.com API 密钥."
     }
     results = None
     errorState = False

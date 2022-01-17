@@ -22,7 +22,7 @@ class GO_intelx(GhostOsintPlugin):
 
     meta = {
         'name': "IntelligenceX",
-        'summary': "Obtain information from IntelligenceX about identified IP addresses, domains, e-mail addresses and phone numbers.",
+        'summary': "从 IntelligenceX 中获取目标有关的IP地址、域名、电子邮件地址和电话号码的信息.",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -35,20 +35,18 @@ class GO_intelx(GhostOsintPlugin):
                 "https://github.com/IntelligenceX/SDK"
             ],
             'apiKeyInstructions': [
-                "Visit https://intelx.io/",
-                "Register a free account",
-                "Navigate to https://intelx.io/account?tab=developer",
-                "The API key is listed under 'Your API details'"
+                "访问 https://intelx.io/",
+                "注册一个免费账户",
+                "导航到 https://intelx.io/account?tab=developer",
+                "API 密钥将在 'Your API details'"
             ],
             'favIcon': "https://intelx.io/favicon/favicon-32x32.png",
             'logo': "https://intelx.io/assets/img/IntelligenceX.svg",
-            'description': "Intelligence X is an independent European technology company founded in 2018 by Peter Kleissner. "
-            "Its mission is to develop and maintain the search engine and data archive.\n"
-            "The search works with selectors, i.e. specific search terms such as "
-            "email addresses, domains, URLs, IPs, CIDRs, Bitcoin addresses, IPFS hashes, etc.\n"
-            "It searches in places such as the darknet, document sharing platforms, whois data, public data leaks and others.\n"
-            "It keeps a historical data archive of results, "
-            "similar to how the Wayback Machine from archive.org stores historical copies of websites.",
+            'description': "Intelligence X 是一家独立的欧洲技术公司，由 Peter Kleissner于2018年成立. "
+            "它的任务是开发和维护搜索引擎和数据档案.\n"
+            "搜索使用选择器，即特定搜索词，如电子邮件地址、域名、Url地址、IP地址、CIDR、比特币地址、IPFS哈希等.\n"
+            "它在暗网、文档共享平台、whois数据、公共数据泄露等地方进行搜索.\n"
+            "它保存结果的历史数据存档，类似于 Wayback 机器如何从 archive.org 存储网站恢复历史副本.",
         }
     }
 
@@ -67,15 +65,15 @@ class GO_intelx(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "IntelligenceX API key.",
-        "base_url": "API URL, as provided in your IntelligenceX account settings.",
-        "checkcohosts": "Check co-hosted sites?",
-        "checkaffiliates": "Check affiliates?",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of?",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxage': "Maximum age (in days) of results to be considered valid. 0 = unlimited."
+        "api_key": "IntelligenceX API 密钥.",
+        "base_url": "API Url地址, 在 IntelligenceX 账户设置中提供.",
+        "checkcohosts": "检查共同托管的网站?",
+        "checkaffiliates": "检查关联公司?",
+        'netblocklookup': "在目标的网段上查找同一目标子域或域上可能存在的主机的所有IP地址?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'subnetlookup': "查找目标所属子网上的所有IP地址?",
+        'maxsubnet': "如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxage': "视为有效的结果最长期限（天）. 0 = 无限."
     }
 
     # Be sure to completely clear any class variables in setup()

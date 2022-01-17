@@ -24,7 +24,7 @@ class GO_emailcrawlr(GhostOsintPlugin):
 
     meta = {
         'name': "EmailCrawlr",
-        'summary': "Search EmailCrawlr for email addresses and phone numbers associated with a domain.",
+        'summary': "在 EmailCrawlr 中索索与域名关联的电子邮件和电话号码.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -35,18 +35,18 @@ class GO_emailcrawlr(GhostOsintPlugin):
                 "https://emailcrawlr.com/docs"
             ],
             'apiKeyInstructions': [
-                "Visit https://emailcrawlr.com",
-                "Sign up for free account",
-                "Navigate to https://emailcrawlr.com/dashboard",
-                "The API key is listed under 'API Key'"
+                "访问 https://emailcrawlr.com",
+                "注册免费账户",
+                "导航到 https://emailcrawlr.com/dashboard",
+                "API 密钥将在 'API Key'"
             ],
             'favIcon': "https://emailcrawlr.com/assets/fav-165eaa698b0dc774f0b250fadb2b41266e4c70dfbd7fb5fd4413e4bdecfd229d.png",
             'logo': "https://emailcrawlr.com/assets/logo_black-d136617b2fc5d52df6eea245a4db78477d8d99f873e08c24a9c3c7defe1c1379.png",
-            'description': "By using the EmailCrawlr JSON API you can: "
-            "Get key information about company websites.\n"
-            "Find all email addresses associated with a domain.\n"
-            "Get social accounts associated with an email.\n"
-            "Verify email address deliverability.",
+            'description': "通过 EmailCrawlr JSON API 你可以: "
+            "获取有关公司网站的关键信息.\n"
+            "查找与域名关联的所有电子邮件地址.\n"
+            "获取与电子邮件关联的社交帐户.\n"
+            "验证电子邮件地址的可交付性.",
         }
     }
 
@@ -58,8 +58,8 @@ class GO_emailcrawlr(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "EmailCrawlr API key.",
-        "delay": "Delay between requests, in seconds.",
+        "api_key": "EmailCrawlr API 密钥.",
+        "delay": "请求之间的延迟（秒）.",
     }
 
     results = None

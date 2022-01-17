@@ -19,8 +19,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_dnsneighbor(GhostOsintPlugin):
 
     meta = {
-        'name': "DNS Look-aside",
-        'summary': "Attempt to reverse-resolve the IP addresses next to your target to see if they are related.",
+        'name': "DNS 旁路",
+        'summary': "尝试反向解析目标旁边的IP地址，以查看它们是否相关.",
         'flags': [],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["DNS"]
@@ -34,8 +34,8 @@ class GO_dnsneighbor(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'validatereverse': "Validate that reverse-resolved hostnames still resolve back to that IP before considering them as aliases of your target.",
-        'lookasidebits': "If look-aside is enabled, the netmask size (in CIDR notation) to check. Default is 4 bits (16 hosts)."
+        'validatereverse': "在将反向解析的主机名视为目标的别名之前，请验证反向解析的主机名是否仍解析回该IP.",
+        'lookasidebits': "如果启用了旁路检测，则要设置检查的网络掩码大小（采用CIDR表示法）.默认值为4（16台主机）."
     }
 
     events = None

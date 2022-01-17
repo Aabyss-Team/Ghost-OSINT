@@ -21,7 +21,7 @@ class GO_spamhaus(GhostOsintPlugin):
 
     meta = {
         'name': "Spamhaus Zen",
-        'summary': "Check if a netblock or IP address is in the Spamhaus Zen database.",
+        'summary': "检查网段或IP地址是否存储在 Spamhaus Zen 数据库中.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -37,13 +37,10 @@ class GO_spamhaus(GhostOsintPlugin):
             ],
             'favIcon': "https://www.spamhaus.org/favicon.ico",
             'logo': "https://www.spamhaus.org/images/sh_logo1.jpg",
-            'description': "The Spamhaus Project is an international nonprofit organization that "
-            "tracks spam and related cyber threats such as phishing, malware and botnets, "
-            "provides realtime actionable and highly accurate threat intelligence to "
-            "the Internet's major networks, corporations and security vendors, "
-            "and works with law enforcement agencies to identify and pursue spam and malware sources worldwide. "
-            "ZEN is the combination of all Spamhaus IP-based DNSBLs into one single powerful and comprehensive "
-            "blocklist to make querying faster and simpler. It contains the SBL, SBLCSS, XBL and PBL blocklists.",
+            'description': "Spamhaus 项目是一个国际非营利组织，跟踪垃圾邮件和相关网络威胁，"
+            "如网络钓鱼、恶意软件和僵尸网络，向互联网的主要网络、公司和安全供应商提供实时可操作且高度准确的威胁情报，"
+            "并与执法机构合作，在全球范围内识别和追踪垃圾邮件和恶意软件来源. "
+            "ZEN 将所有基于 Spamhaus IP的 DNSBL 组合成一个功能强大且全面的区块列表，以使查询更快、更简单. 它包含SBL、SBLCS、XBL和PBL区块列表.",
         }
     }
 
@@ -55,10 +52,10 @@ class GO_spamhaus(GhostOsintPlugin):
     }
 
     optdescs = {
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of for blacklisting?",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)"
+        'netblocklookup': "在目标的网段上查找所有 IP 地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'subnetlookup': "查找目标子网上的所有IP地址是否在黑名单中?",
+        'maxsubnet': "如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)"
     }
 
     results = None

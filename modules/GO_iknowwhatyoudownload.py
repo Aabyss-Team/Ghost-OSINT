@@ -21,7 +21,7 @@ class GO_iknowwhatyoudownload(GhostOsintPlugin):
 
     meta = {
         'name': "Iknowwhatyoudownload.com",
-        'summary': "Check iknowwhatyoudownload.com for IP addresses that have been using torrents.",
+        'summary': "检查 iknowwhatyoudownload.com 中 torrent 使用的 IP地址.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Secondary Networks"],
@@ -34,15 +34,14 @@ class GO_iknowwhatyoudownload(GhostOsintPlugin):
                 "https://iknowwhatyoudownload.com/en/peer/"
             ],
             'apiKeyInstructions': [
-                "Visit https://iknowwhatyoudownload.com/en/api/",
-                "Request Demo Key with email id",
-                "The API key will be sent to your email"
+                "访问 https://iknowwhatyoudownload.com/en/api/",
+                "请求带有电子邮件ID的演示 API 密钥",
+                "API密钥将发送到你的电子邮件"
             ],
             'favIcon': "https://iknowwhatyoudownload.com/assets/img/utorrent2.png",
             'logo': "https://iknowwhatyoudownload.com/assets/img/logo.png",
-            'description': "Our system collects torrent files in two ways: parsing torrent sites, and listening DHT network. "
-            "The system contains more than 7 million torrents (as of Oct 2021) which were classified and which are using now "
-            "for collecting peer sharing facts (up to 200.000.000 daily).",
+            'description': "我们的系统以两种方式收集torrent文件：解析torrent站点和监听DHT网络. "
+            "该系统包含700多万条已分类的Torrent（截至2021年10月），目前用于收集对等共享事实（每天高达200.000.000条）.",
         }
     }
 
@@ -52,8 +51,8 @@ class GO_iknowwhatyoudownload(GhostOsintPlugin):
     }
 
     optdescs = {
-        "daysback": "How far back (in days) to look for activity.",
-        "api_key": "Iknowwhatyoudownload.com API key."
+        "daysback": "追溯多长时间（以天为单位）来查找活动.",
+        "api_key": "Iknowwhatyoudownload.com API 密钥."
     }
 
     results = None

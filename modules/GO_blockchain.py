@@ -20,7 +20,7 @@ class GO_blockchain(GhostOsintPlugin):
 
     meta = {
         'name': "Blockchain",
-        'summary': "Queries blockchain.info to find the balance of identified bitcoin wallet addresses.",
+        'summary': "查询blockchain.info以查找已识别的比特币钱包地址的余额.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Public Registries"],

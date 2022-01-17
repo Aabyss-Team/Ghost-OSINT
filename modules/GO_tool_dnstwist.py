@@ -22,17 +22,17 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin, GhostOsintHelp
 class GO_tool_dnstwist(GhostOsintPlugin):
 
     meta = {
-        'name': "Tool - DNSTwist",
-        'summary': "Identify bit-squatting, typo and other similar domains to the target using a local DNSTwist installation.",
+        'name': "DNSTwist - 工具",
+        'summary': "使用安装在本地的 DNSTwist 来识别与目标相关的占用、输入错误和其他类似域名.",
         'flags': ["tool"],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["DNS"],
         'toolDetails': {
             'name': "DNSTwist",
-            'description': "See what sort of trouble users can get in trying to type your domain name. "
-            "Find lookalike domains that adversaries can use to attack you. "
-            "Can detect typosquatters, phishing attacks, fraud, and brand impersonation. "
-            "Useful as an additional source of targeted threat intelligence.",
+            'description': "看看用户在尝试键入域名时会遇到什么样的麻烦. "
+            "找到敌人可以用来攻击你的相似域名. "
+            "可以检测盗用者、网络钓鱼攻击、欺诈和品牌假冒. "
+            "作为目标威胁情报的额外来源非常有用.",
             'website': 'https://github.com/elceef/dnstwist',
             'repository': 'https://github.com/elceef/dnstwist'
         },
@@ -46,8 +46,8 @@ class GO_tool_dnstwist(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'pythonpath': "Path to Python interpreter to use for DNSTwist. If just 'python' then it must be in your PATH.",
-        'dnstwistpath': "Path to the where the dnstwist.py file lives. Optional."
+        'pythonpath': "用于 dnstwist 的 Python 解释器的路径. 如果只是 'Python'，那么它一定在你的路径中.",
+        'dnstwistpath': "dnstwist.py 文件所在的路径. 可选."
     }
 
     results = None

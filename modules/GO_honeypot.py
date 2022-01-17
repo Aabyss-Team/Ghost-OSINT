@@ -20,7 +20,7 @@ class GO_honeypot(GhostOsintPlugin):
 
     meta = {
         'name': "Project Honey Pot",
-        'summary': "Query the Project Honey Pot database for IP addresses.",
+        'summary': "在项目 Honey Pot 数据库中查询IP地址.",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -33,20 +33,17 @@ class GO_honeypot(GhostOsintPlugin):
                 "https://www.projecthoneypot.org/faq.php"
             ],
             'apiKeyInstructions': [
-                "Visit https://www.projecthoneypot.org",
-                "Sign up for a free account",
-                "Navigate to https://www.projecthoneypot.org/httpbl_configure.php'",
-                "Request for an API key",
-                "The API key is listed under 'Your http:BL Access Key'"
+                "访问 https://www.projecthoneypot.org",
+                "注册一个免费的账户",
+                "导航到 https://www.projecthoneypot.org/httpbl_configure.php'",
+                "请求一个 API 密钥",
+                "API 密钥将在 'Your http:BL Access Key'"
             ],
             'favIcon': "https://www.projecthoneypot.org/favicon.ico",
             'logo': "https://www.projecthoneypot.org/images/php_logo.gif",
-            'description': "Project Honey Pot is the first and only distributed system for identifying spammers "
-            "and the spambots they use to scrape addresses from your website. "
-            "Using the Project Honey Pot system you can install addresses "
-            "that are custom-tagged to the time and IP address of a visitor to your site. "
-            "If one of these addresses begins receiving email we not only can tell that the messages are spam, "
-            "but also the exact moment when the address was harvested and the IP address that gathered it.",
+            'description': "Honey Pot 项目是第一个也是唯一一个用于识别垃圾邮件发送者和他们用来从你的网站上获取地址的垃圾邮件的分布式系统. "
+            "使用 Honey Pot 项目系统，你可以自定义标记站点访问者的时间和IP地址. "
+            "如果其中一个地址开始接收电子邮件，我们不仅可以知道这些邮件是垃圾邮件，还可以知道获取该地址的确切时间以及收集该地址的IP地址.",
         }
     }
 
@@ -62,14 +59,14 @@ class GO_honeypot(GhostOsintPlugin):
     }
 
     optdescs = {
-        'api_key': "ProjectHoneyPot.org API key.",
-        'searchengine': "Include entries considered search engines?",
-        'threatscore': "Threat score minimum, 0 being everything and 255 being only the most serious.",
-        'timelimit': "Maximum days old an entry can be. 255 is the maximum, 0 means you'll get nothing.",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of?",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)"
+        'api_key': "ProjectHoneyPot.org API 密钥.",
+        'searchengine': "包括搜索引擎认为的条目?",
+        'threatscore': "最低威胁分值，0表示所有威胁，255表示最严重的威胁.",
+        'timelimit': "条目的最大保留天数。255是最大值，0表示你什么也得不到.",
+        'netblocklookup': "在目标的网段上查找同一目标子域或域上可能存在的主机的所有IP地址?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'subnetlookup': "查找目标所属网段上的所有IP?",
+        'maxsubnet': "如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)"
     }
 
     results = None

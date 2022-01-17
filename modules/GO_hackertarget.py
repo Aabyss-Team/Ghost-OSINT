@@ -27,7 +27,7 @@ class GO_hackertarget(GhostOsintPlugin):
 
     meta = {
         'name': "HackerTarget",
-        'summary': "Search HackerTarget.com for hosts sharing the same IP.",
+        'summary': "通过 HackerTarget.com 搜索相同IP地址的共享主机.",
         'flags': [],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["Passive DNS"],
@@ -40,11 +40,10 @@ class GO_hackertarget(GhostOsintPlugin):
             ],
             'favIcon': "https://www.google.com/s2/favicons?domain=https://hackertarget.com/",
             'logo': "https://hackertarget.com/wp-content/uploads/2018/03/online-security.png",
-            'description': "Simplify the security assessment process with hosted vulnerability scanners. "
-            "From attack surface discovery to vulnerability identification, "
-            "actionable network intelligence for IT & security operations. "
-            "Proactively hunt for security weakness. "
-            "Pivot from attack surface discovery to vulnerability identification.",
+            'description': "使用托管的漏洞扫描程序简化安全评估过程. "
+            "从攻击面发现到漏洞识别，IT和安全操作的可操作网络智能. "
+            "主动寻找安全弱点. "
+            "从攻击面发现转向漏洞识别.",
         }
     }
 
@@ -58,12 +57,12 @@ class GO_hackertarget(GhostOsintPlugin):
     }
 
     optdescs = {
-        'cohostsamedomain': "Treat co-hosted sites on the same target domain as co-hosting?",
-        'verify': "Verify co-hosts are valid by checking if they still resolve to the shared IP.",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxcohost': "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting.",
-        'http_headers': "Retrieve IP HTTP headers using HackerTarget.com",
+        'cohostsamedomain': "将同一目标域上的托管站点视为共同托管?",
+        'verify': "通过检查共享主机是否仍解析为共享IP地址来验证它们是否有效.",
+        'netblocklookup': "在目标的网段上查找所有 IP 地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxcohost': "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的.",
+        'http_headers': "使用 HackerTarget.com 检索IP地址的 HTTP报头",
     }
 
     results = None

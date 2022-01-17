@@ -21,14 +21,14 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin, GhostOsintHelp
 class GO_tool_whatweb(GhostOsintPlugin):
 
     meta = {
-        'name': "Tool - WhatWeb",
-        'summary': "Identify what software is in use on the specified website.",
+        'name': "WhatWeb - 工具",
+        'summary': "确定指定网站上正在使用的组件.",
         'flags': ["tool"],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["Content Analysis"],
         'toolDetails': {
             'name': "WhatWeb",
-            'description': "WhatWeb identifies websites. Its goal is to answer the question, \"What is that Website?\". "
+            'description': "WhatWeb 标识网站. Its goal is to answer the question, \"What is that Website?\". "
             "WhatWeb recognises web technologies including content management systems (CMS), "
             "blogging platforms, statistic/analytics packages, JavaScript libraries, web servers, and embedded devices. "
             "WhatWeb has over 1800 plugins, each to recognise something different. "
@@ -47,9 +47,9 @@ class GO_tool_whatweb(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'aggression': 'Set WhatWeb aggression level (1-4)',
-        'ruby_path': "Path to Ruby interpreter to use for WhatWeb. If just 'ruby' then it must be in your $PATH.",
-        'whatweb_path': "Path to the whatweb executable file. Must be set."
+        'aggression': '设置 WhatWeb 攻击级别(1-4).',
+        'ruby_path': "用于 WhatWeb 的 Ruby 解释器的路径. 如果只有 'ruby'，那么它必须在你的$PATH中.",
+        'whatweb_path': "WhatWeb 可执行文件的路径. 必须设置."
     }
 
     results = None

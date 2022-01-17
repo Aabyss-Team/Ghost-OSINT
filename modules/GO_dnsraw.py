@@ -23,8 +23,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_dnsraw(GhostOsintPlugin):
 
     meta = {
-        'name': "DNS Raw Records",
-        'summary': "Retrieves raw DNS records such as MX, TXT and others.",
+        'name': "DNS 原始记录",
+        'summary': "检索原始DNS记录，如MX、TXT和其他信息.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["DNS"]
@@ -37,7 +37,7 @@ class GO_dnsraw(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'verify': "Verify identified hostnames resolve."
+        'verify': "验证已识别的主机名解析."
     }
 
     events = None

@@ -17,7 +17,7 @@ class GO_fortinet(GhostOsintPlugin):
 
     meta = {
         'name': "FortiGuard Antispam",
-        'summary': "Check if an IP address is malicious according to FortiGuard Antispam.",
+        'summary': "根据 FortiGuard Antispam 检查IP地址是否为恶意地址.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -29,7 +29,7 @@ class GO_fortinet(GhostOsintPlugin):
             ],
             'favIcon': "https://www.fortiguard.com/static/images/favicon.ico",
             'logo': "https://www.fortiguard.com/static/images/Fortinet-logo%20white.png?v=880",
-            'description': "FortiGuard Antispam provides a comprehensive and multi-layered approach to detect and filter spam processed by organizations."
+            'description': "FortiGuard Antispam 提供了一种全面、多层次的方法来检测和过滤垃圾邮件."
         }
     }
 
@@ -38,7 +38,7 @@ class GO_fortinet(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?"
+        'checkaffiliates': "检查关联企业?"
     }
 
     results = None

@@ -24,7 +24,7 @@ class GO_koodous(GhostOsintPlugin):
 
     meta = {
         'name': "Koodous",
-        'summary': "Search Koodous for mobile apps.",
+        'summary': "在 Koodous 上搜索移动应用程序.",
         'flags': [],
         'useCases': ["Investigate", "Footprint", "Passive"],
         'categories': ["Search Engines"],
@@ -43,7 +43,7 @@ class GO_koodous(GhostOsintPlugin):
     }
 
     optdescs = {
-        'max_pages': "Maximum number of pages of results to fetch.",
+        'max_pages': "提取结果最大页数.",
     }
 
     results = None

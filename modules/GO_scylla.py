@@ -22,7 +22,7 @@ class GO_scylla(GhostOsintPlugin):
 
     meta = {
         'name': "Scylla",
-        'summary': "Gather breach data from Scylla API.",
+        'summary': "从 Scylla API 收集违规数据.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Leaks, Dumps and Breaches"],
@@ -34,9 +34,8 @@ class GO_scylla(GhostOsintPlugin):
             ],
             'favIcon': "",
             'logo': "",
-            'description': "scylla.so has two major goals. One is to have a community-oriented database leak community "
-            "that is a useful tool for security researchers.\n"
-            "The other major goal is to undercut those people that are selling databases.",
+            'description': "scylla.so 它有两个主要目标. 一个是建立一个面向数据库的泄漏社区，它是安全研究人员的有用工具.\n"
+            "另一个主要目标是削弱那些销售数据库的人.",
         }
     }
 
@@ -49,9 +48,9 @@ class GO_scylla(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'pause': "Number of seconds to pause between fetches.",
-        'per_page': "Maximum number of results per page.",
-        'max_pages': "Maximum number of pages of results to fetch."
+        'pause': "读取之间暂停的秒数.",
+        'per_page': "每页最大结果数.",
+        'max_pages': "提取结果最大页数."
     }
 
     results = None

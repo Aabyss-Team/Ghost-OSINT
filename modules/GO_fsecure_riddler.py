@@ -20,7 +20,7 @@ class GO_fsecure_riddler(GhostOsintPlugin):
 
     meta = {
         'name': "F-Secure Riddler.io",
-        'summary': "Obtain network information from F-Secure Riddler.io API.",
+        'summary': "从 F-Secure Riddler.io API 密钥获取网络信息.",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Footprint", "Passive"],
         'categories': ["Search Engines"],
@@ -34,15 +34,13 @@ class GO_fsecure_riddler(GhostOsintPlugin):
                 "https://www.f-secure.com/en/business/products/vulnerability-management/radar"
             ],
             'apiKeyInstructions': [
-                "Registration is disabled for new accounts"
+                "对新账户禁止注册了"
             ],
             'favIcon': "https://riddler.io/static/images/favicon.png",
             'logo': "https://riddler.io/static/images/logo.png",
-            'description': "Riddler.io allows you to search in a high quality dataset with more than 396,831,739 hostnames. "
-            "Unlike others, we do not rely on simple port scanning techniques - we crawl the web, "
-            "ensuring an in-depth quality data set you will not find anywhere else.\n"
-            "Use Riddler to enumerate possible attack vectors during your pen-test or use the very same data "
-            "to monitor potential threats before it is too late.",
+            'description': "Riddler.io 允许您在包含超过396831739个主机名的高质量数据集中搜索. "
+            "与其他人不同，我们不依赖简单的端口扫描技术——我们在网络上爬行，确保您在其他任何地方都找不到深入的高质量数据集.\n"
+            "在渗透测试期间，使用 Riddler 枚举可能的攻击向量，或者在为时已晚之前，使用完全相同的数据监控潜在的威胁.",
         }
     }
 
@@ -53,9 +51,9 @@ class GO_fsecure_riddler(GhostOsintPlugin):
     }
 
     optdescs = {
-        'verify': 'Verify host names resolve',
-        'username': 'F-Secure Riddler.io username',
-        'password': 'F-Secure Riddler.io password'
+        'verify': '验证主机名解析',
+        'username': 'F-Secure Riddler.io 用户名',
+        'password': 'F-Secure Riddler.io 密码'
     }
 
     results = None

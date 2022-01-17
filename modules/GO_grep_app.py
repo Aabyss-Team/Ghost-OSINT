@@ -25,7 +25,7 @@ class GO_grep_app(GhostOsintPlugin):
 
     meta = {
         'name': "grep.app",
-        'summary': "Search grep.app API for links and emails related to the specified domain.",
+        'summary': "通过 grep.app API 搜索与指定域名相关的链接和电子邮件.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -35,9 +35,9 @@ class GO_grep_app(GhostOsintPlugin):
             'references': [],
             'favIcon': "https://grep.app/favicon-16x16.png",
             'logo': "https://grep.app/apple-touch-icon.png",
-            'description': "grep.app searches code from over a half million public repositories on GitHub.\n"
-            "It searches for the exact string you enter, including any punctuation or other characters.\n"
-            "You can also search by regular expression, using the RE2 syntax.",
+            'description': "grep.app 在 GitHub上 搜索50多万个公共存储库中的代码.\n"
+            "它会搜索你输入的字符串，包括任何标点符号或其他字符.\n"
+            "你还可以使用 RE2 语法通过正则表达式进行搜索.",
         }
     }
 
@@ -49,8 +49,8 @@ class GO_grep_app(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'max_pages': "Maximum number of pages of results to fetch.",
-        'dns_resolve': "DNS resolve each identified domain."
+        'max_pages': "提取结果最大页数.",
+        'dns_resolve': "DNS解析每个已识别到的域."
     }
 
     results = None

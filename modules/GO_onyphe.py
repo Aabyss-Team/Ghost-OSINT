@@ -22,7 +22,7 @@ class GO_onyphe(GhostOsintPlugin):
 
     meta = {
         "name": "Onyphe",
-        "summary": "Check Onyphe data (threat list, geo-location, pastries, vulnerabilities)  about a given IP.",
+        "summary": "通过 Onyphe 检查指定的IP地址信息 (威胁列表, 地理位置, 漏洞).",
         'flags': ["apikey"],
         "useCases": ["Footprint", "Passive", "Investigate"],
         "categories": ["Reputation Systems"],
@@ -31,22 +31,17 @@ class GO_onyphe(GhostOsintPlugin):
             "model": "FREE_AUTH_LIMITED",
             "references": ["https://www.onyphe.io/documentation/api"],
             "apiKeyInstructions": [
-                "Visit https://www.onyphe.io/login/#register",
-                "Register a free account",
-                "You should receive your API key on your email, or you can get it by yourself following next steps",
-                "Go to your account settings https://www.onyphe.io/auth/account",
-                "The API key is listed under 'API Key'",
+                "访问 https://www.onyphe.io/login/#register",
+                "注册一个免费账户",
+                "你应该在你的电子邮件中收到你的 API 密钥，或者你可以按照后续步骤自行获取",
+                "转到账户设置 https://www.onyphe.io/auth/account",
+                "API 密钥将在 'API Key'",
             ],
             "favIcon": "https://www.onyphe.io/favicon.ico",
             "logo": "https://www.onyphe.io/img/logo-solo.png",
-            "description": "ONYPHE is a search engine for open-source "
-            "and cyber threat intelligence data collected by crawling "
-            "various sources available on the Internet or by listening "
-            "to Internet background noise. They make this data available "
-            "through API that we use. We check their data to see following "
-            "information about the IP: geo-location, does it have some "
-            "vulnerabilities, is it on some pastries (PasteBin) and "
-            "is it on their threat list",
+            "description": "ONYPHE是一个搜索引擎，通过搜索互联网上的各种来源或监听互联网噪音来收集开源和网络威胁情报数据. "
+            "嘿，通过我们使用的API使这些数据可用. "
+            "我们检查他们的数据以查看关于IP地址的以下信息：地理位置，它是否有一些漏洞，它是否在威胁列表上. ",
         },
     }
 
@@ -60,13 +55,13 @@ class GO_onyphe(GhostOsintPlugin):
         "maxcohost": 100,
     }
     optdescs = {
-        "api_key": "Onyphe access token.",
-        "paid_plan": "Are you using paid plan? Paid plan has pagination enabled",
-        "max_page": "Maximum number of pages to iterate through. Onyphe has a maximum of 1000 pages (10,000 results). Only matters for paid plans",
-        "verify": "Verify identified domains still resolve to the associated specified IP address.",
-        "age_limit_days": "Ignore any records older than this many days. 0 = unlimited.",
-        "maxcohost": "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting.",
-        "cohostsamedomain": "Treat co-hosted sites on the same target domain as co-hosting?",
+        "api_key": "Onyphe 访问令牌.",
+        "paid_plan": "你是否使用付费计划? 付费计划已启用分页",
+        "max_page": "要循环访问的最大页数. Onyphe最多有1000页(10，000个结果). 只对付费计划有影响",
+        "verify": "验证标识的域名是否仍解析为关联的指定IP地址.",
+        "age_limit_days": "忽略该天数之前的任何记录. 0 = 无限.",
+        "maxcohost": "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的.",
+        "cohostsamedomain": "将同一目标域上的托管站点视为共同托管?",
     }
 
     results = None

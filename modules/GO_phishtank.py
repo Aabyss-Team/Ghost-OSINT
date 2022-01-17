@@ -17,7 +17,7 @@ class GO_phishtank(GhostOsintPlugin):
 
     meta = {
         'name': "PhishTank",
-        'summary': "Check if a host/domain is malicious according to PhishTank.",
+        'summary': "根据 PhishTank 检查主机或域名是否是恶意的.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -29,7 +29,7 @@ class GO_phishtank(GhostOsintPlugin):
             ],
             'favIcon': "https://www.google.com/s2/favicons?domain=https://phishtank.com/",
             'logo': "https://phishtank.com/images/logo_with_tagline.gif",
-            'description': "Submit suspected phishes. Track the status of your submissions. Verify other users' submissions.",
+            'description': "提交可疑的网络钓鱼. 跟踪您提交的内容的状态. 验证其他用户的提交.",
         }
     }
 
@@ -40,9 +40,9 @@ class GO_phishtank(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?",
-        'checkcohosts': "Apply checks to sites found to be co-hosted on the target's IP?",
-        'cacheperiod': "Hours to cache list data before re-fetching."
+        'checkaffiliates': "检查关联企业?",
+        'checkcohosts': "检查目标 IP地址 上共同托管的站点?",
+        'cacheperiod': "之前缓存数据提取."
     }
 
     results = None

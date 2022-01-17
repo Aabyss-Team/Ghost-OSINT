@@ -19,7 +19,7 @@ class GO_builtwith(GhostOsintPlugin):
 
     meta = {
         'name': "BuiltWith",
-        'summary': "Query BuiltWith.com's Domain API for information about your target's web technology stack, e-mail addresses and more.",
+        'summary': "查询 BuiltWith.com's 域名 API 来获取目标的WEB技术堆栈、电子邮件地址等信息.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -33,19 +33,17 @@ class GO_builtwith(GhostOsintPlugin):
                 "https://builtwith.com/faq"
             ],
             'apiKeyInstructions': [
-                "Visit https://api.builtwith.com/free-api",
-                "Register a free account",
-                "Navigate to https://api.builtwith.com/free-api",
-                "The API key is listed under 'Your API Key'"
+                "访问 https://api.builtwith.com/free-api",
+                "注册一个免费账户",
+                "导航到 https://api.builtwith.com/free-api",
+                "API 密钥将在 'Your API Key'"
             ],
             'favIcon': "https://d28rh9vvmrd65v.cloudfront.net/favicon.ico",
             'logo': "https://d28rh9vvmrd65v.cloudfront.net/favicon.ico",
-            'description': "Build lists of websites from our database of 38,701+ web technologies and over a quarter of a billion websites showing "
-            "which sites use shopping carts, analytics, hosting and many more. "
-            "Filter by location, traffic, vertical and more.\n"
-            "Know your prospects platform before you talk to them. "
-            "Improve your conversions with validated market adoption.\n"
-            "Get advanced technology market share information and country based analytics for all web technologies.",
+            'description': "从我们 38701+ 的网络技术数据库和超过25亿个网站的网站列表，显示哪些网站使用购物车、分析、托管等. "
+            "按位置、交通、垂直等进行过滤。在与潜在客户交谈之前，了解他们的平台.\n"
+            "通过验证市场采用率提高转化率. \n"
+            "获取所有网络技术的先进技术市场份额信息和基于国家或地区的分析.",
         }
     }
 
@@ -57,8 +55,8 @@ class GO_builtwith(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "Builtwith.com Domain API key.",
-        "maxage": "The maximum age of the data returned, in days, in order to be considered valid."
+        "api_key": "Builtwith.com 域名 API 密钥.",
+        "maxage": "返回的数据被视为有效的最长时间（天）."
     }
 
     # Be sure to completely clear any class variables in setup()

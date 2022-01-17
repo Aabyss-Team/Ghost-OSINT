@@ -26,7 +26,7 @@ class GO_dnsgrep(GhostOsintPlugin):
 
     meta = {
         'name': "DNSGrep",
-        'summary': "Obtain Passive DNS information from Rapid7 Sonar Project using DNSGrep API.",
+        'summary': "通过 Rapid7 Sonar 项目使用 DNSGrep API 进行 被动查询DNS.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Passive DNS"],
@@ -38,17 +38,15 @@ class GO_dnsgrep(GhostOsintPlugin):
                 "https://www.rapid7.com/about/research"
             ],
             'apiKeyInstructions': [
-                "Visit https://opendata.rapid7.com/apihelp/",
-                "Submit form requesting for access",
-                "After getting access, navigate to https://insight.rapid7.com/platform#/apiKeyManagement",
-                "Create an User Key",
-                "The API key will be listed after creation"
+                "访问 https://opendata.rapid7.com/apihelp/",
+                "提交请求访问的表单",
+                "获得访问权限后，导航到 https://insight.rapid7.com/platform#/apiKeyManagement",
+                "创建用户密钥",
+                "创建后将列出API密钥"
             ],
             'favIcon': "https://www.rapid7.com/includes/img/favicon.ico",
             'logo': "https://www.rapid7.com/includes/img/Rapid7_logo.svg",
-            'description': "Offering researchers and community members open access to data from Project Sonar, "
-            "which conducts internet-wide surveys to gain insights into global exposure "
-            "to common vulnerabilities.",
+            'description': "让研究人员和社区成员能够公开访问 Project Sonar 项目的数据，该项目进行互联网范围的调查，以深入了解全球面临的常见漏洞.",
         }
     }
 
@@ -60,8 +58,8 @@ class GO_dnsgrep(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'timeout': "Query timeout, in seconds.",
-        'dns_resolve': "DNS resolve each identified domain."
+        'timeout': "查询超时（秒）.",
+        'dns_resolve': "DNS解析每个已识别到的域."
     }
 
     results = None

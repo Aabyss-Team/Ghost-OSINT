@@ -18,8 +18,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_cleantalk(GhostOsintPlugin):
 
     meta = {
-        'name': "CleanTalk Spam List",
-        'summary': "Check if a netblock or IP address is on CleanTalk.org's spam IP list.",
+        'name': "CleanTalk 垃圾邮件列表",
+        'summary': "检查网段或 IP地址 是否在 CleanTalk.org 的垃圾邮件列表中.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -38,12 +38,10 @@ class GO_cleantalk(GhostOsintPlugin):
             ],
             'favIcon': "https://cleantalk.org/favicons/favicon-16x16.png",
             'logo': "https://cleantalk.org/favicons/favicon-16x16.png",
-            'description': "CleanTalk is a Cloud-Based spam filtering service that allows you to protect your website from spam. "
-            "CleanTalk provides spam protection that invisible to visitors "
-            "without using captcha or other methods when visitors have to prove that they are real people.\n"
-            "CleanTalk provides cloud anti-spam solutions for CMS and we developed plugins for the most of popular "
-            "CMS: WordPress anti-spam plugin, Joomla anti-spam plugin, Drupal and etc. "
-            "With our simple cloud spam checker, you can be sure your website is protected from spam bots, spam comments, and users.",
+            'description': "CleanTalk 是一种基于云端的垃圾邮件过滤服务，允许您保护您的网站免受垃圾邮件的影响. "
+            "CleanTalk 提供垃圾邮件保护，访问者必须证明自己是真人，不使用验证码或其他方法，访问者就看不见这些垃圾邮件.\n"
+            "CleanTalk 为CMS提供云反垃圾邮件解决方案，我们为最流行的CMS开发了插件：WordPress反垃圾邮件插件、Joomla反垃圾邮件插件、Drupal等. "
+            "使用我们的云垃圾邮件检查器，您可以确保您的网站不会收到垃圾邮件机器人、垃圾邮件评论.",
         }
     }
 
@@ -55,10 +53,10 @@ class GO_cleantalk(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliate IP addresses?",
-        'cacheperiod': "Hours to cache list data before re-fetching.",
-        'checknetblocks': "Report if any malicious IPs are found within owned netblocks?",
-        'checksubnets': "Check if any malicious IPs are found within the same subnet of the target?"
+        'checkaffiliates': "对附属IP地址应用检查?",
+        'cacheperiod': "提取之前数据缓存.",
+        'checknetblocks': "导出在网段中发现的恶意IP地址?",
+        'checksubnets': "检查目标的同一子网内的恶意IP地址?"
     }
 
     results = None

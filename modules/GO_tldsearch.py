@@ -23,8 +23,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_tldsearch(GhostOsintPlugin):
 
     meta = {
-        'name': "TLD Searcher",
-        'summary': "Search all Internet TLDs for domains with the same name as the target (this can be very slow.)",
+        'name': "TLD 搜索",
+        'summary': "在所有互联网顶级域名中搜索与目标域名同名的域名(可能会非常慢).",
         'flags': ["slow"],
         'useCases': ["Footprint"],
         'categories': ["DNS"]
@@ -39,9 +39,9 @@ class GO_tldsearch(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'activeonly': "Only report domains that have content (try to fetch the page)?",
-        "skipwildcards": "Skip TLDs and sub-TLDs that have wildcard DNS.",
-        "_maxthreads": "Maximum threads"
+        'activeonly': "仅报告具有内容的域(尝试获取页面)?",
+        "skipwildcards": "跳过具有通配符 DNS 的 TLD 和 子TLD.",
+        "_maxthreads": "最大线程数"
     }
 
     # Internal results tracking

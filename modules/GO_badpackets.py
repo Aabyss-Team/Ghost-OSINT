@@ -24,8 +24,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_badpackets(GhostOsintPlugin):
 
     meta = {
-        'name': "Bad Packets",
-        'summary': "Obtain information about any malicious activities involving IP addresses found",
+        'name': "Bad Packets——恶意数据包",
+        'summary': "获取有关发现的涉及 IP 地址的任何恶意活动的信息",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -36,18 +36,16 @@ class GO_badpackets(GhostOsintPlugin):
                 "https://docs.badpackets.net/"
             ],
             'apiKeyInstructions': [
-                "Visit https://badpackets.net/pricing/",
-                "Select a monthly plan",
-                "Fill out the contact form",
-                "BadPackets will reach out to you with your API key"
+                "访问 https://badpackets.net/pricing/",
+                "选择月计划",
+                "填写联系表格",
+                "BadPackets 将使用你的 API 密钥联系你"
             ],
             'favIcon': "https://i1.wp.com/badpackets.net/wp-content/uploads/2019/04/cropped-512x512_logo.png?fit=32%2C32&ssl=1",
             'logo': "https://badpackets.net/wp-content/uploads/2019/05/badpackets-rgb-350x70.png",
-            'description': "Bad Packets provides cyber threat intelligence on emerging threats, DDoS botnets and network abuse by continuously monitoring "
-            "and detecting malicious activity. Our team of experienced security professionals conducts "
-            "comprehensive and ethical research to ensure our data is of the highest quality and accuracy.\n"
-            "Constant aggregation and analysis of relevant data allows us to empower our partners with "
-            "actionable information to proactively defend against emerging security threats.",
+            'description': "Bad Packets 通过持续监控和检测恶意活动，提供关于新出现威胁、DDoS僵尸网络和网络滥用的网络威胁情报. "
+            "我们由经验丰富的安全专业人员组成的团队进行全面的道德研究，以确保我们的数据具有最高的质量和准确性.\n"
+            "通过不断汇总和分析相关数据，我们可以为合作伙伴提供可采取行动的信息，以主动防御新出现的安全威胁.",
         }
     }
 
@@ -62,12 +60,12 @@ class GO_badpackets(GhostOsintPlugin):
 
     # Option descriptions. Delete any options not applicable to this module.
     optdescs = {
-        "api_key": "Bad Packets API Key",
-        'checkaffiliates': "Check affiliates?",
-        'subnetlookup': "Look up all IPs on subnets which your target is a part of?",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxsubnet': "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)"
+        "api_key": "Bad Packets API 密钥",
+        'checkaffiliates': "检查关联公司?",
+        'subnetlookup': "查找目标所属子网上的所有 IP 地址?",
+        'netblocklookup': "在目标的网段上查找所有 IP 地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查找拥有的网段，则为查找其中所有IP的最大网段大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        'maxsubnet': "如果正在查找子网，则为要在其中查找所有IP的最大子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)"
     }
 
     results = None

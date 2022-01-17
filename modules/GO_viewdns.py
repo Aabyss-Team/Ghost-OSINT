@@ -22,7 +22,7 @@ class GO_viewdns(GhostOsintPlugin):
 
     meta = {
         'name': "ViewDNS.info",
-        'summary': "Identify co-hosted websites and perform reverse Whois lookups using ViewDNS.info.",
+        'summary': "使用 viewdns.inf o识别共同托管的网站并执行反向 WHOIS 查找.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -34,16 +34,15 @@ class GO_viewdns(GhostOsintPlugin):
                 "https://viewdns.info/api/"
             ],
             'apiKeyInstructions': [
-                "Visit https://viewdns.info/api",
-                "Select a plan",
-                "Register an account",
-                "Navigate to https://viewdns.info/api/dashboard/",
-                "The API key is listed under 'API Key'"
+                "访问 https://viewdns.info/api",
+                "选择一个计划",
+                "注册一个账户",
+                "导航到 https://viewdns.info/api/dashboard/",
+                "API 密钥将在 'API Key'"
             ],
             'favIcon': "https://viewdns.info/apple-touch-icon.png",
             'logo': "https://viewdns.info/images/viewdns_logo.gif",
-            'description': "The ViewDNS.info API allows webmasters to integrate the tools provided by ViewDNS.info "
-            "into their own sites in a simple and effective manner.",
+            'description': "ViewDNS.info 允许网站管理员集成 ViewDNS 提供的工具. 以简单有效的方式将信息导入自己的网站.",
         }
     }
 
@@ -54,9 +53,9 @@ class GO_viewdns(GhostOsintPlugin):
     }
 
     optdescs = {
-        "api_key": "ViewDNS.info API key.",
-        "verify": "Verify co-hosts are valid by checking if they still resolve to the shared IP.",
-        "maxcohost": "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting."
+        "api_key": "ViewDNS.info API 密钥.",
+        "verify": "通过检查共享主机是否仍解析为共享IP地址来验证它们是否有效.",
+        "maxcohost": "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的."
     }
 
     results = None

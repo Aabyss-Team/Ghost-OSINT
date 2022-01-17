@@ -20,8 +20,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_crt(GhostOsintPlugin):
 
     meta = {
-        'name': "Certificate Transparency",
-        'summary': "Gather hostnames from historical certificates in crt.sh.",
+        'name': "证书透明度",
+        'summary': "从 crt.sh 的历史证书中收集主机名.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -34,8 +34,8 @@ class GO_crt(GhostOsintPlugin):
             ],
             'favIcon': "https://crt.sh/sectigo_s.png",
             'logo': "https://crt.sh/sectigo_s.png",
-            'description': "Enter an Identity (Domain Name, Organization Name, etc), "
-            "a Certificate Fingerprint (SHA-1 or SHA-256) or a crt.sh ID",
+            'description': "输入标识（域名、组织名称等）, "
+            "证书指纹（SHA-1或SHA-256）或 crt.sh ID",
         }
     }
 
@@ -45,8 +45,8 @@ class GO_crt(GhostOsintPlugin):
     }
 
     optdescs = {
-        'verify': 'Verify certificate subject alternative names resolve.',
-        'fetchcerts': 'Fetch each certificate found, for processing by other modules.',
+        'verify': '验证证书使用者备用名称解析.',
+        'fetchcerts': '获取找到的每个证书，以供其他模块处理.',
     }
 
     results = None

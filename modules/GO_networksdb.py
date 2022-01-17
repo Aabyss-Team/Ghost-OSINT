@@ -24,7 +24,7 @@ class GO_networksdb(GhostOsintPlugin):
 
     meta = {
         'name': "NetworksDB",
-        'summary': "Search NetworksDB.io API for IP address and domain information.",
+        'summary': "通过 NetworksDB.io API 搜索IP地址和域名信息.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Passive DNS"],
@@ -35,16 +35,15 @@ class GO_networksdb(GhostOsintPlugin):
                 "https://networksdb.io/api/docs"
             ],
             'apiKeyInstructions': [
-                "Visit https://networksdb.io/api/order/free",
-                "Register a free account",
-                "Click on 'Generate a Free API Key'",
-                "The API key is listed under 'API Key: Free plan'"
+                "访问 https://networksdb.io/api/order/free",
+                "注册一个免费账户",
+                "点击 'Generate a Free API Key'",
+                "API 密钥将在 'API Key: Free plan'"
             ],
             'favIcon': "https://networksdb.io/img/favicon/favicon-96x96.png",
             'logo': "https://networksdb.io/img/logo.png",
-            'description': "Our database contains information about the public IPv4 and IPv6 addresses, "
-            "networks and domains owned by companies and organisations across the world "
-            "along with city-level IP geolocation data and autonomous system information.",
+            'description': "我们的数据库包含有关公共 IPv4 和 IPv6 地址的信息, "
+            "全球公司和组织拥有的网络和域名，以及城市级IP地理位置数据和自治系统信息.",
         }
     }
     # Default options
@@ -58,11 +57,11 @@ class GO_networksdb(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key': 'NetworksDB API key.',
-        'delay': 'Delay between requests, in seconds.',
-        'verify': "Verify co-hosts are valid by checking if they still resolve to the shared IP.",
-        'cohostsamedomain': "Treat co-hosted sites on the same target domain as co-hosting?",
-        'maxcohost': "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting."
+        'api_key': 'NetworksDB API 密钥.',
+        'delay': '请求之间的延迟（秒）.',
+        'verify': "通过检查共享主机是否仍解析为共享IP地址来验证它们是否有效.",
+        'cohostsamedomain': "将同一目标域上的托管站点视为共同托管?",
+        'maxcohost': "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的."
     }
 
     cohostcount = 0

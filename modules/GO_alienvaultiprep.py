@@ -19,8 +19,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_alienvaultiprep(GhostOsintPlugin):
 
     meta = {
-        'name': "AlienVault IP Reputation",
-        'summary': "Check if an IP or netblock is malicious according to the AlienVault IP Reputation database.",
+        'name': "AlienVault IP 地址信誉",
+        'summary': "根据 AlienVault IP 信誉数据库检查 IP 地址或子网是否是恶意的.",
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
         'dataSource': {
@@ -33,10 +33,10 @@ class GO_alienvaultiprep(GhostOsintPlugin):
             ],
             'favIcon': "https://cdn-cybersecurity.att.com/images/uploads/logos/att-globe.svg",
             'logo': "https://cdn-cybersecurity.att.com/images/uploads/logos/att-business-web.svg",
-            'description': "Looking at security through new eyes.\n"
-            "AT&T Business and AlienVault have joined forces to create AT&T Cybersecurity, "
-            "with a vision to bring together the people, process, and technology "
-            "that help businesses of any size stay ahead of threats.",
+            'description': "用新的眼光看待网络安全.\n"
+            "AT&T Business 和 AlienVault 联手打造 AT&T 网络安全, "
+            "具有将人员、流程和技术结合在一起的愿景 "
+            "帮助任何规模的企业走在威胁的前面.",
         }
     }
 
@@ -50,10 +50,10 @@ class GO_alienvaultiprep(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?",
-        'cacheperiod': "Hours to cache list data before re-fetching.",
-        'checknetblocks': "Report if any malicious IPs are found within owned netblocks?",
-        'checksubnets': "Check if any malicious IPs are found within the same subnet of the target?"
+        'checkaffiliates': "检查关联公司?",
+        'cacheperiod': "之前缓存数据提取.",
+        'checknetblocks': "导出在网段中拥有的任何恶意 IP 地址?",
+        'checksubnets': "检查在目标的同一子网内是否发现的任何恶意 IP 地址?"
     }
 
     results = None

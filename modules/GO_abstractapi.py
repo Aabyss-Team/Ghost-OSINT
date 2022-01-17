@@ -2,6 +2,11 @@
 # -------------------------------------------------------------------------------
 # Name:        GO_abstractapi
 # Purpose:     Search AbstractAPI for domain, phone and IP address information.
+# Author:      Steve Micallef <steve@binarypool.com>
+#
+# Created:     14/07/2019
+# Copyright:   (c) Steve Micallef 2019
+# Licence:     GPL
 # -------------------------------------------------------------------------------
 
 import json

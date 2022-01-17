@@ -15,8 +15,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_bingsearch(GhostOsintPlugin):
 
     meta = {
-        'name': "Bing",
-        'summary': "Obtain information from bing to identify sub-domains and links.",
+        'name': "Bing搜索",
+        'summary': "通过 Bing 获取信息以识别子域和链接.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -27,15 +27,15 @@ class GO_bingsearch(GhostOsintPlugin):
                 "https://docs.microsoft.com/en-us/azure/cognitive-services/bing-web-search/"
             ],
             'apiKeyInstructions': [
-                "Visit https://azure.microsoft.com/en-in/services/cognitive-services/bing-web-search-api/",
-                "Register a free account",
-                "Select on Bing Custom Search",
-                "The API keys are listed under 'Key1' and 'Key2' (both should work)"
+                "访问 https://azure.microsoft.com/en-in/services/cognitive-services/bing-web-search-api/",
+                "注册一个免费用户",
+                "在 Bing 自定义搜索选择",
+                "API 密钥将在 'Key1' 和 'Key2' (两个都可以)"
             ],
             'favIcon': "https://www.bing.com/sa/simg/bing_p_rr_teal_min.ico",
             'logo': "https://www.bing.com/sa/simg/bing_p_rr_teal_min.ico",
-            'description': "The Bing Search APIs let you build web-connected apps and services that "
-            "find webpages, images, news, locations, and more without advertisements.",
+            'description': "Bing 搜索 API 允许你构建网络连接的应用程序和服务 "
+            ", 在没有广告的情况下查找网页、图片、新闻、位置等.",
         }
     }
 
@@ -47,8 +47,8 @@ class GO_bingsearch(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "pages": "Number of max bing results to request from the API.",
-        "api_key": "Bing API Key for Bing search."
+        "pages": "从 API 请求的 bing 最大结果数.",
+        "api_key": "Bing API 密钥 ."
     }
 
     results = None

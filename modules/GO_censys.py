@@ -26,8 +26,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_censys(GhostOsintPlugin):
 
     meta = {
-        'name': "Censys",
-        'summary': "Obtain host information from Censys.io.",
+        'name': "Censys查询",
+        'summary': "从 Censys.io 上获取主机信息.",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -40,18 +40,18 @@ class GO_censys(GhostOsintPlugin):
                 "https://github.com/censys/censys-postman/blob/main/Censys_Search.postman_collection.json",
             ],
             'apiKeyInstructions': [
-                "Visit https://censys.io/",
-                "Register a free account",
-                "Navigate to https://censys.io/account",
-                "Click on 'API'",
-                "The API key combination is listed under 'API ID' and 'Secret'"
+                "访问 https://censys.io/",
+                "注册一个免费账户",
+                "导航到 https://censys.io/account",
+                "点击 'API'",
+                "API 密钥将在 'API ID' 和 'Secret'"
             ],
             'favIcon': "https://censys.io/assets/favicon.png",
             'logo': "https://censys.io/assets/logo.png",
-            'description': "Discover exposures and other common entry points for attackers.\n"
-            "Censys scans the entire internet constantly, including obscure ports. "
-            "We use a combination of banner grabs and deep protocol handshakes "
-            "to provide industry-leading visibility and an accurate depiction of what is live on the internet.",
+            'description': "发现攻击者的漏洞和其他常见入口点.\n"
+            "Censys 不断扫描整个互联网，包括隐藏的端口. "
+            "我们使用 banner 抓取和深度协议的握手包组合 "
+            "来提供行业零线的可见性和对互联网上实时内容的准确描述.",
         }
     }
 
@@ -67,10 +67,10 @@ class GO_censys(GhostOsintPlugin):
     optdescs = {
         "censys_api_key_uid": "Censys.io API UID.",
         "censys_api_key_secret": "Censys.io API Secret.",
-        'delay': 'Delay between requests, in seconds.',
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        'maxnetblock': "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        "age_limit_days": "Ignore any records older than this many days. 0 = unlimited.",
+        'delay': '请求之间的延迟（秒）.',
+        'netblocklookup': "在目标拥有的网段上查找所有IP地址，以查找同一目标子域或域上可能被列入黑名单的主机?",
+        'maxnetblock': "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        "age_limit_days": "忽略该天数之前的记录. 0 = 无限.",
     }
 
     results = None

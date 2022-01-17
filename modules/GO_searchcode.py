@@ -23,7 +23,7 @@ class GO_searchcode(GhostOsintPlugin):
 
     meta = {
         'name': "searchcode",
-        'summary': "Search searchcode for code repositories mentioning the target domain.",
+        'summary': "在 searchcode 中搜索涉及目标域名的代码库.",
         'flags': [],
         'useCases': ["Investigate", "Footprint", "Passive"],
         'categories': ["Search Engines"],
@@ -34,7 +34,7 @@ class GO_searchcode(GhostOsintPlugin):
             ],
             'website': "https://searchcode.com/",
             'logo': "https://searchcode.com/static/small_logo.png",
-            'description': "Simple, comprehensive code search."
+            'description': "简单、全面的代码搜索."
         }
     }
 
@@ -44,8 +44,8 @@ class GO_searchcode(GhostOsintPlugin):
     }
 
     optdescs = {
-        'max_pages': "Maximum number of pages of results to fetch.",
-        'dns_resolve': "DNS resolve each identified domain.",
+        'max_pages': "提取结果最大页数.",
+        'dns_resolve': "DNS解析每个已识别到的域.",
     }
 
     results = None

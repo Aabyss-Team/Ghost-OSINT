@@ -18,8 +18,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_cinsscore(GhostOsintPlugin):
 
     meta = {
-        'name': "CINS Army List",
-        'summary': "Check if a netblock or IP address is malicious according to Collective Intelligence Network Security (CINS) Army list.",
+        'name': "CINS 威胁情报",
+        'summary': "根据 Collective Intelligence Network Security (CINS) 检查网段或IP地址是否是恶意的.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -28,11 +28,7 @@ class GO_cinsscore(GhostOsintPlugin):
             'model': "FREE_NOAUTH_UNLIMITED",
             'favIcon': 'https://cinsscore.com/media/images/fav-icon.png',
             'logo': 'https://cinsscore.com/media/images/logo-small-grey-inset.png',
-            'description': "Leveraging data from our network of Sentinel "
-                "devices and other trusted InfoSec sources, CINS is a "
-                "Threat Intelligence database that provides an accurate "
-                "and timely score for any IP address in the world."
-                "The CINS Army list is a subset of the CINS Active Threat Intelligence ruleset.",
+            'description': "CINS是一个威胁情报数据库，利用我们的哨兵设备网络和其他可信信息安全来源的数据，为世界上任何IP地址提供准确及时的评分.",
         }
     }
 
@@ -44,10 +40,10 @@ class GO_cinsscore(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliate IP addresses?",
-        'cacheperiod': "Hours to cache list data before re-fetching.",
-        'checknetblocks': "Report if any malicious IPs are found within owned netblocks?",
-        'checksubnets': "Check if any malicious IPs are found within the same subnet of the target?"
+        'checkaffiliates': "对附属 IP地址 应用检查?",
+        'cacheperiod': "之前缓存数据提取.",
+        'checknetblocks': "导出网段中发现的任何恶意IP?",
+        'checksubnets': "检查在目标的同一子网内是否发现任何恶意 IP地址 ?"
     }
 
     results = None

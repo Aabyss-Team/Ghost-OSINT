@@ -20,7 +20,7 @@ class GO_haveibeenpwned(GhostOsintPlugin):
 
     meta = {
         'name': "HaveIBeenPwned",
-        'summary': "Check HaveIBeenPwned.com for hacked e-mail addresses identified in breaches.",
+        'summary': "检查 HaveIBeenPwned.com 以获取被黑客攻击的电子邮件地址.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Leaks, Dumps and Breaches"],
@@ -32,13 +32,13 @@ class GO_haveibeenpwned(GhostOsintPlugin):
                 "https://haveibeenpwned.com/FAQs"
             ],
             'apiKeyInstructions': [
-                "Visit https://haveibeenpwned.com/API/Key",
-                "Register an account",
-                "Visit https://haveibeenpwned.com/API/Key",
+                "访问 https://haveibeenpwned.com/API/Key",
+                "注册一个账户",
+                "访问 https://haveibeenpwned.com/API/Key",
             ],
             'favIcon': "https://haveibeenpwned.com/favicon.ico",
             'logo': "https://haveibeenpwned.com/favicon.ico",
-            'description': "Check if you have an account that has been compromised in a data breach.",
+            'description': "检查你的帐户是否因数据泄露而受损.",
         }
     }
 
@@ -49,7 +49,7 @@ class GO_haveibeenpwned(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "HaveIBeenPwned.com API key."
+        "api_key": "HaveIBeenPwned.com API 密钥."
     }
 
     # Be sure to completely clear any class variables in setup()

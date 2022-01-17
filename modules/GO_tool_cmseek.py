@@ -22,14 +22,14 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin, GhostOsintHelp
 class GO_tool_cmseek(GhostOsintPlugin):
 
     meta = {
-        'name': "Tool - CMSeeK",
-        'summary': "Identify what Content Management System (CMS) might be used.",
+        'name': "CMSeeK - 工具",
+        'summary': "确定可能使用的内容管理系统(CMS).",
         'flags': ["tool"],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["Content Analysis"],
         'toolDetails': {
             'name': "CMSeeK",
-            'description': "CMSeek is a tool that is used to extract Content Management System(CMS) details of a website.",
+            'description': "CMSeek 是一种用于提取网站内容管理系统(CMS)详细信息的工具.",
             'website': 'https://github.com/Tuhinshubhra/CMSeeK',
             'repository': 'https://github.com/Tuhinshubhra/CMSeeK'
         },
@@ -43,8 +43,8 @@ class GO_tool_cmseek(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'pythonpath': "Path to Python 3 interpreter to use for CMSeeK. If just 'python3' then it must be in your PATH.",
-        'cmseekpath': "Path to the where the cmseek.py file lives. Must be set."
+        'pythonpath': "用于 CMSeek 的 Python 3解释器的路径. 如果只有'Python3'，那么它一定在你的路径中.",
+        'cmseekpath': "cmseek.py 文件所在的的路径. 必须设置."
     }
 
     results = None

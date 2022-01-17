@@ -21,8 +21,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_azureblobstorage(GhostOsintPlugin):
 
     meta = {
-        'name': "Azure Blob Finder",
-        'summary': "Search for potential Azure blobs associated with the target and attempt to list their contents.",
+        'name': "Azure Blob 存储查找",
+        'summary': "搜索与目标关联的潜在Azure Blob 存储并列出其内容.",
         'flags': [],
         'useCases': ["Footprint", "Passive"],
         'categories': ["Crawling and Scanning"],
@@ -40,8 +40,8 @@ class GO_azureblobstorage(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "suffixes": "List of suffixes to append to domains tried as blob storage names",
-        "_maxthreads": "Maximum threads"
+        "suffixes": "要作为 Blob 存储名称附加到域的后缀列表",
+        "_maxthreads": "最大线程数"
     }
 
     results = None

@@ -21,19 +21,17 @@ class GO_torch(GhostOsintPlugin):
 
     meta = {
         'name': "TORCH",
-        'summary': "Search Tor 'TORCH' search engine for mentions of the target domain.",
+        'summary': "在 Tor 'TORCH' 搜索引擎中搜索目标域名的相关信息.",
         'flags': ["errorprone", "tor"],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["Search Engines"],
         'dataSource': {
             'website': "https://torchsearch.wordpress.com/",
             'model': "FREE_NOAUTH_UNLIMITED",
-            'description': "Torch or TorSearch is the best search engine "
-                "for the hidden part of the internet. They're also the "
-                "oldest and longest running search engine on Tor.\n"
-                "Torch claims to have over one billion dark net pages indexed. "
-                "They also don't censor search results or track what you "
-                "search for.",
+            'description': "Torch 或 TorSearch 是互联网隐藏部分的最佳搜索引擎. "
+                "他们也是Tor上最古老、运行时间最长的搜索引擎.\n"
+                "Torch 声称有超过10亿个暗网页面被索引. "
+                "他们也不会审查搜索结果或跟踪你搜索的内容.",
         }
     }
 
@@ -44,9 +42,9 @@ class GO_torch(GhostOsintPlugin):
     }
 
     optdescs = {
-        'fetchlinks': "Fetch the darknet pages (via TOR, if enabled) to verify they mention your target.",
-        'pages': "Number of results pages to iterate through.",
-        'fullnames': "Search for human names?"
+        'fetchlinks': "获取暗网页面（如果启用则通过 Tor ）以验证它们是否与目标相关.",
+        'pages': "访问结果页数.",
+        'fullnames': "搜索人名?"
     }
 
     results = None

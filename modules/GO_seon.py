@@ -20,7 +20,7 @@ class GO_seon(GhostOsintPlugin):
 
     meta = {
         'name': "Seon",
-        'summary': "Queries seon.io to gather intelligence about IP Addresses, email addresses, and phone numbers",
+        'summary': "查询 seon.io 以收集目标的有关IP地址、电子邮件地址和电话号码的信息",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Real World"],
@@ -31,15 +31,15 @@ class GO_seon(GhostOsintPlugin):
                 "https://docs.seon.io/api-reference",
             ],
             'apiKeyInstructions': [
-                "Visit https://seon.io/",
-                "Register an account",
-                "Visit https://docs.seon.io/api-reference",
-                "Your API key is listed under 'License key'",
+                "访问 https://seon.io/",
+                "注册一个账户",
+                "访问 https://docs.seon.io/api-reference",
+                "API 密钥将在 'License key'",
             ],
             'favIcon': "https://seon.io/assets/favicons/favicon-16x16.png",
             'logo': "https://seon.io/assets/favicons/apple-touch-icon-152.png",
-            'description': "SEON Fraud Prevention tools help organisations reduce "
-            "the costs and resources lost to fraud. Spot fake accounts, slash manual reviews and cut chargebacks now.",
+            'description': "SEON 欺诈预防工具可帮助组织减少因欺诈而损失的成本和资源. "
+            "现在就发现假账户，削减人工审核并减少退单.",
         }
     }
 
@@ -51,8 +51,8 @@ class GO_seon(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key': "seon.io API Key",
-        'fraud_threshold': 'Minimum fraud score for target to be marked as malicious (0-100)',
+        'api_key': "seon.io API 密钥",
+        'fraud_threshold': '要标记为恶意的目标的最低欺诈分数（0-100）',
     }
 
     results = None

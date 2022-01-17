@@ -20,14 +20,14 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin, GhostOsintHelp
 
 class GO_tool_wafw00f(GhostOsintPlugin):
     meta = {
-        'name': "Tool - WAFW00F",
-        'summary': "Identify what web application firewall (WAF) is in use on the specified website.",
+        'name': "WAFW00F - 工具",
+        'summary': "确定指定网站上正在使用的Web应用程序防火墙（WAF）.",
         'flags': ["tool"],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["Crawling and Scanning"],
         'toolDetails': {
             'name': "WAFW00F",
-            'description': "WAFW00F allows one to identify and fingerprint Web Application Firewall (WAF) products protecting a website.",
+            'description': "WAFW00F 允许用户识别和识别保护网站的Web应用程序防火墙（WAF）产品.",
             'website': 'https://github.com/EnableSecurity/wafw00f',
             'repository': 'https://github.com/EnableSecurity/wafw00f'
         },
@@ -39,8 +39,8 @@ class GO_tool_wafw00f(GhostOsintPlugin):
     }
 
     optdescs = {
-        'python_path': "Path to Python 3 interpreter to use for wafw00f. If just 'python3' then it must be in your $PATH.",
-        'wafw00f_path': "Path to the wafw00f executable file. Must be set."
+        'python_path': "用于 WAFW00F 的 Python 3解释器的路径. 如果只有 'python3'，那么它必须在你的路径中.",
+        'wafw00f_path': "WAFW00F 可执行文件的路径. 必须设置."
     }
 
     results = None

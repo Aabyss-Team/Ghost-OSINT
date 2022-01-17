@@ -22,8 +22,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_dnsresolve(GhostOsintPlugin):
 
     meta = {
-        'name': "DNS Resolver",
-        'summary': "Resolves hosts and IP addresses identified, also extracted from raw content.",
+        'name': "DNS 解析器",
+        'summary': "解析识别的主机和IP地址，也从原始内容中提取.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["DNS"]
@@ -40,11 +40,11 @@ class GO_dnsresolve(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'skipcommononwildcard': "If wildcard DNS is detected, only attempt to look up the first common sub-domain from the common sub-domain list.",
-        'validatereverse': "Validate that reverse-resolved hostnames still resolve back to that IP before considering them as aliases of your target.",
-        'netblocklookup': "Look up all IPs on netblocks deemed to be owned by your target for possible hosts on the same target subdomain/domain?",
-        'maxnetblock': "Maximum owned IPv4 netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        'maxv6netblock': "Maximum owned IPv6 netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)"
+        'skipcommononwildcard': "如果检测到通配符DNS，则仅尝试从公共子域列表中查找第一个公共子域.",
+        'validatereverse': "在将反向解析的主机名视为目标的别名之前，请验证反向解析的主机名是否仍解析回该IP.",
+        'netblocklookup': "在目标的网段上查找同一目标子域或域上可能存在的主机的所有IP地址?",
+        'maxnetblock': "如果查询网段则设置网段最小的子网划分 (CIDR 值 24 = /24, 16 = /16, 等等.)",
+        'maxv6netblock': "如果查询IPV6网段则设置网段最小的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)"
     }
 
     events = None

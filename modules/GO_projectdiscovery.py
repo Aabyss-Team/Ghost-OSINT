@@ -18,7 +18,7 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_projectdiscovery(GhostOsintPlugin):
     meta = {
         "name": "ProjectDiscovery Chaos",
-        "summary": "Search for hosts/subdomains using chaos.projectdiscovery.io",
+        "summary": "通过 chaos.projectdiscovery.io 搜索主机或子域名",
         'flags': ["apikey"],
         "useCases": ["Passive", "Footprint", "Investigate"],
         "categories": ["Passive DNS"],
@@ -31,17 +31,15 @@ class GO_projectdiscovery(GhostOsintPlugin):
                 "https://projectdiscovery.io/about",
             ],
             "apiKeyInstructions": [
-                "Visit https://chaos.projectdiscovery.io/#/",
-                "Click the request access button",
-                "Click the 'Early signup form' link or go to https://forms.gle/GP5nTamxJPfiMaBn9",
-                "Click on 'Developer'",
-                "The API key is listed under 'Your API Key'",
-                "You will receive your API key by email.",
+                "访问 https://chaos.projectdiscovery.io/#/",
+                "单击'请求访问'按钮",
+                "点击 'Early signup form' 连接跳转到 https://forms.gle/GP5nTamxJPfiMaBn9",
+                "点击 'Developer'",
+                "API 密钥将在 'Your API Key'",
+                "你将通过电子邮件收到你的API密钥.",
             ],
             "logo": "https://projectdiscovery.io/assets/img/logo.png",
-            "description": "Projectdiscovery Chaos actively collect and maintain "
-            "internet-wide assets' data, this project is meant to "
-            "enhance research and analyse changes around DNS for better insights. ",
+            "description": "Projectdiscovery Chaos 积极收集和维护互联网范围内资产的数据，该项目旨在加强对DNS变化的研究和分析，以获得更好的见解. ",
         },
     }
 
@@ -50,8 +48,8 @@ class GO_projectdiscovery(GhostOsintPlugin):
         "verify": True,
     }
     optdescs = {
-        "api_key": "chaos.projectdiscovery.io API Key.",
-        "verify": "Verify that any hostnames found on the target domain still resolve?",
+        "api_key": "chaos.projectdiscovery.io API 密钥.",
+        "verify": "验证在目标域上找到的任何主机名是否仍可解析?",
     }
 
     results = None

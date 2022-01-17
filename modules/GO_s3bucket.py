@@ -21,8 +21,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_s3bucket(GhostOsintPlugin):
 
     meta = {
-        'name': "Amazon S3 Bucket Finder",
-        'summary': "Search for potential Amazon S3 buckets associated with the target and attempt to list their contents.",
+        'name': "Amazon S3 存储桶查找器",
+        'summary': "搜索与目标关联的潜在 Amazon S3 存储桶，并尝试列出其内容.",
         'flags': [],
         'useCases': ["Footprint", "Passive"],
         'categories': ["Crawling and Scanning"],
@@ -41,9 +41,9 @@ class GO_s3bucket(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "endpoints": "Different S3 endpoints to check where buckets may exist, as per http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region",
-        "suffixes": "List of suffixes to append to domains tried as bucket names",
-        "_maxthreads": "Maximum threads"
+        "endpoints": "不同的S3端点，以检查存储桶可能存在的位置，如 http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region",
+        "suffixes": "作为存储桶名称附加到域名的后缀列表",
+        "_maxthreads": "最大线程数"
     }
 
     results = None

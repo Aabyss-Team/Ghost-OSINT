@@ -21,8 +21,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_googleobjectstorage(GhostOsintPlugin):
 
     meta = {
-        'name': "Google Object Storage Finder",
-        'summary': "Search for potential Google Object Storage buckets associated with the target and attempt to list their contents.",
+        'name': "Google 对象存储查找器",
+        'summary': "搜索与目标关联的 Google 对象存储器并列出其中的内容.",
         'flags': [],
         'useCases': ["Footprint", "Passive"],
         'categories': ["Crawling and Scanning"],
@@ -35,13 +35,13 @@ class GO_googleobjectstorage(GhostOsintPlugin):
     # Default options
     opts = {
         "suffixes": "test,dev,web,beta,bucket,space,files,content,data,prod,staging,production,stage,app,media,development,-test,-dev,-web,-beta,-bucket,-space,-files,-content,-data,-prod,-staging,-production,-stage,-app,-media,-development",
-        "_maxthreads": 20
+        "_maxthreads": "20"
     }
 
     # Option descriptions
     optdescs = {
-        "suffixes": "List of suffixes to append to domains tried as bucket names",
-        "_maxthreads": "Maximum threads"
+        "suffixes": "要附加到尝试作为存储桶名称的域的后缀列表",
+        "_maxthreads": "最大线程数"
     }
 
     results = None

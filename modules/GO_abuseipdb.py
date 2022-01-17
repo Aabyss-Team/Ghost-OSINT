@@ -2,6 +2,11 @@
 # -------------------------------------------------------------------------------
 # Name:        GO_abuseipdb
 # Purpose:     Check if an IP address is malicious according to AbuseIPDB.com.
+# Author:      Steve Micallef <steve@binarypool.com>
+#
+# Created:     14/07/2019
+# Copyright:   (c) Steve Micallef 2019
+# Licence:     GPL
 # -------------------------------------------------------------------------------
 
 import json
@@ -58,7 +63,7 @@ class GO_abuseipdb(GhostOsintPlugin):
     optdescs = {
         'api_key': "AbuseIPDB.com API 密钥.",
         'confidenceminimum': "AbuseIPDB 最小可信度.",
-        'checkaffiliates': "应用检查企业?",
+        'checkaffiliates': "检查关联公司?",
         'limit': '要检索的最大结果数.',
     }
 

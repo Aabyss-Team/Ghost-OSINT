@@ -23,8 +23,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_open_passive_dns_database(GhostOsintPlugin):
 
     meta = {
-        'name': "Open Passive DNS Database",
-        'summary': "Obtain passive DNS information from pdns.daloo.de Open passive DNS database.",
+        'name': "开放被动 DNS 数据库",
+        'summary': "通过 pdns.daloo.de 开放被动 DNS 数据库获取 DNS 信息.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Passive DNS"],
@@ -36,9 +36,9 @@ class GO_open_passive_dns_database(GhostOsintPlugin):
             ],
             'favIcon': "https://www.google.com/s2/favicons?domain=http://pdns.daloo.de/",
             'logo': "https://www.google.com/s2/favicons?domain=http://pdns.daloo.de/",
-            'description': "This is a personal project to track DNS responses. "
-            "You can use the DNS resolver to add data to it or just browse what the crawler found. "
-            "I mainly did it because I found no really open database.",
+            'description': "这是一个跟踪 DNS 响应的个人项目. "
+            "你可以使用 DNS 解析程序向其添加数据，或只是浏览爬虫程序发现的内容. "
+            "我这么做主要是因为我没有发现真正开放的数据库.",
         }
     }
 
@@ -48,8 +48,8 @@ class GO_open_passive_dns_database(GhostOsintPlugin):
     }
 
     optdescs = {
-        "timeout": "Query timeout, in seconds.",
-        "verify": "Verify identified domains still resolve to the associated specified IP address.",
+        "timeout": "查询超时（秒）.",
+        "verify": "验证标识的域名是否仍解析为关联的指定IP地址.",
     }
 
     results = None

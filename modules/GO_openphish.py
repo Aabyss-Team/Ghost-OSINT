@@ -17,7 +17,7 @@ class GO_openphish(GhostOsintPlugin):
 
     meta = {
         'name': "OpenPhish",
-        'summary': "Check if a host/domain is malicious according to OpenPhish.com.",
+        'summary': "根据 OpenPhish.com 检查主机或域名是否为恶意的.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -30,10 +30,9 @@ class GO_openphish(GhostOsintPlugin):
             ],
             'favIcon': "",
             'logo': "https://openphish.com/static/openphish_logo2.png",
-            'description': "Timely. Accurate. Relevant Threat Intelligence.\n"
-            "OpenPhish is a fully automated self-contained platform for phishing intelligence. "
-            "It identifies phishing sites and performs intelligence analysis ""in real time "
-            "without human intervention and without using any external resources, such as blacklists.",
+            'description': "及时精确的相关威胁情报.\n"
+            "OpenPhish 是一个完全自动化的独立网络钓鱼智能平台. "
+            "它可以识别钓鱼网站并实时执行情报分析，无需人工干预，也无需使用任何外部资源，如黑名单.",
         }
     }
 
@@ -44,9 +43,9 @@ class GO_openphish(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?",
-        'checkcohosts': "Apply checks to sites found to be co-hosted on the target's IP?",
-        'cacheperiod': "Hours to cache list data before re-fetching."
+        'checkaffiliates': "检查关联企业?",
+        'checkcohosts': "检查目标 IP地址 上共同托管的站点?",
+        'cacheperiod': "之前缓存数据提取."
     }
 
     results = None

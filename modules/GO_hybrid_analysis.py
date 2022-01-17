@@ -20,7 +20,7 @@ class GO_hybrid_analysis(GhostOsintPlugin):
 
     meta = {
         'name': "Hybrid Analysis",
-        'summary': "Search Hybrid Analysis for domains and URLs related to the target.",
+        'summary': "通过 Hybrid Analysis 搜索目标相关的域名和 Url地址 .",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -32,16 +32,16 @@ class GO_hybrid_analysis(GhostOsintPlugin):
                 "https://www.hybrid-analysis.com/docs/api/v2"
             ],
             'apiKeyInstructions': [
-                "Visit https://www.hybrid-analysis.com/signup",
-                "Register a free account",
-                "Navigate to https://www.hybrid-analysis.com/my-account?tab=%23api-key-tab",
-                "Create an API Key",
-                "The API key is listed under 'API Key'"
+                "访问 https://www.hybrid-analysis.com/signup",
+                "注册一个免费账户",
+                "导航到 https://www.hybrid-analysis.com/my-account?tab=%23api-key-tab",
+                "创建 API 密钥",
+                "API 密钥将在 'API Key'"
             ],
             'favIcon': "https://www.hybrid-analysis.com/favicon.ico",
             'logo': "https://www.hybrid-analysis.com/img/logo.svg",
-            'description': "A free malware analysis service for the community. "
-            "Using this service you can submit files for in-depth static and dynamic analysis.",
+            'description': "为社区提供免费的恶意软件分析服务. "
+            "使用此服务，你可以提交文件进行深入的静态和动态分析.",
         }
     }
 
@@ -54,9 +54,9 @@ class GO_hybrid_analysis(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "Hybrid Analysis API key.",
-        "verify": "Verify identified domains still resolve to the associated specified IP address.",
-        "delay": "Delay between requests, in seconds."
+        "api_key": "Hybrid Analysis API 密钥.",
+        "verify": "验证标识的域名是否仍解析为关联的指定IP地址.",
+        "delay": "请求之间的延迟（秒）."
     }
 
     results = None

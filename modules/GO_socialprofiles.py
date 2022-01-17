@@ -47,8 +47,8 @@ sites = {
 class GO_socialprofiles(GhostOsintPlugin):
 
     meta = {
-        'name': "Social Media Profile Finder",
-        'summary': "Tries to discover the social media profiles for human names identified.",
+        'name': "社交媒体个人资料查找器",
+        'summary': "查找已识别人名的社交媒体资料.",
         'flags': ["slow", "apikey"],
         'useCases': ["Footprint", "Passive"],
         'categories': ["Social Media"],
@@ -61,24 +61,24 @@ class GO_socialprofiles(GhostOsintPlugin):
                 "https://cse.google.com/cse"
             ],
             'apiKeyInstructions': [
-                "If using Google:",
-                "Visit https://developers.google.com/custom-search/v1/introduction",
-                "Register a free Google account",
-                "Click on 'Get A Key'",
-                "Connect a Project",
-                "The API Key will be listed under 'YOUR API KEY'",
-                "If using Bing:",
-                "Visit https://azure.microsoft.com/en-in/services/cognitive-services/bing-web-search-api/",
-                "Register a free account",
-                "Select on Bing Custom Search",
-                "The API keys are listed under 'Key1' and 'Key2' (both should work)"
+                "如果使用 Google:",
+                "访问 https://developers.google.com/custom-search/v1/introduction",
+                "注册一个免费的 Google 账户",
+                "点击 'Get A Key'",
+                "连接项目",
+                "API 密钥将在 'YOUR API KEY'",
+                "如果使用 Bing:",
+                "访问 https://azure.microsoft.com/en-in/services/cognitive-services/bing-web-search-api/",
+                "注册一个免费账户",
+                "选择 Bing 自定义搜索",
+                "API 密钥将在 'Key1' 和 'Key2' (两个都可以使用)"
             ],
             'favIcon': "https://www.gstatic.com/devrel-devsite/prod/v2210deb8920cd4a55bd580441aa58e7853afc04b39a9d9ac4198e1cd7fbe04ef/developers/images/favicon.png",
             'logo': "https://www.gstatic.com/devrel-devsite/prod/v2210deb8920cd4a55bd580441aa58e7853afc04b39a9d9ac4198e1cd7fbe04ef/developers/images/favicon.png",
-            'description': "Google Custom Search enables you to create a search engine for your website, your blog, or a collection of websites. "
-            "You can configure your engine to search both web pages and images. "
-            "You can fine-tune the ranking, add your own promotions and customize the look and feel of the search results. "
-            "You can monetize the search by connecting your engine to your Google AdSense account.",
+            'description': "Google 自定义搜索使你能够为你的网站、博客或网站集合创建搜索引擎. "
+            "你可以将引擎配置为同时搜索网页和图像. "
+            "你可以微调排名，添加自己的促销活动，自定义搜索结果的外观和感觉. "
+            "你可以通过将你的搜索引擎连接到你的谷歌 AdSense 帐户来赚钱.",
         }
     }
 
@@ -94,12 +94,12 @@ class GO_socialprofiles(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "count": "Number of bing search engine results of identified profiles to iterate through.",
-        "method": "Search engine to use: 'google' or 'bing'.",
-        "tighten": "Tighten results by expecting to find the keyword of the target domain mentioned in the social media profile page results?",
-        "bing_api_key": "Bing API Key for social media profile search.",
-        "google_api_key": "Google API Key for social media profile search.",
-        "google_cse_id": "Google Custom Search Engine ID.",
+        "count": "Bing 搜索引擎结果数量.",
+        "method": "要使用的搜索引擎：'Google' 或 'Bing'.",
+        "tighten": "通过期望找到社交媒体个人资料页面结果中提到的目标域名的关键字来搜索结果?",
+        "bing_api_key": "Bing API 密钥用于搜索社交媒体的个人资料.",
+        "google_api_key": "Google API 密钥用于搜索社交媒体的个人资料.",
+        "google_cse_id": "Google 自定义搜索引擎 ID.",
     }
 
     keywords = None

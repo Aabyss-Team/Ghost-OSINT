@@ -29,8 +29,8 @@ malchecks = {
 class GO_customfeed(GhostOsintPlugin):
 
     meta = {
-        'name': "Custom Threat Feed",
-        'summary': "Check if a host/domain, netblock, ASN or IP is malicious according to your custom feed.",
+        'name': "自定义威胁检测",
+        'summary': "自定义检查主机或域名、网段、ASN或IP地址是否是恶意的.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"]
@@ -46,10 +46,10 @@ class GO_customfeed(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'url': "The URL where the feed can be found. Exact matching is performed so the format must be a single line per host, ASN, domain, IP or netblock.",
-        'checkaffiliates': "Apply checks to affiliates?",
-        'checkcohosts': "Apply checks to sites found to be co-hosted on the target's IP?",
-        'cacheperiod': "Maximum age of data in hours before re-downloading. 0 to always download."
+        'url': "可以找到Url地址. 执行精确匹配，因此每个主机、ASN、域名、IP地址或网段的格式必须为单行.",
+        'checkaffiliates': "检查关联企业?",
+        'checkcohosts': "检查目标 IP地址 上共同托管的站点?",
+        'cacheperiod': "重新下载之前数据的最长使用期限（小时）。0表示始终下载."
     }
 
     # Be sure to completely clear any class variables in setup()

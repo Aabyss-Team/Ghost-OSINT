@@ -24,7 +24,7 @@ class GO_greynoise(GhostOsintPlugin):
 
     meta = {
         "name": "GreyNoise",
-        "summary": "Obtain IP enrichment data from GreyNoise",
+        "summary": "从 GreyNoise 中获取IP地址的详细数据",
         "flags": ["apikey"],
         "useCases": ["Investigate", "Passive"],
         "categories": ["Reputation Systems"],
@@ -33,18 +33,16 @@ class GO_greynoise(GhostOsintPlugin):
             "model": "FREE_AUTH_LIMITED",
             "references": ["https://docs.greynoise.io/", "https://www.greynoise.io/viz/signup"],
             "apiKeyInstructions": [
-                "Visit https://www.greynoise.io/viz/signup",
-                "Sign up for a free account",
-                "Navigate to https://www.greynoise.io/viz/account/",
-                "The API key is listed under 'API Key'",
+                "访问 https://www.greynoise.io/viz/signup",
+                "登录一个免费的账户",
+                "导航到 https://www.greynoise.io/viz/account/",
+                "API 密钥将在 'API Key'",
             ],
             "favIcon": "https://www.greynoise.io/favicon.ico",
             "logo": "https://www.greynoise.io/_nuxt/img/greynoise-logo.dccd59d.png",
-            "description": "At GreyNoise, we collect and analyze untargeted, widespread, "
-            "and opportunistic scan and attack activity that reaches every server directly connected to the Internet. "
-            "Mass scanners (such as Shodan and Censys), search engines, bots, worms, "
-            "and crawlers generate logs and events omnidirectionally on every IP address in the IPv4 space. "
-            "GreyNoise gives you the ability to filter this useless noise out.",
+            "description": "在 GreyNoise ，我们收集和分析直接连接到 Internet 的每台服务器的无目标、普遍的随机扫描和攻击活动. "
+            "大规模扫描器（如 Shodan 和 Censys ）、搜索引擎、机器人、蠕虫和爬虫程序在IPv4空间中的每个IP地址上全方位生成日志和事件. "
+            "GreyNoise 使你能够过滤掉这些无用的干扰.",
         },
     }
 
@@ -61,12 +59,12 @@ class GO_greynoise(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key": "GreyNoise API Key.",
-        "age_limit_days": "Ignore any records older than this many days. 0 = unlimited.",
-        "netblocklookup": "Look up netblocks deemed to be owned by your target for possible blacklisted hosts on the same target subdomain/domain?",
-        "maxnetblock": "If looking up owned netblocks, the maximum netblock size to look up all IPs within (CIDR value, 24 = /24, 16 = /16, etc.)",
-        "subnetlookup": "Look up subnets which your target is a part of for blacklisting?",
-        "maxsubnet": "If looking up subnets, the maximum subnet size to look up all the IPs within (CIDR value, 24 = /24, 16 = /16, etc.)"
+        "api_key": "GreyNoise API 密钥.",
+        "age_limit_days": "忽略该天数之前的任何记录. 0 = 无限.",
+        "netblocklookup": "在被视为你的目标所有的网段上查找同一目标子域或域名上可能被列入黑名单的主机的所有IP地址?",
+        "maxnetblock": "如果查找网段，则为查找其中所有IP的最大网段的大小 (CIDR 值, 24 = /24, 16 = /16, 等等.)",
+        "subnetlookup": "查找目标所属的子网以将其列入黑名单?",
+        "maxsubnet": "如果查询子网则设置子网最大的子网划分 (CIDR 值, 24 = /24, 16 = /16, 等等.)"
         # 'asnlookup': "Look up ASNs that your target is a member of?"
     }
 

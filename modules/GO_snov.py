@@ -23,7 +23,7 @@ class GO_snov(GhostOsintPlugin):
 
     meta = {
         'name': "Snov",
-        'summary': "Gather available email IDs from identified domains",
+        'summary': "识别域名收集可用的电子邮件ID",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -34,16 +34,14 @@ class GO_snov(GhostOsintPlugin):
                 "https://snov.io/api"
             ],
             'apiKeyInstructions': [
-                "Visit https://snov.io",
-                "Register a free account",
-                "Navigate to https://app.snov.io/api-setting",
-                "The API key combination is listed under 'API User ID' and 'API Secret'"
+                "访问 https://snov.io",
+                "注册一个免费账户",
+                "导航到 https://app.snov.io/api-setting",
+                "API 密钥将在 'API User ID' 和 'API Secret'"
             ],
             'favIcon': "https://snov.io/img/favicon/favicon-96x96.png",
             'logo': "https://cdn.snov.io/img/common/icon-logo.svg?cf6b11aa56fa13f6c94c969282424cfc",
-            'description': "Snov.io API allows to get a list of all emails from a particular domain, "
-            "find email addresses by name and domain, verify emails, add prospects to a list, "
-            "change a recipient's status and more.",
+            'description': "Snov.io API 允许获取特定域中所有电子邮件的列表、按名称和域查找电子邮件地址、验证电子邮件、将潜在客户添加到列表、更改收件人的状态等.",
         }
     }
 
@@ -54,8 +52,8 @@ class GO_snov(GhostOsintPlugin):
 
     # Option descriptions. Delete any options not applicable to this module.
     optdescs = {
-        'api_key_client_id': "Snov.io API Client ID",
-        'api_key_client_secret': "Snov.io API Client Secret"
+        'api_key_client_id': "Snov.io API 客户端 ID",
+        'api_key_client_secret': "Snov.io API 客户端密钥"
     }
 
     results = None

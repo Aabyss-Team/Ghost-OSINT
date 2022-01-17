@@ -18,7 +18,7 @@ class GO_hostio(GhostOsintPlugin):
 
     meta = {
         "name": "Host.io",
-        "summary": "Obtain information about domain names from host.io.",
+        "summary": "从 host.io 获取有关域名的信息.",
         'flags': ["apikey"],
         "useCases": ["Passive"],
         "categories": ["Passive DNS"],
@@ -27,17 +27,16 @@ class GO_hostio(GhostOsintPlugin):
             "model": "FREE_AUTH_LIMITED",
             "references": ["https://host.io/docs"],
             "apiKeyInstructions": [
-                "Visit https://host.io/signup",
-                "Register a free account",
-                "Visit https://host.io/dashboard and use the authentication token provided",
+                "访问 https://host.io/signup",
+                "注册一个免费账户",
+                "访问 https://host.io/dashboard 并使用提供的身份验证令牌",
             ],
             "favIcon": "https://host.io/static/images/hostio/favicon.png?v2",
             "logo": "https://host.io/static/images/hostio/favicon.png?v2",  # Seems like they embed it as SVG
-            "description": "We collect data on every known domain name, from every TLD, and update it every month. "
-            "Our data includes DNS records and website data for each of the domains."
-            "We process terabytes of data and summarize it to produce our final results. "
-            "Browse through our site to see backlinks, redirects, server details or IP address "
-            "and hosting provider details courtesy of IPinfo.io.",
+            "description": "我们从每个TLD收集每个已知域名的数据，并每月更新. "
+            "我们的数据包括每个域的DNS记录和网站数据."
+            "我们处理万亿字节的数据，并对其进行汇总以产生最终结果. "
+            "浏览我们的网站，查看反向链接、重定向、服务器详细信息或IP地址和托管提供商详细信息，由 IPinfo.io 提供.",
         },
     }
 
@@ -46,7 +45,7 @@ class GO_hostio(GhostOsintPlugin):
     }
 
     optdescs = {
-        "api_key": "Host.io API Key.",
+        "api_key": "Host.io API 密钥.",
     }
 
     errorState = False

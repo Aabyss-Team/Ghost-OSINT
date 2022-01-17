@@ -20,7 +20,7 @@ class GO_riskiq(GhostOsintPlugin):
 
     meta = {
         'name': "RiskIQ",
-        'summary': "Obtain information from RiskIQ's (formerly PassiveTotal) Passive DNS and Passive SSL databases.",
+        'summary': "从 RiskIQ (以前称为 Passive Total ) 的被动 DNS 和被动 SSL 数据库中获取信息.",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -33,18 +33,17 @@ class GO_riskiq(GhostOsintPlugin):
                 "https://api.riskiq.net/api/concepts.html"
             ],
             'apiKeyInstructions': [
-                "Visit https://community.riskiq.com/home",
-                "Register a free account",
-                "Navigate to https://community.riskiq.com/settings",
-                "Click on 'Show' beside 'User'",
-                "The API Key combination will be under 'Key' and 'Secret'"
+                "访问 https://community.riskiq.com/home",
+                "注册一个免费账户",
+                "导航到 https://community.riskiq.com/settings",
+                "点击 'Show' 旁边的 'User'",
+                "API 密钥将在 'Key' 和 'Secret'"
             ],
             'favIcon': "https://community.riskiq.com/static/assets/favicon.png",
             'logo': "https://community.riskiq.com/static/assets/favicon.png",
-            'description': "RiskIQ Community brings petabytes of internet intelligence directly to your fingertips. "
-            "Investigate threats by pivoting through attacker infrastructure data. "
-            "Understand your digital assets that are internet-exposed, "
-            "and map and monitor your external attack surface.",
+            'description': "RiskIQ 社区将数PB的互联网情报直接带到你的指尖. "
+            "通过旋转攻击者基础数据来调查威胁. "
+            "了解暴露在互联网上的数字资产，并绘制和监控外部攻击面.",
         }
     }
 
@@ -59,11 +58,11 @@ class GO_riskiq(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key_login": "RiskIQ login.",
-        "api_key_password": "RiskIQ API Key.",
-        "verify": "Verify co-hosts are valid by checking if they still resolve to the shared IP.",
-        "cohostsamedomain": "Treat co-hosted sites on the same target domain as co-hosting?",
-        'maxcohost': "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting."
+        "api_key_login": "RiskIQ 登录.",
+        "api_key_password": "RiskIQ API 密钥.",
+        "verify": "通过检查共享主机是否仍解析为共享IP地址来验证它们是否有效.",
+        "cohostsamedomain": "将同一目标域上的托管站点视为共同托管?",
+        'maxcohost': "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的."
     }
 
     # Be sure to completely clear any class variables in setup()

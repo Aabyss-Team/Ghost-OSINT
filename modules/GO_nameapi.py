@@ -20,7 +20,7 @@ class GO_nameapi(GhostOsintPlugin):
 
     meta = {
         'name': "NameAPI",
-        'summary': "Check whether an email is disposable",
+        'summary': "检查电子邮件是否是一次性的",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -31,17 +31,16 @@ class GO_nameapi(GhostOsintPlugin):
                 "https://www.nameapi.org/en/developer/manuals/rest-web-services/53/web-services/disposable-email-address-detector/"
             ],
             'apiKeyInstructions': [
-                "Visit https://nameapi.org",
-                "Click on 'Get API Key'",
-                "Register a free account",
-                "The API key will be sent to your email"
+                "访问 https://nameapi.org",
+                "点击 'Get API Key'",
+                "注册一个免费账户",
+                "API 密钥将会发送到你的电子邮件中"
             ],
             'favIcon': "https://www.nameapi.org/fileadmin/favicon.ico",
             'logo': "https://www.nameapi.org/fileadmin/templates/nameprofiler/images/name-api-logo.png",
-            'description': "The NameAPI DEA-Detector checks email addresses "
-            "against a list of known trash domains such as mailinator.com.\n"
-            "It classifies those as disposable which operate as a time-limited, "
-            "web based way of receiving emails, for example, sign up confirmations.",
+            'description': "NameAPI DEA-Detector 检查电子邮件地址 "
+            "针对一直的垃圾域名列表，如 mailinator.com .\n"
+            "它将这些分类为一次性的，作为一种有时间限制的、基于网络的接收电子邮件的方式，例如，注册确认.",
         }
     }
 
@@ -50,7 +49,7 @@ class GO_nameapi(GhostOsintPlugin):
     }
 
     optdescs = {
-        'api_key': "API Key for NameAPI"
+        'api_key': "NameAPI 密钥"
     }
 
     results = None

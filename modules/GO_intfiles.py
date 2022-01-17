@@ -16,8 +16,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_intfiles(GhostOsintPlugin):
 
     meta = {
-        'name': "Interesting File Finder",
-        'summary': "Identifies potential files of interest, e.g. office documents, zip files.",
+        'name': "有趣的文件查找器",
+        'summary': "查找可能感兴趣的文件, 例如 office 文档, zip 文件.",
         'flags': [],
         'useCases': ["Footprint", "Passive"],
         'categories': ["Crawling and Scanning"]
@@ -30,7 +30,7 @@ class GO_intfiles(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'fileexts': "File extensions of files you consider interesting."
+        'fileexts': "你认为感兴趣的文件的文件扩展名."
     }
 
     results = None

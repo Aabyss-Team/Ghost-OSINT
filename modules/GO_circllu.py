@@ -22,7 +22,7 @@ class GO_circllu(GhostOsintPlugin):
 
     meta = {
         'name': "CIRCL.LU",
-        'summary': "Obtain information from CIRCL.LU's Passive DNS and Passive SSL databases.",
+        'summary': "通过 CIRCL.LU 数据库获取 DNS 和 SSL 证书信息.",
         'flags': ["apikey"],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -37,18 +37,15 @@ class GO_circllu(GhostOsintPlugin):
                 "https://www.circl.lu/projects"
             ],
             'apiKeyInstructions': [
-                "Visit https://www.circl.lu/contact/",
-                "Contact with email or phone to request access for Passive DNS and Passive SSL API services",
-                "The API access will be provided once approved"
+                "访问 https://www.circl.lu/contact/",
+                "通过电子邮件或电话，请求访问被动 DNS 查询和被动 SSL证书 查询的 API 服务",
+                "一旦获得批准，将提供 API 访问权限"
             ],
             'favIcon': "https://www.google.com/s2/favicons?domain=https://www.circl.lu/",
             'logo': "https://www.circl.lu/assets/images/circl-logo.png",
-            'description': "The Computer Incident Response Center Luxembourg (CIRCL) is a government-driven initiative "
-            "designed to gather, review, report and respond to computer security threats and incidents.\n"
-            "CIRCL provides a reliable and trusted point of contact for any users, companies and organizations "
-            "based in Luxembourg, for the handling of attacks and incidents. "
-            "Its team of experts acts like a fire brigade, with the ability to react promptly and "
-            "efficiently whenever threats are suspected, detected or incidents occur.",
+            'description': "Computer Incident Response Center Luxembourg (CIRCL) 是一个由政府推动的倡议，旨在收集、审查、报告和响应计算机安全威胁和事件.\n"
+            "CIRCL为卢森堡境内的任何用户、公司和组织提供可靠和可信的联络点，以处理攻击和事件. "
+            "它的专家团队就像一支消防队，能够在怀疑、发现威胁或发生事故时迅速有效地作出反应.",
         }
     }
 
@@ -64,12 +61,12 @@ class GO_circllu(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "api_key_login": "CIRCL.LU login.",
-        "api_key_password": "CIRCL.LU password.",
-        "age_limit_days": "Ignore any Passive DNS records older than this many days. 0 = unlimited.",
-        "verify": "Verify co-hosts are valid by checking if they still resolve to the shared IP.",
-        "cohostsamedomain": "Treat co-hosted sites on the same target domain as co-hosting?",
-        'maxcohost': "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting."
+        "api_key_login": "CIRCL.LU 用户名.",
+        "api_key_password": "CIRCL.LU 密码.",
+        "age_limit_days": "忽略之前的 被动DNS 记录. 0 = 无线.",
+        "verify": "通过检查共享主机是否仍解析为共享IP地址来验证它们是否有效.",
+        "cohostsamedomain": "将同一目标上的托管站点视为共同托管?",
+        'maxcohost': "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的."
     }
 
     # Be sure to completely clear any class variables in setup()

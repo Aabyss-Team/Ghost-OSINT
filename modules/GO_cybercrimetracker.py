@@ -17,7 +17,7 @@ class GO_cybercrimetracker(GhostOsintPlugin):
 
     meta = {
         'name': "CyberCrime-Tracker.net",
-        'summary': "Check if a host/domain or IP address is malicious according to CyberCrime-Tracker.net.",
+        'summary': "根据 CyberCrime-Tracker.net 检查主机和域名，以及 IP地址 是否是恶意的.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -30,8 +30,8 @@ class GO_cybercrimetracker(GhostOsintPlugin):
             ],
             'favIcon': "https://cybercrime-tracker.net/favicon.ico",
             'logo': "https://cybercrime-tracker.net/favicon.ico",
-            'description': "CyberCrime is a C&C panel tracker, in other words, "
-            "it lists the administration interfaces of certain in-the-wild botnets.",
+            'description': "CyberCrime 是一个C&C面板跟踪器, 换句话说, "
+            "它列出了某些僵尸网络的管理接口.",
         }
     }
 
@@ -44,9 +44,9 @@ class GO_cybercrimetracker(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?",
-        'checkcohosts': "Apply checks to sites found to be co-hosted on the target's IP?",
-        'cacheperiod': "Hours to cache list data before re-fetching."
+        'checkaffiliates': "检查关联企业?",
+        'checkcohosts': "检查目标 IP地址 上共同托管的站点?",
+        'cacheperiod': "之前缓存数据提取."
     }
 
     results = None

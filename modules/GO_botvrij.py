@@ -17,18 +17,15 @@ class GO_botvrij(GhostOsintPlugin):
 
     meta = {
         'name': "botvrij.eu",
-        'summary': "Check if a domain is malicious according to botvrij.eu.",
+        'summary': "根据 botvrij.eu 检查域名是否为恶意域名.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
         'dataSource': {
             'website': "https://botvrij.eu/",
             'model': "FREE_NOAUTH_UNLIMITED",
-            'description': "Botvrij.eu provides different sets "
-                " of open source IOCs that you can use in your "
-                " security devices to detect possible malicious activity.\n"
-                "The information contains network info (IPs), file hashes,"
-                " file paths, domain names, URLs.",
+            'description': "Botvrij.eu 提供不同的开源IOC集，您可以在安全设备中使用这些IOC来检测可能的恶意活动.\n"
+                "这些信息包含网络信息（IP地址）、文件哈希、文件路径、域名和URL链接.",
         }
     }
 
@@ -39,9 +36,9 @@ class GO_botvrij(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?",
-        'checkcohosts': "Apply checks to sites found to be co-hosted on the target's IP?",
-        'cacheperiod': "Hours to cache list data before re-fetching."
+        'checkaffiliates': "检查关联公司?",
+        'checkcohosts': "检查目标IP地址上共同托管的站点?",
+        'cacheperiod': "之前缓存提取."
     }
 
     results = None

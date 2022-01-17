@@ -23,7 +23,7 @@ class GO_crxcavator(GhostOsintPlugin):
 
     meta = {
         'name': "CRXcavator",
-        'summary': "Search CRXcavator for Chrome extensions.",
+        'summary': "在 CRXcavator 中搜索 Chrome 扩展.",
         'flags': [],
         'useCases': ["Investigate", "Footprint", "Passive"],
         'categories': ["Search Engines"],
@@ -32,9 +32,7 @@ class GO_crxcavator(GhostOsintPlugin):
             'model': "FREE_NOAUTH_UNLIMITED",
             'favIcon': "https://crxcavator.io/favicon-32x32.png",
             'logo': "https://crxcavator.io/apple-touch-icon.png",
-            'description': "CRXcavator automatically scans the entire Chrome Web "
-                "Store every 3 hours and produces a quantified risk score for "
-                "each Chrome Extension based on several factors.",
+            'description': "CRXcavator 每3小时自动扫描一次整个 Chrome 网络商店，并根据几个因素为每个Chrome扩展生成量化的风险分数.",
         }
     }
 
@@ -43,7 +41,7 @@ class GO_crxcavator(GhostOsintPlugin):
     }
 
     optdescs = {
-        "verify": "Verify identified hostnames resolve.",
+        "verify": "验证已识别的主机名解析.",
     }
 
     results = None

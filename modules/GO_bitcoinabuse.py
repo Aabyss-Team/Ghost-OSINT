@@ -19,7 +19,7 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_bitcoinabuse(GhostOsintPlugin):
     meta = {
         "name": "BitcoinAbuse",
-        "summary": "Check Bitcoin addresses against the bitcoinabuse.com database of suspect/malicious addresses.",
+        "summary": "根据 bitcoinabuse.com 检查可疑和恶意的比特币地址.",
         'flags': ["apikey"],
         "useCases": ["Passive", "Investigate"],
         "categories": ["Reputation Systems"],
@@ -28,30 +28,25 @@ class GO_bitcoinabuse(GhostOsintPlugin):
             "model": "FREE_AUTH_UNLIMITED",
             "references": ["https://www.bitcoinabuse.com/api-docs"],
             "apiKeyInstructions": [
-                "Visit https://www.bitcoinabuse.com/register",
-                "Register a free account",
-                "Click on the account icon and click on 'Your Settings'",
-                "Click on 'API'",
-                "Enter a token name and press 'Create'",
+                "访问 https://www.bitcoinabuse.com/register",
+                "注册一个免费账户",
+                "单击账户图标后单击 'Your Settings'",
+                "点击 'API'",
+                "输入 Token 后点击 'Create'",
             ],
             "favIcon": "https://www.bitcoinabuse.com/favicon-32x32.png",
             "logo": "https://www.bitcoinabuse.com/img/logo-sm.png",
-            "description": "BitcoinAbuse.com is a public database of bitcoin "
-            "addresses used by scammers, hackers, and criminals."
-            "Bitcoin is anonymous if used perfectly. Luckily, no "
-            "one is perfect. Even hackers make mistakes. It only "
-            "takes one slip to link stolen bitcoin to a hacker's "
-            "their real identity. It is our hope that by making a "
-            "public database of bitcoin addresses used by criminals it "
-            "will be harder for criminals to convert the digital currency"
-            " back into fiat money.",
+            "description": "BitcoinAbuse.com 是一个存储黑客、骗子和罪犯使用的比特币地址的公开数据库"
+            "如果使用得当, 比特币是匿名的. 幸运的是,  "
+            "没用东西是完美的. 甚至黑客也会犯错. 只要一次失误，就可以将被盗比特币与黑客的真实身份联系起来 "
+            "我们希望，通过建立罪犯使用的比特币地址的公共数据库，罪犯将更难将数字货币转换回法定货币.",
         },
     }
     opts = {
         "api_key": "",
     }
     optdescs = {
-        "api_key": "BitcoinAbuse API Key.",
+        "api_key": "BitcoinAbuse API 密钥.",
     }
     results = None
     errorState = False

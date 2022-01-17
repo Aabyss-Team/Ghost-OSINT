@@ -21,7 +21,7 @@ class GO_commoncrawl(GhostOsintPlugin):
 
     meta = {
         'name': "CommonCrawl",
-        'summary': "Searches for URLs found through CommonCrawl.org.",
+        'summary': "通过 CommonCrawl.org 搜索 Url地址.",
         'flags': [],
         'useCases': ["Footprint", "Passive"],
         'categories': ["Search Engines"],
@@ -35,10 +35,9 @@ class GO_commoncrawl(GhostOsintPlugin):
             ],
             'favIcon': "https://commoncrawl.org/wp-content/themes/commoncrawl/img/favicon.png",
             'logo': "https://commoncrawl.org/wp-content/themes/commoncrawl/img/favicon.png",
-            'description': "We build and maintain an open repository of web crawl data that can be accessed and analyzed by anyone.\n"
-            "Everyone should have the opportunity to indulge their curiosities, analyze the world and pursue brilliant ideas. "
-            "Small startups or even individuals can now access high quality crawl data that was previously "
-            "only available to large search engine corporations.",
+            'description': "我们建立并维护一个开放的 WEB爬虫 数据库，任何人都可以访问和分析这些数据.\n"
+            "每个人都应该有机会沉迷于自己的好奇心，分析世界，追求卓越的想法. "
+            "小型初创公司甚至个人现在都可以访问以前只有大型搜索引擎公司才能访问的高质量爬虫数据.",
         }
     }
 
@@ -49,7 +48,7 @@ class GO_commoncrawl(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        "indexes": "Number of most recent indexes to attempt, because results tend to be occasionally patchy."
+        "indexes": "要尝试的最近索引的数量."
     }
 
     results = None

@@ -16,8 +16,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_coinblocker(GhostOsintPlugin):
 
     meta = {
-        'name': "CoinBlocker Lists",
-        'summary': "Check if a domain appears on CoinBlocker lists.",
+        'name': "CoinBlocker 列表",
+        'summary': "检查域名是否出现在 CoinBlocker 列表中.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -31,10 +31,8 @@ class GO_coinblocker(GhostOsintPlugin):
             ],
             'favIcon': "https://zerodot1.gitlab.io/CoinBlockerListsWeb/assets/img/favicon.png",
             'logo': "https://zerodot1.gitlab.io/CoinBlockerListsWeb/assets/img/favicon.png",
-            'description': "The CoinBlockerLists are a project to prevent illegal mining in "
-            "browsers or other applications using IPlists and URLLists.\n"
-            "It's not just to block everything without any reason, but to protect "
-            "Internet users from illegal mining.",
+            'description': "CoinBlockerLists 是一个防止在浏览器或其他应用程序中使用 IPLists 和 UrlLists 进行非法挖掘的项目.\n"
+            "这不仅仅是无缘无故地封锁一切，而且是为了保护互联网用户不受非法挖矿的影响.",
         }
     }
 
@@ -45,9 +43,9 @@ class GO_coinblocker(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?",
-        'checkcohosts': "Apply checks to sites found to be co-hosted on the target's IP?",
-        'cacheperiod': "Hours to cache list data before re-fetching.",
+        'checkaffiliates': "检查关联企业?",
+        'checkcohosts': "检查目标 IP地址 上共同托管的站点?",
+        'cacheperiod': "之前缓存数据提取.",
     }
 
     results = None

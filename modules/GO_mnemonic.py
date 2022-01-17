@@ -23,8 +23,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_mnemonic(GhostOsintPlugin):
 
     meta = {
-        'name': "Mnemonic PassiveDNS",
-        'summary': "Obtain Passive DNS information from PassiveDNS.mnemonic.no.",
+        'name': "Mnemonic 被动DNS查询",
+        'summary': "从 PassiveDNS.mnemonic.no 被动获取DNS信息.",
         'flags': [],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Passive DNS"],
@@ -38,12 +38,9 @@ class GO_mnemonic(GhostOsintPlugin):
             ],
             'favIcon': "https://www.mnemonic.no/favicon-96x96.png",
             'logo': "https://www.mnemonic.no/UI/logo.svg",
-            'description': "mnemonic helps businesses manage their security risks, "
-            "protect their data and defend against cyber threats.\n"
-            "Our expert team of security consultants, product specialists, "
-            "threat researchers, incident responders and ethical hackers, combined "
-            "with our Argus security platform ensures we stay ahead of "
-            "advanced cyberattacks and protect our customers from evolving threats.",
+            'description': "mnemonic 帮助企业管理其安全风险，保护其数据并抵御网络威胁.\n"
+            "我们由安全顾问、产品专家、威胁研究人员、事件响应人员和道德黑客组成的专家团队，"
+            "结合我们的Argus安全平台，确保我们领先于先进的网络攻击，并保护我们的客户免受不断演变的威胁.",
         }
     }
 
@@ -58,13 +55,13 @@ class GO_mnemonic(GhostOsintPlugin):
     }
 
     optdescs = {
-        'per_page': "Maximum number of results per page.",
-        'max_pages': "Maximum number of pages of results to fetch.",
-        'timeout': "Query timeout, in seconds.",
-        'maxage': "The maximum age of the data returned, in days, in order to be considered valid.",
-        'verify': "Verify identified domains still resolve to the associated specified IP address.",
-        'cohostsamedomain': "Treat co-hosted sites on the same target domain as co-hosting?",
-        'maxcohost': "Stop reporting co-hosted sites after this many are found, as it would likely indicate web hosting.",
+        'per_page': "每页最大结果数.",
+        'max_pages': "提取结果最大页数.",
+        'timeout': "查询超时（秒）.",
+        'maxage': "返回的数据被视为有效的最长时间（天）.",
+        'verify': "验证标识的域名是否仍解析为关联的指定IP地址.",
+        'cohostsamedomain': "将同一目标域上的托管站点视为共同托管?",
+        'maxcohost': "在发现这么多网站后，停止报告共同托管的网站，因为这可能表明网站是托管的.",
     }
 
     cohostcount = 0

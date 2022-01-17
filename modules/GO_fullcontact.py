@@ -20,7 +20,7 @@ class GO_fullcontact(GhostOsintPlugin):
 
     meta = {
         'name': "FullContact",
-        'summary': "Gather domain and e-mail information from FullContact.com API.",
+        'summary': "通过 FullContact.com API 收集域名和电子邮件信息.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -35,21 +35,19 @@ class GO_fullcontact(GhostOsintPlugin):
                 "https://www.fullcontact.com/faq/"
             ],
             'apiKeyInstructions': [
-                "Visit https://fullcontact.com",
-                "Register a free account",
-                "Navigate to https://dashboard.fullcontact.com",
-                "Click on 'Get an API Key'",
-                "Verify your account using your contact number",
-                "The API Key will be listed under 'Your API Keys'"
+                "访问 https://fullcontact.com",
+                "注册一个免费账户",
+                "导航到 https://dashboard.fullcontact.com",
+                "点击 'Get an API Key'",
+                "使用你的联系号码验证您的帐户",
+                "API 密钥将在 'Your API Keys'"
             ],
             'favIcon': "https://1a3asl4eps7u26kl661u3bi9-wpengine.netdna-ssl.com/wp-content/uploads/2019/11/cropped-full-contact-isologo-32x32.png",
             'logo': "https://1a3asl4eps7u26kl661u3bi9-wpengine.netdna-ssl.com/wp-content/themes/fc-theme/assets/images/common/full-contact-logo.svg?1574450351",
-            'description': "Connecting data. Consolidating identities. Applying insights. Amplifying media reach. "
-            "We provide person-centered identity resolution to improve your customer interactions with a simple, "
-            "real-time API integration.\n"
-            "FullContact is a privacy-safe Identity Resolution company building trust between people and brands. "
-            "We deliver the capabilities needed to create tailored customer experiences by unifying data and "
-            "applying insights in the moments that matter.",
+            'description': "连接数据.巩固身份.应用见解.扩大媒体覆盖范围. "
+            "我们提供以个人为中心的身份解析，通过简单、实时的API集成来改善客户交互.\n"
+            "FullContact 是一家隐私安全的身份解析公司，旨在建立人与品牌之间的信任. "
+            "我们通过统一数据并在关键时刻应用见解，提供创造定制客户体验所需的能力.",
         }
     }
 
@@ -59,8 +57,8 @@ class GO_fullcontact(GhostOsintPlugin):
     }
 
     optdescs = {
-        "api_key": "FullContact.com API key.",
-        "max_age_days": "Maximum number of age in days for a record before it's considered invalid and not reported."
+        "api_key": "FullContact.com API 密钥.",
+        "max_age_days": "记录在被视为无效且未报告之前的最大存在天数(以天为单位)."
     }
 
     results = None

@@ -20,8 +20,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_googlemaps(GhostOsintPlugin):
 
     meta = {
-        'name': "Google Maps",
-        'summary': "Identifies potential physical addresses and latitude/longitude coordinates.",
+        'name': "Google 地图",
+        'summary': "标识可能的物理地址和纬度/经度坐标.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Real World"],
@@ -32,21 +32,20 @@ class GO_googlemaps(GhostOsintPlugin):
                 "https://developers.google.com/maps/documentation/?_ga=2.135220017.1220421370.1587340370-900596925.1587340370"
             ],
             'apiKeyInstructions': [
-                "Visit https://cloud.google.com/maps-platform/",
-                "Register a free Google account",
-                "Click on 'Get Started'",
-                "Click on 'API'",
-                "Select the type of API",
-                "Navigate to https://console.cloud.google.com/apis/credentials",
-                "Click on 'Credentials'",
-                "The API Key will be listed under 'API Keys'"
+                "访问 https://cloud.google.com/maps-platform/",
+                "注册一个免费的账户",
+                "点击 'Get Started'",
+                "点击 'API'",
+                "选择 API 类型",
+                "导航到 https://console.cloud.google.com/apis/credentials",
+                "点击 'Credentials'",
+                "API 密钥将在 'API Keys'"
             ],
             'favIcon': "https://www.gstatic.com/devrel-devsite/prod/v2210deb8920cd4a55bd580441aa58e7853afc04b39a9d9ac4198e1cd7fbe04ef/cloud/images/favicons/onecloud/favicon.ico",
             'logo': "https://www.gstatic.com/devrel-devsite/prod/v2210deb8920cd4a55bd580441aa58e7853afc04b39a9d9ac4198e1cd7fbe04ef/cloud/images/cloud-logo.svg",
-            'description': "Explore where real-world insights and immersive location experiences can take your business.\n"
-            "Build with reliable, comprehensive data for over 200 countries and territories.\n"
-            "has been done here. If line breaks are needed for breaking up\n"
-            "Scale confidently, backed by our infrastructure.",
+            'description': "探索真实世界的洞察力和身临其境的位置体验可以将您的业务带向何处.\n"
+            "使用200多个国家和地区的可靠、全面的数据进行构建.\n"
+            "已经在这里完成了.如果需要离线，则可以在我们的基础设施支持下自信地拆分规模.",
         }
     }
 
@@ -54,7 +53,7 @@ class GO_googlemaps(GhostOsintPlugin):
         "api_key": ""
     }
     optdescs = {
-        "api_key": "Google Geocoding API Key."
+        "api_key": "Google Geocoding API 密钥."
     }
     results = None
     errorState = False

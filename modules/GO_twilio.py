@@ -20,7 +20,7 @@ class GO_twilio(GhostOsintPlugin):
 
     meta = {
         'name': "Twilio",
-        'summary': "Obtain information from Twilio about phone numbers. Ensure you have the Caller Name add-on installed in Twilio.",
+        'summary': "从 Twilio 获取有关电话号码的信息. 确保你在 Twilio 中安装了来电者姓名插件.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Search Engines"],
@@ -32,16 +32,15 @@ class GO_twilio(GhostOsintPlugin):
                 "https://www.twilio.com/blog/what-does-twilio-do"
             ],
             'apiKeyInstructions': [
-                "Visit https://www.twilio.com",
-                "Register a free account",
-                "Navigate to https://www.twilio.com/console",
-                "The API key combination is listed under 'Account SID' and 'Auth Token'"
+                "访问 https://www.twilio.com",
+                "注册一个免费账户",
+                "导航到 https://www.twilio.com/console",
+                "API 密钥将在 'Account SID' 和 'Auth Token'"
             ],
             'favIcon': "https://www.datasource.com/favicon.ico",
             'logo': "https://www.datasource.com/logo.gif",
-            'description': "Twilio is a cloud communications platform as a service company based in San Francisco, California. "
-            "Twilio allows software developers to programmatically make and receive phone calls, "
-            "send and receive text messages, and perform other communication functions using its web service APIs.",
+            'description': "Twilio 是一家云通信平台，为加利福尼亚旧金山的服务公司. "
+            "Twilio 允许软件开发人员使用其 WEB 服务 API 以编程方式拨打和接听电话、发送和接收文本消息以及执行其他通信功能.",
         }
     }
 
@@ -51,8 +50,8 @@ class GO_twilio(GhostOsintPlugin):
     }
 
     optdescs = {
-        'api_key_account_sid': 'Twilio Account SID',
-        'api_key_auth_token': 'Twilio Auth Token'
+        'api_key_account_sid': 'Twilio 账户 SID',
+        'api_key_auth_token': 'Twilio Token'
     }
 
     results = None

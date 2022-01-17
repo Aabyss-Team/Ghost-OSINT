@@ -21,8 +21,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_dnsbrute(GhostOsintPlugin):
 
     meta = {
-        'name': "DNS Brute-forcer",
-        'summary': "Attempts to identify hostnames through brute-forcing common names and iterations.",
+        'name': "DNS 枚举",
+        'summary': "尝试通过暴力破解常见名称和迭代来标识主机名.",
         'flags': [],
         'useCases': ["Footprint", "Investigate"],
         'categories': ["DNS"]
@@ -41,13 +41,13 @@ class GO_dnsbrute(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'skipcommonwildcard': "If wildcard DNS is detected, don't bother brute-forcing.",
-        'domainonly': "Only attempt to brute-force names on domain names, not hostnames (some hostnames are also sub-domains).",
-        'commons': "Try a list of about 750 common hostnames/sub-domains.",
-        'top10000': "Try a further 10,000 common hostnames/sub-domains. Will make the scan much slower.",
-        'numbersuffix': "For any host found, try appending 1, 01, 001, -1, -01, -001, 2, 02, etc. (up to 10)",
-        'numbersuffixlimit': "Limit using the number suffixes for hosts that have already been resolved? If disabled this will significantly extend the duration of scans.",
-        "_maxthreads": "Maximum threads"
+        'skipcommonwildcard': "如果检测到通配符DNS，请不要使用暴力破解.",
+        'domainonly': "仅尝试暴力破解域名，而不是主机名（某些主机名也是子域名）.",
+        'commons': "尝试大约750个常见主机名/子域名的列表.",
+        'top10000': "尝试10000个常用主机名/子域名。将使扫描变得更慢.",
+        'numbersuffix': "对于找到的任何主机，请尝试追加 1, 01, 001, -1, -01, -001, 2, 02, 等等. (最多10个)",
+        'numbersuffixlimit': "限制对已解析的主机使用数字后缀? 如果禁用，这将显著延长扫描的持续时间.",
+        "_maxthreads": "最大线程数"
     }
 
     events = None

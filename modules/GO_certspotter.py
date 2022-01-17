@@ -22,8 +22,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 
 class GO_certspotter(GhostOsintPlugin):
     meta = {
-        'name': "CertSpotter",
-        'summary': "Gather information about SSL certificates from SSLMate CertSpotter API.",
+        'name': "Cert侦查",
+        'summary': "通过 SSLMate CertSpotter API 侦查SSL证书的有关信息.",
         'flags': ["apikey"],
         'useCases': ["Footprint", "Investigate", "Passive"],
         'categories': ["Crawling and Scanning"],
@@ -34,10 +34,10 @@ class GO_certspotter(GhostOsintPlugin):
                 "https://sslmate.com/help/reference/ct_search_api_v1"
             ],
             'apiKeyInstructions': [
-                "Visit https://sslmate.com/signup?for=ct_search_api",
-                "Register a new account with an email",
-                "Navigate to https://sslmate.com/account/",
-                "The API key is listed under 'API Credentials'",
+                "访问 https://sslmate.com/signup?for=ct_search_api",
+                "通过电子邮件注册新账户",
+                "导航到 to https://sslmate.com/account/",
+                "API 密钥将在 'API Credentials'",
             ],
         }
     }
@@ -52,10 +52,10 @@ class GO_certspotter(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'api_key': 'CertSpotter API key.',
-        'verify': "Verify certificate subject alternative names resolve.",
-        'max_pages': "Maximum number of pages of results to fetch.",
-        'certexpiringdays': 'Number of days in the future a certificate expires to consider it as expiring.'
+        'api_key': 'CertSpotter API 密钥.',
+        'verify': "验证证书使用者备用名称解析.",
+        'max_pages': "提取结果最大页数.",
+        'certexpiringdays': '将证书视为过期的未来过期天数.'
     }
 
     results = None

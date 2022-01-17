@@ -20,7 +20,7 @@ class GO_talosintel(GhostOsintPlugin):
 
     meta = {
         'name': "Talos Intelligence",
-        'summary': "Check if a netblock or IP address is malicious according to TalosIntelligence.",
+        'summary': "根据 TalosIntelligence 检查网段或IP地址是否为恶意地址.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -33,13 +33,9 @@ class GO_talosintel(GhostOsintPlugin):
             ],
             'favIcon': "https://talosintelligence.com/assets/favicons/favicon-49c9b25776778ff43873cf5ebde2e1ffcd0747ad1042ac5a5306cdde3ffca8cd.ico",
             'logo': "https://talosintelligence.com/assets/favicons/favicon-49c9b25776778ff43873cf5ebde2e1ffcd0747ad1042ac5a5306cdde3ffca8cd.ico",
-            'description': "Cisco Talos Incident Response provides a full suite of proactive and reactive services "
-            "to help you prepare, respond and recover from a breach. "
-            "With Talos IR, you have direct access to the same threat intelligence available "
-            "to Cisco and world-class emergency response capabilities — "
-            "in addition to more than 350 threat researchers for questions and analysis. "
-            "Let our experts work with you to evaluate existing plans, develop a new plan, "
-            "and provide rapid assistance when you need it most.",
+            'description': "Cisco Talos 事件响应提供全套主动式和反应式服务，帮助你做好准备、做出响应并从违约中恢复. "
+            "通过Talos IR，你可以直接访问Cisco提供的相同威胁情报和世界一流的应急响应能力，此外还有350多名威胁研究人员进行提问和分析. "
+            "让我们的专家与你一起评估现有计划，制定新计划，并在你最需要时提供快速帮助.",
         }
     }
 
@@ -51,10 +47,10 @@ class GO_talosintel(GhostOsintPlugin):
     }
 
     optdescs = {
-        'checkaffiliates': "Apply checks to affiliates?",
-        'cacheperiod': "Hours to cache list data before re-fetching.",
-        'checknetblocks': "Report if any malicious IPs are found within owned netblocks?",
-        'checksubnets': "Check if any malicious IPs are found within the same subnet of the target?"
+        'checkaffiliates': "检查关联企业?",
+        'cacheperiod': "之前缓存数据提取.",
+        'checknetblocks': "报告网段中是否发现任何恶意IP地址?",
+        'checksubnets': "检查在目标的同一子网内是否发现的任何恶意 IP 地址?"
     }
 
     results = None

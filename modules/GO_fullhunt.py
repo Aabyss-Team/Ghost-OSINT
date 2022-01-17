@@ -19,7 +19,7 @@ class GO_fullhunt(GhostOsintPlugin):
 
     meta = {
         'name': "FullHunt",
-        'summary': "Identify domain attack surface using FullHunt API.",
+        'summary': "通过 FullHunt API 识别该域名的攻击面.",
         'flags': ['apikey'],
         'useCases': ["Passive", "Footprint", "Investigate"],
         'categories': ["Search Engines"],
@@ -30,15 +30,15 @@ class GO_fullhunt(GhostOsintPlugin):
                 "https://api-docs.fullhunt.io/",
             ],
             'apiKeyInstructions': [
-                "Visit https://fullhunt.io/",
-                "Register a free account",
-                "Navigate to https://fullhunt.io/user/settings/",
-                "Your API key is listed under 'API Access'"
+                "访问 https://fullhunt.io/",
+                "注册一个免费账户",
+                "导航到 https://fullhunt.io/user/settings/",
+                "API 密钥将在 'API Access'"
             ],
             'favIcon': "https://fullhunt.io/static/theme/images/logo/favicon.ico",
             'logo': "https://fullhunt.io/static/theme/images/logo/Icon.png",
-            'description': "Discover, monitor, and secure your attack surface. "
-            "FullHunt delivers the best platform in the market for attack surface security."
+            'description': "发现、监视并保护你的攻击面. "
+            "FullHunt 为攻击面提供了市场上最好的平台."
         }
     }
 
@@ -47,7 +47,7 @@ class GO_fullhunt(GhostOsintPlugin):
     }
 
     optdescs = {
-        "api_key": "FullHunt API key.",
+        "api_key": "FullHunt API 密钥.",
     }
 
     results = None

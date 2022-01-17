@@ -3,6 +3,11 @@
 # Name:        GO_adguard_dns
 # Purpose:     GhostOSINT plug-in for looking up whether hosts are blocked by
 #              AdGuard DNS servers.
+# Author:      Steve Micallef <steve@binarypool.com>
+#
+# Created:     14/07/2019
+# Copyright:   (c) Steve Micallef 2019
+# Licence:     GPL
 # -------------------------------------------------------------------------------
 
 import dns.resolver
@@ -14,7 +19,7 @@ class GO_adguard_dns(GhostOsintPlugin):
 
     meta = {
         'name': "AdGuard DNS",
-        'summary': "Check if a host would be blocked by AdGuard DNS.",
+        'summary': "检查主机是否会被 AdGuard DNS 阻止.",
         'flags': [],
         'useCases': ["Investigate", "Passive"],
         'categories': ["Reputation Systems"],
@@ -26,9 +31,9 @@ class GO_adguard_dns(GhostOsintPlugin):
             ],
             'favIcon': "https://adguard.com/img/favicons/favicon.ico",
             'logo': "https://adguard.com/img/favicons/apple-touch-icon.png",
-            'description': "AdGuard DNS is a foolproof way to block Internet ads that does not require installing any applications. "
-            "It is easy to use, absolutely free, easily set up on any device, and provides you with minimal necessary functions "
-            "to block ads, counters, malicious websites, and adult content."
+            'description': "AdGuard DNS 是不需要安装任何应用程序阻止互联网广告的万无一失的方法. "
+            "它易于使用, 绝对免费, 易于在任何设备上设置,并为您提供最少的必要功能 "
+            "阻止广告、加载器、恶意网站和成人内容."
         }
     }
 

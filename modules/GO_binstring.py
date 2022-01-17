@@ -18,8 +18,8 @@ from ghostosint import GhostOsintEvent, GhostOsintPlugin
 class GO_binstring(GhostOsintPlugin):
 
     meta = {
-        'name': "Binary String Extractor",
-        'summary': "Attempt to identify strings in binary content.",
+        'name': "二进制字符串提取器",
+        'summary': "尝试识别二进制内容中的字符串.",
         'flags': ["errorprone"],
         'useCases': ["Footprint"],
         'categories': ["Content Analysis"]
@@ -39,12 +39,12 @@ class GO_binstring(GhostOsintPlugin):
 
     # Option descriptions
     optdescs = {
-        'minwordsize': "Upon finding a string in a binary, ensure it is at least this length. Helps weed out false positives.",
-        'usedict': "Use the dictionary to further reduce false positives - any string found must contain a word from the dictionary (can be very slow, especially for larger files).",
-        'fileexts': "File types to fetch and analyse.",
-        'maxfilesize': "Maximum file size in bytes to download for analysis.",
-        'maxwords': "Stop reporting strings from a single binary after this many are found.",
-        'filterchars': "Ignore strings with these characters, as they may just be garbage ASCII."
+        'minwordsize': "在二进制文件中找到字符串时，请确保它至少具有此长度。有助于排除误报.",
+        'usedict': "使用字典进一步减少误报, 找到的任何字符串都必须包含字典中的单词（对于较大的字典文件会非常慢）.",
+        'fileexts': "要获取和分析的文件类型.",
+        'maxfilesize': "要下载以供分析的最大的文件大小（字节）.",
+        'maxwords': "找到这么多后，停止报告来自单个二进制文件的字符串.",
+        'filterchars': "忽略包含这些字符的字符串，因为它们可能只是垃圾ASCII码."
     }
 
     results = list()
