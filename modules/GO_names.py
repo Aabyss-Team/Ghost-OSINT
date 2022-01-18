@@ -109,7 +109,8 @@ class GO_names(GhostOsintPlugin):
             if srcModuleName not in ["GO_arin", "GO_builtwith", "GO_clearbit",
                                      "GO_fullcontact", "GO_github", "GO_hunter",
                                      "GO_opencorporates", "GO_slideshare",
-                                     "GO_twitter", "GO_venmo", "GO_instagram"]:
+                                     "GO_twitter", "GO_venmo", "GO_instagram",
+                                     "GO_stackoverflow"]:
                 self.debug("Ignoring RAW_RIR_DATA from untrusted module.")
                 return
 
