@@ -4,7 +4,6 @@
 [![License](https://img.shields.io/badge/license-GPLv2-blue.svg)](https://raw.githubusercontent.com/GhostWolfTeam/Ghost-OSINT/master/LICENSE)
 [![Python Version](https://img.shields.io/badge/python-3.7+-green)](https://www.python.org)
 [![Stable Release](https://img.shields.io/badge/version-3.5-blue.svg)](https://github.com/GhostWolfTeam/Ghost-OSINT/releases/tag/v3.5)
-[![CI status](https://github.com/smicallef/ghostosint/workflows/Tests/badge.svg)](https://github.com/GhostWolfTeam/Ghost-OSINT/actions?query=workflow%3A"Tests")
 [![Last Commit](https://img.shields.io/github/last-commit/smicallef/ghostosint)](https://github.com/GhostWolfTeam/Ghost-OSINT/commits/master)
 [![Discord](https://img.shields.io/discord/770524432464216074)](https://hack.chat/?Ghost-OSINT)
 
