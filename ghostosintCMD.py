@@ -156,7 +156,7 @@ class GhostOsintCMD(cmd.Cmd):
     # Shortcut commands
     def do_debug(self, line):
         """debug
-        Short-cut command for set cli.debug = 1"""
+        快捷键设置开启 cli.debug = 1"""
         if self.ownopts['cli.debug']:
             val = "0"
         else:
@@ -165,7 +165,7 @@ class GhostOsintCMD(cmd.Cmd):
 
     def do_spool(self, line):
         """spool
-        Short-cut command for set cli.spool = 1/0"""
+        快捷键设置开启或关闭 cli.spool = 1/0"""
         if self.ownopts['cli.spool']:
             val = "0"
         else:
@@ -180,8 +180,8 @@ class GhostOsintCMD(cmd.Cmd):
 
     def do_history(self, line):
         """history [-l]
-        Short-cut command for set cli.history = 1/0.
-        Add -l to just list the history."""
+        快捷键设置开启或关闭 cli.history = 1/0.
+        使用 -l 选项以列出历史记录."""
         c = self.myparseline(line)
 
         if '-l' in c[0]:
@@ -363,7 +363,7 @@ class GhostOsintCMD(cmd.Cmd):
         # requests_log.setLevel(logging.DEBUG)
         # requests_log.propagate = True
         headers = {
-            "User-agent": "GhostOSINT-CLI/" + self.version,
+            "User-agent": "GhostOSINT-CMD/" + self.version,
             "Accept": "application/json"
         }
 
@@ -538,7 +538,7 @@ class GhostOsintCMD(cmd.Cmd):
     # Run SQL against the DB.
     def do_query(self, line):
         """query <SQL query>
-        Run an <SQL query> against the database."""
+        对数据库运行SQL查询."""
         c = self.myparseline(line)
         if len(c[0]) < 1:
             self.edprint("语法无效.")
@@ -557,7 +557,7 @@ class GhostOsintCMD(cmd.Cmd):
     # Ping the server.
     def do_ping(self, line):
         """ping
-        Ping the GhostOSINT server to ensure it's responding."""
+        ping Ghost-OSINT 服务器以确保其响应."""
         d = self.request(self.ownopts['cli.server_baseurl'] + "/ping")
         if not d:
             return
@@ -576,7 +576,7 @@ class GhostOsintCMD(cmd.Cmd):
     # List all GhostOSINT modules.
     def do_modules(self, line, cacheonly=False):
         """modules
-        List all available modules and their descriptions."""
+        列出所有可用模块及其说明."""
         d = self.request(self.ownopts['cli.server_baseurl'] + "/modules")
         if not d:
             return
@@ -593,7 +593,7 @@ class GhostOsintCMD(cmd.Cmd):
     # List all GhostOSINT data element types.
     def do_types(self, line, cacheonly=False):
         """types
-        List all available element types and their descriptions."""
+        列出所有可用元素类型及其说明."""
         d = self.request(self.ownopts['cli.server_baseurl'] + "/eventtypes")
 
         if not d:
@@ -617,14 +617,13 @@ class GhostOsintCMD(cmd.Cmd):
     # Load commands from a file.
     def do_load(self, line):
         """load <file>
-        Execute GhostOSINT CLI commands found in <file>."""
+        加载文件 <file>中的命令使Ghost-OSINT执行."""
         pass
 
     # Get scan info and config.
     def do_scaninfo(self, line):
         """scaninfo <sid> [-c]
-        Get status information for scan ID <sid>, optionally also its
-        configuration if -c is supplied."""
+        获取指定扫描ID <sid>的详细信息, -c选项可以获取其配置."""
         c = self.myparseline(line)
         if len(c[0]) < 1:
             self.edprint("无效语法.")
@@ -657,7 +656,7 @@ class GhostOsintCMD(cmd.Cmd):
     # List scans.
     def do_scans(self, line):
         """scans [-x]
-        List all scans, past and present. -x for extended view."""
+        列出所有扫描. -x选项用于扩展视图."""
         d = self.request(self.ownopts['cli.server_baseurl'] + "/scanlist")
         if not d:
             return
@@ -691,9 +690,9 @@ class GhostOsintCMD(cmd.Cmd):
     # Show the data from a scan.
     def do_data(self, line):
         """data <sid> [-t type] [-x] [-u]
-        Get the scan data for scan ID <sid> and optionally the element
-        type [type] (e.g. EMAILADDR), [type]. Use -x for extended format.
-        Use -u for a unique set of results."""
+        获取指定扫描ID <sid> 和元素（可选）的扫描数据和
+        类型 [type] (例如 EMAILADDR), [type]. -x 选项用于扩展格式.
+        使用-u选项获得特殊结果."""
         c = self.myparseline(line)
         if len(c[0]) < 1:
             self.edprint("无效语法.")
@@ -737,8 +736,8 @@ class GhostOsintCMD(cmd.Cmd):
     # Export data from a scan.
     def do_export(self, line):
         """export <sid> [-t type]
-        Export the scan data for scan ID <sid> as type [type].
-        Valid types: csv, json, gexf (default: json)."""
+        将指定扫描ID <sid> 扫描到的数据导出为类型 [type].
+        有效类型: csv, json, gexf (默认: json)."""
         c = self.myparseline(line)
 
         if len(c[0]) < 1:
@@ -791,10 +790,10 @@ class GhostOsintCMD(cmd.Cmd):
     # Show logs.
     def do_logs(self, line):
         """logs <sid> [-l count] [-w]
-        Show the most recent [count] logs for a given scan ID, <sid>.
-        If no count is supplied, all logs are given.
-        If -w is supplied, logs will be streamed to the console until
-        Ctrl-C is entered."""
+        显示指定扫描ID的最新 [count] 日志, <sid>.
+        如果没提供计数，则显示所有日志.
+        如果使用了-w选项, 则日志会直接显示到控制台，直到键入
+        Ctrl-C."""
         c = self.myparseline(line)
 
         if len(c[0]) < 1:
@@ -891,14 +890,13 @@ class GhostOsintCMD(cmd.Cmd):
     # Start a new scan.
     def do_start(self, line):
         """start <target> (-m m1,... | -t t1,... | -u case) [-n name] [-w]
-        Start a scan against <target> using modules m1,... OR looking
-        for types t1,...
-        OR by use case ("all", "investigate", "passive" and "footprint").
+        开始扫描 <target> 使用模块 m1,... 或者
+        类型 t1,...
+        或者按用例 ("all", "investigate", "passive" and "footprint").
 
-        Scan be be optionally named [name], without a name the target
-        will be used.
-        Use -w to watch the logs from the scan. Ctrl-C to abort the
-        logging (but will not abort the scan).
+        可选择将扫描命名为 [name], 而不对目标进行命名.
+        使用 -w 选项查看扫描的日志. Ctrl-C 中止记录
+        (但不会中止扫描).
         """
         c = self.myparseline(line)
         if len(c[0]) < 3:
@@ -959,7 +957,7 @@ class GhostOsintCMD(cmd.Cmd):
     # Stop a running scan.
     def do_stop(self, line):
         """stop <sid>
-        Abort the running scan with scan ID, <sid>."""
+        中止指定扫描ID任务, <sid>."""
         c = self.myparseline(line)
         try:
             scan_id = c[0][0]
@@ -972,15 +970,15 @@ class GhostOsintCMD(cmd.Cmd):
 
     # Search for data, alias to find
     def do_search(self, line):
-        """search (look up 'find')
+        """search (同 'find')
         """
         return self.do_find(line)
 
     # Search for data
     def do_find(self, line):
         """find "<string|/regex/>" <[-s sid]|[-t type]> [-x]
-        Search for string/regex, limited to the scope of either a scan ID or
-        event type. -x for extended format."""
+        通过字符串或正则表达式搜索结果, 仅限扫描ID或
+        事件类型. -x 选项扩展格式."""
         c = self.myparseline(line)
         if len(c[0]) < 1:
             self.edprint("无效语法.")
@@ -1023,8 +1021,8 @@ class GhostOsintCMD(cmd.Cmd):
     # Summary of a scan
     def do_summary(self, line):
         """summary <sid> [-t]
-        Summarise the results for a scan ID, <sid>. -t to only show
-        the element types."""
+        汇总扫描ID的结果, <sid>. -t仅显示
+        元素类型."""
         c = self.myparseline(line)
         if len(c[0]) < 1:
             self.edprint("无效语法.")
@@ -1060,7 +1058,7 @@ class GhostOsintCMD(cmd.Cmd):
     # Delete a scan
     def do_delete(self, line):
         """delete <sid>
-        Delete a scan with scan ID, <sid>."""
+        删除指定扫描ID任务, <sid>."""
         c = self.myparseline(line)
         try:
             scan_id = c[0][0]
@@ -1254,25 +1252,25 @@ class GhostOsintCMD(cmd.Cmd):
     # Execute a shell command locally and return the output
     def do_shell(self, line):
         """shell
-        Run a shell command locally."""
+        在本地运行shell命令."""
         self.dprint("正在运行的Shell命令:" + str(line))
         self.dprint(os.popen(line).read(), plain=True)  # noqa: DUO106
 
     def do_clear(self, line):
         """clear
-        Clear the screen."""
+        清屏."""
         sys.stderr.write("\x1b[2J\x1b[H")
 
     # Exit the CLI
     def do_exit(self, line):
         """exit
-        Exit the GhostOSINT CLI."""
+        退出 Ghost-OSINT CMD."""
         return True
 
     # Ctrl-D
     def do_EOF(self, line):
         """EOF (Ctrl-D)
-        Exit the GhostOSINT CLI."""
+        退出 Ghost-OSINT CMD."""
         print("\n")
         return True
 
