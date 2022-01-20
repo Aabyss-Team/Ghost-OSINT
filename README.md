@@ -1,12 +1,5 @@
 <a href="https://github.com/GhostWolfTeam/Ghost-OSINT"><img src="https://raw.githubusercontent.com/GhostWolfTeam/Ghost-OSINT/main/ghostosint/static/img/ghostosint-header.png"></a>
 
-
-[![License](https://img.shields.io/badge/license-GPLv2-blue.svg)](https://raw.githubusercontent.com/GhostWolfTeam/Ghost-OSINT/master/LICENSE)
-[![Python Version](https://img.shields.io/badge/python-3.7+-green)](https://www.python.org)
-[![Stable Release](https://img.shields.io/badge/version-3.5-blue.svg)](https://github.com/GhostWolfTeam/Ghost-OSINT/releases/tag/v3.5)
-[![Last Commit](https://img.shields.io/github/last-commit/smicallef/ghostosint)](https://github.com/GhostWolfTeam/Ghost-OSINT/commits/master)
-[![Discord](https://img.shields.io/discord/770524432464216074)](https://hack.chat/?Ghost-OSINT)
-
 **Ghost-OSINT**
 
 一个基于SpiderFoot二次开发的开源OSINT工具.
